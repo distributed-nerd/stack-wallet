@@ -1,0 +1,12 @@
+[project]
+name = "stacks-smart-contract"
+description = "Smart contract project for Stacks blockchain"
+authors = []
+telemetry = false
+cache_dir = "./.cache"
+requirements = []
+boot_contracts = []
+
+[repl]
+costs_version = 3
+parser_version = 2
