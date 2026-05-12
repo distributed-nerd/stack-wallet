@@ -7,6 +7,18 @@ cache_dir = "./.cache"
 requirements = []
 boot_contracts = []
 
+[contracts.sip010-trait]
+path = "contracts/sip010-trait.clar"
+
+[contracts.hello-stacks]
+path = "contracts/hello-stacks.clar"
+
+[contracts.sip010-token]
+path = "contracts/sip010-token.clar"
+
+[contracts.stack-wallet]
+path = "contracts/stack-wallet.clar"
+
 [repl]
 costs_version = 3
 parser_version = 2

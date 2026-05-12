@@ -1,0 +1,311 @@
+Sending 0.1 STX to 50 accounts...
+Starting nonce: 10
+
+[1/50] Sending to: SP1WE6P7H5EGPESARYHVF8NZ6KG0884A3Q8VXG0P1
+  ✓ Success - Nonce: 10
+  TxID: {
+  txid: '0xbfb51130e40a948c784c152de73eda97f9df8659de6c4e93439fc69f4af9a0fe',
+  transaction: 'https://explorer.hiro.so/txid/0xbfb51130e40a948c784c152de73eda97f9df8659de6c4e93439fc69f4af9a0fe?chain=mainnet'
+}
+[2/50] Sending to: SP2DTV4BG951T04XSTN1Z0NJFHTXYMSYQGCYM04WP
+  ✓ Success - Nonce: 11
+  TxID: {
+  txid: '0x89aee0a3a154ab5d398baa9f63f44cc31655720c6189daa7b054aaf9e11486ee',
+  transaction: 'https://explorer.hiro.so/txid/0x89aee0a3a154ab5d398baa9f63f44cc31655720c6189daa7b054aaf9e11486ee?chain=mainnet'
+}
+[3/50] Sending to: SPX73N9AE31KS2HYFSXKXX9BC1BJCMPVY4WKH2G6
+  ✓ Success - Nonce: 12
+  TxID: {
+  txid: '0x86463a6d47d43b10359f1aac256a9aebd8edee203237ef431724329a2d43b704',
+  transaction: 'https://explorer.hiro.so/txid/0x86463a6d47d43b10359f1aac256a9aebd8edee203237ef431724329a2d43b704?chain=mainnet'
+}
+[4/50] Sending to: SP1WDQHEA0M1TJTWYJ13NBNV4JSCAVGT2BVJY9MQV
+  ✓ Success - Nonce: 13
+  TxID: {
+  txid: '0x981403664bf03d1a0c692fb14bb90930d3add822110e084ef88ecd1cd2f330aa',
+  transaction: 'https://explorer.hiro.so/txid/0x981403664bf03d1a0c692fb14bb90930d3add822110e084ef88ecd1cd2f330aa?chain=mainnet'
+}
+[5/50] Sending to: SP3F96WZ9N4T04A3DR8PQ00WH339BEBNTSZ3S7R9N
+  ✓ Success - Nonce: 14
+  TxID: {
+  txid: '0xc1aa26b3272c08c990465e38887e2d7dc7edd4a1346b8f9d817167db1703255c',
+  transaction: 'https://explorer.hiro.so/txid/0xc1aa26b3272c08c990465e38887e2d7dc7edd4a1346b8f9d817167db1703255c?chain=mainnet'
+}
+[6/50] Sending to: SP3KF8Y4AZ6P1JH3YBY5Y4RN6A9YMCDBGW2R395W9
+  ✓ Success - Nonce: 15
+  TxID: {
+  txid: '0x20abea6466306ed2dddf62d913410d2179c19249516517d3c72ef5f422d08bb1',
+  transaction: 'https://explorer.hiro.so/txid/0x20abea6466306ed2dddf62d913410d2179c19249516517d3c72ef5f422d08bb1?chain=mainnet'
+}
+[7/50] Sending to: SP1FS3YRS8GXT6K7H6549K771HGA3ENXPM8FFFVJK
+  ✓ Success - Nonce: 16
+  TxID: {
+  txid: '0x022b237d03d3e9c10da2bd1c2761e83b29f4cc651e38f29bded2502edc74dc9b',
+  transaction: 'https://explorer.hiro.so/txid/0x022b237d03d3e9c10da2bd1c2761e83b29f4cc651e38f29bded2502edc74dc9b?chain=mainnet'
+}
+[8/50] Sending to: SP3CT0VE7P8E6R44M4MCDS53MNNGZ27XR6YRP6XE6
+  ✓ Success - Nonce: 17
+  TxID: {
+  txid: '0x19580a70050daffb1012586b11bfdf0eca91f650f6438534bb3024f6af4070d4',
+  transaction: 'https://explorer.hiro.so/txid/0x19580a70050daffb1012586b11bfdf0eca91f650f6438534bb3024f6af4070d4?chain=mainnet'
+}
+[9/50] Sending to: SP2090PYYDDN3YE0W84HAQ6VH0YHRX9G325F6SJ3D
+  ✓ Success - Nonce: 18
+  TxID: {
+  txid: '0xa92ac8b34936347020294f62a97c2df98a7847d8f9c496605cfff3735b6d175e',
+  transaction: 'https://explorer.hiro.so/txid/0xa92ac8b34936347020294f62a97c2df98a7847d8f9c496605cfff3735b6d175e?chain=mainnet'
+}
+[10/50] Sending to: SP07R282NJDMDXNKSH5JQHP58HBGSYMGY694Q15E
+  ✓ Success - Nonce: 19
+  TxID: {
+  txid: '0x1e4980f251f0d48bf320fb3b760d4c3672548b0eea25338571e4b3dd6d8c3046',
+  transaction: 'https://explorer.hiro.so/txid/0x1e4980f251f0d48bf320fb3b760d4c3672548b0eea25338571e4b3dd6d8c3046?chain=mainnet'
+}
+[11/50] Sending to: SP1GAX5QGFH3QJPA89KQ1035YQW40T2Z6V1HJTP7D
+  ✓ Success - Nonce: 20
+  TxID: {
+  txid: '0x69ce39a1e2e97a756e2ad2f6571c133b9a464811df20eb61db82ecf00795b997',
+  transaction: 'https://explorer.hiro.so/txid/0x69ce39a1e2e97a756e2ad2f6571c133b9a464811df20eb61db82ecf00795b997?chain=mainnet'
+}
+[12/50] Sending to: SPFZZF7FDSTNB0C2FK7ZC8BZ2MN76NBR61BT0TF7
+  ✓ Success - Nonce: 21
+  TxID: {
+  txid: '0x8b5acd0a22a9f5b5608814e5dcc16f09af252f8f0cb58dccb981e88ee4ca2c9b',
+  transaction: 'https://explorer.hiro.so/txid/0x8b5acd0a22a9f5b5608814e5dcc16f09af252f8f0cb58dccb981e88ee4ca2c9b?chain=mainnet'
+}
+[13/50] Sending to: SP1FS3B5PR9ZYTCN9R40FP2MHD3RAQ467MF2TCAHF
+  ✓ Success - Nonce: 22
+  TxID: {
+  txid: '0x555e647a5cd6bd0bed803cb9aa9c8b5115eb142174205511f02bb828c4261577',
+  transaction: 'https://explorer.hiro.so/txid/0x555e647a5cd6bd0bed803cb9aa9c8b5115eb142174205511f02bb828c4261577?chain=mainnet'
+}
+[14/50] Sending to: SP1JQT7MFXW602NKNTMWBSH78WJ3ACM45SV7V2T2E
+  ✓ Success - Nonce: 23
+  TxID: {
+  txid: '0x00be5de5de71e9136773a2c24e823b6496785e6b7551396f33a0b65de2cad1aa',
+  transaction: 'https://explorer.hiro.so/txid/0x00be5de5de71e9136773a2c24e823b6496785e6b7551396f33a0b65de2cad1aa?chain=mainnet'
+}
+[15/50] Sending to: SPX15KQ14SN17S9ZX739BF130M93EMSJTAYFWXKM
+  ✓ Success - Nonce: 24
+  TxID: {
+  txid: '0x3cf7b8fe3632cf7d13e50c2c02ee9ff8902fcb4a974d2cefccc875675adbf580',
+  transaction: 'https://explorer.hiro.so/txid/0x3cf7b8fe3632cf7d13e50c2c02ee9ff8902fcb4a974d2cefccc875675adbf580?chain=mainnet'
+}
+[16/50] Sending to: SP3KFWPZY86RDMQK9RVZ26T51QZM3F54CTGNXKDGR
+  ✓ Success - Nonce: 25
+  TxID: {
+  txid: '0x8d7b2e8a310dc5a1147f1b5f592b0314522c4263fa600366e697b0af3e84abdb',
+  transaction: 'https://explorer.hiro.so/txid/0x8d7b2e8a310dc5a1147f1b5f592b0314522c4263fa600366e697b0af3e84abdb?chain=mainnet'
+}
+[17/50] Sending to: SP1KHCMQPM7G1DPB8DPRRY9Y2DRMW111QG1W359CG
+  ✓ Success - Nonce: 26
+  TxID: {
+  txid: '0xab25e63896ad27b3449073103d482cfc120d818f796835a00de1cad8de3acbff',
+  transaction: 'https://explorer.hiro.so/txid/0xab25e63896ad27b3449073103d482cfc120d818f796835a00de1cad8de3acbff?chain=mainnet'
+}
+[18/50] Sending to: SP224KN6ATHJ3X2GE3THXR00ETKT2HR2GS77P6SHK
+  ✓ Success - Nonce: 27
+  TxID: {
+  txid: '0xd676f9b2bbc73abc569b90b9d6290609a267b4ac2fd3606a89a2fc1b67043ab6',
+  transaction: 'https://explorer.hiro.so/txid/0xd676f9b2bbc73abc569b90b9d6290609a267b4ac2fd3606a89a2fc1b67043ab6?chain=mainnet'
+}
+[19/50] Sending to: SP23SADMAQKH7P20YBPYK7M7F6ZV4GRG07C1G91VN
+  ✓ Success - Nonce: 28
+  TxID: {
+  txid: '0x8475f7f515023c95a4891b6d8e5905567193cb1b0efbfba67203b3b576028bab',
+  transaction: 'https://explorer.hiro.so/txid/0x8475f7f515023c95a4891b6d8e5905567193cb1b0efbfba67203b3b576028bab?chain=mainnet'
+}
+[20/50] Sending to: SPASMSJ094D94TEN368Z42330F52WH9MF6FTAR0E
+  ✓ Success - Nonce: 29
+  TxID: {
+  txid: '0xb7e899569ecff935dbd77e288b88de52176a10f66917b84de166da202adf3162',
+  transaction: 'https://explorer.hiro.so/txid/0xb7e899569ecff935dbd77e288b88de52176a10f66917b84de166da202adf3162?chain=mainnet'
+}
+[21/50] Sending to: SP20CV84P6W8JP5YWPFMZ37YCGHY1VESYNF7GWZV9
+  ✓ Success - Nonce: 30
+  TxID: {
+  txid: '0x9f36d6a4eeba960016575b34a42d7bf0a3a1e124061ec06e624c3ab2ace7831f',
+  transaction: 'https://explorer.hiro.so/txid/0x9f36d6a4eeba960016575b34a42d7bf0a3a1e124061ec06e624c3ab2ace7831f?chain=mainnet'
+}
+[22/50] Sending to: SP3C2YJ9AH8RJ4C1Y14QBW67R47Z9DBZF5QQ42DKW
+  ✓ Success - Nonce: 31
+  TxID: {
+  txid: '0xa222a387e72b21db467e882009820e8301c15bc19dda56acc7b334e874cfa701',
+  transaction: 'https://explorer.hiro.so/txid/0xa222a387e72b21db467e882009820e8301c15bc19dda56acc7b334e874cfa701?chain=mainnet'
+}
+[23/50] Sending to: SPB548YGBZBCJJABCWESG8HYR4FNCJKEV203FWZE
+  ✓ Success - Nonce: 32
+  TxID: {
+  txid: '0x38016843c3168a9efebdca5c0ddb4a4193fed60a3bc3b499bb86ff6917355882',
+  transaction: 'https://explorer.hiro.so/txid/0x38016843c3168a9efebdca5c0ddb4a4193fed60a3bc3b499bb86ff6917355882?chain=mainnet'
+}
+[24/50] Sending to: SP3MDTNY60D0Y97JZ71SGC4EC5XN92T2P4W1NAEV3
+  ✓ Success - Nonce: 33
+  TxID: {
+  txid: '0x5bb034fa2077a2caec4b062771add6caa90966d2bb3815725c4528c2a0c1dd82',
+  transaction: 'https://explorer.hiro.so/txid/0x5bb034fa2077a2caec4b062771add6caa90966d2bb3815725c4528c2a0c1dd82?chain=mainnet'
+}
+[25/50] Sending to: SP32K90G5H5F6QZS17DBEWCWPGBVCETSRH5MXS275
+  ✓ Success - Nonce: 34
+  TxID: {
+  txid: '0xc226bfb530c668b8e7c24932bb4e92b0f814c5be1ce67fc8b5b9dd0c6de7263b',
+  transaction: 'https://explorer.hiro.so/txid/0xc226bfb530c668b8e7c24932bb4e92b0f814c5be1ce67fc8b5b9dd0c6de7263b?chain=mainnet'
+}
+[26/50] Sending to: SP7RQEVNGBHAR2H3BCF79SBMMCKKS8ZAFHGCGDXX
+  ✓ Success - Nonce: 35
+  TxID: {
+  txid: '0xb3939a83d73af2e8cbf32367710112889ec2f6fb875d03674c69703844c149e4',
+  transaction: 'https://explorer.hiro.so/txid/0xb3939a83d73af2e8cbf32367710112889ec2f6fb875d03674c69703844c149e4?chain=mainnet'
+}
+[27/50] Sending to: SP3BZ1M18QR4RH1FCKCFSMQ0KNP6NZEAB5GT6PT7D
+  ✓ Success - Nonce: 36
+  TxID: {
+  txid: '0x42b5c9cef31ce35a9c2ff05988fe3ae50406ac075131c0071fcbb33be7811a1d',
+  transaction: 'https://explorer.hiro.so/txid/0x42b5c9cef31ce35a9c2ff05988fe3ae50406ac075131c0071fcbb33be7811a1d?chain=mainnet'
+}
+[28/50] Sending to: SP17S45MK1BVWP7PPSP637J8AG842NTHPMDKC1EZ5
+  ✓ Success - Nonce: 37
+  TxID: {
+  txid: '0x5839b9bd3b46658c3378cbfc48a67ee8bbae35154a68f704276a71b4a4d3a97a',
+  transaction: 'https://explorer.hiro.so/txid/0x5839b9bd3b46658c3378cbfc48a67ee8bbae35154a68f704276a71b4a4d3a97a?chain=mainnet'
+}
+[29/50] Sending to: SP234F743NJ6CQDCMCHGWVZ0DTX5212SX3SWJX6KB
+  ✓ Success - Nonce: 38
+  TxID: {
+  txid: '0x97788a2068fec3a6918b8f339ebac5408f4d1c09e7e6aab4ffe25bcc2c71ece8',
+  transaction: 'https://explorer.hiro.so/txid/0x97788a2068fec3a6918b8f339ebac5408f4d1c09e7e6aab4ffe25bcc2c71ece8?chain=mainnet'
+}
+[30/50] Sending to: SP3ZG4G5MW4TPK8H2H8B3SN42VPQJAKH9M37X2VP0
+  ✓ Success - Nonce: 39
+  TxID: {
+  txid: '0x044f88fec59008034430b516960d1974e0dc75d1e327908dfd89f5c75fa42c5c',
+  transaction: 'https://explorer.hiro.so/txid/0x044f88fec59008034430b516960d1974e0dc75d1e327908dfd89f5c75fa42c5c?chain=mainnet'
+}
+[31/50] Sending to: SP169VEVBTZ4X81C8YRE8A2V71SVFDYHWRN1X7MP5
+  ✓ Success - Nonce: 40
+  TxID: {
+  txid: '0x215c53d51bb7b723146ea1a8654c4c04971f42be7b1a0071f06b6b579b121061',
+  transaction: 'https://explorer.hiro.so/txid/0x215c53d51bb7b723146ea1a8654c4c04971f42be7b1a0071f06b6b579b121061?chain=mainnet'
+}
+[32/50] Sending to: SP30SX80X4VMRFN9S1RQNGMM6K6Z1CXDVXGBMJ34C
+  ✓ Success - Nonce: 41
+  TxID: {
+  txid: '0x218ffaddd154704e11f16643ae6526fa78725ae5473afb617401ae1fa31cc88b',
+  transaction: 'https://explorer.hiro.so/txid/0x218ffaddd154704e11f16643ae6526fa78725ae5473afb617401ae1fa31cc88b?chain=mainnet'
+}
+[33/50] Sending to: SP22CXNGDTMAHRWCJ1NZ7B0W6Q4P7J463E6NCPWZ2
+  ✓ Success - Nonce: 42
+  TxID: {
+  txid: '0xf32345ac231d5e47c17964ae91018b61d2c0678e363b0843f59f8a9c83cb1e10',
+  transaction: 'https://explorer.hiro.so/txid/0xf32345ac231d5e47c17964ae91018b61d2c0678e363b0843f59f8a9c83cb1e10?chain=mainnet'
+}
+[34/50] Sending to: SP13NRB7YV1ZNWBYYNB0GYFW83FGN5Q645D3NQV9B
+  ✓ Success - Nonce: 43
+  TxID: {
+  txid: '0xb55215a42bf6f232687b612b75fc8d37f1196778732a9c3895c146ac446fbbe9',
+  transaction: 'https://explorer.hiro.so/txid/0xb55215a42bf6f232687b612b75fc8d37f1196778732a9c3895c146ac446fbbe9?chain=mainnet'
+}
+[35/50] Sending to: SP3G14ADND60H1SDHR30CASXYKSSRCZMYE2ECCST2
+  ✓ Success - Nonce: 44
+  TxID: {
+  txid: '0xf48f3606431f0db74a68c9b7c34d6d4ac99c029dd06e03555a36af39c60ca0e8',
+  transaction: 'https://explorer.hiro.so/txid/0xf48f3606431f0db74a68c9b7c34d6d4ac99c029dd06e03555a36af39c60ca0e8?chain=mainnet'
+}
+[36/50] Sending to: SP11WM85APFDDR4GJ8583FY94B77JW3597TWCGHYG
+  ✓ Success - Nonce: 45
+  TxID: {
+  txid: '0x2ed215e8d140744183eeb9f92269d5cae46f1dfb87c08b64eefc32de9f073bd0',
+  transaction: 'https://explorer.hiro.so/txid/0x2ed215e8d140744183eeb9f92269d5cae46f1dfb87c08b64eefc32de9f073bd0?chain=mainnet'
+}
+[37/50] Sending to: SP0273T9AQHF9ARPMHV89TQ7MCXV8Y12HG2NYYGT
+  ✓ Success - Nonce: 46
+  TxID: {
+  txid: '0x86c00c863513c1531f1de864f8550a61e1f4e6c1e98ca1f1503e1293d6d9fe42',
+  transaction: 'https://explorer.hiro.so/txid/0x86c00c863513c1531f1de864f8550a61e1f4e6c1e98ca1f1503e1293d6d9fe42?chain=mainnet'
+}
+[38/50] Sending to: SP3SSZE85XPRGVWWC8QVJZR08EGHEFA7KC1X9XN9C
+  ✓ Success - Nonce: 47
+  TxID: {
+  txid: '0xb5d2125d65d3f39c429f52b515f8129ff2f0e1ad7a08c39fec6cc8abe9c90a2c',
+  transaction: 'https://explorer.hiro.so/txid/0xb5d2125d65d3f39c429f52b515f8129ff2f0e1ad7a08c39fec6cc8abe9c90a2c?chain=mainnet'
+}
+[39/50] Sending to: SP361HBM3G59KCEM8YDQNVA2A49AR94DVV548CVCQ
+  ✓ Success - Nonce: 48
+  TxID: {
+  txid: '0x2116bdedc58f16ed418ed95edf9fe1d8b56e445e595a7e3972a3f7cbe7a005d2',
+  transaction: 'https://explorer.hiro.so/txid/0x2116bdedc58f16ed418ed95edf9fe1d8b56e445e595a7e3972a3f7cbe7a005d2?chain=mainnet'
+}
+[40/50] Sending to: SP3P5EM48ERR17143Y22RZASMX37Q5HYD00D36H9N
+  ✓ Success - Nonce: 49
+  TxID: {
+  txid: '0xbbacf0df0e44cc66f2eb5675a53e19f7c6bd63949800ceba397a0785d62eb0c7',
+  transaction: 'https://explorer.hiro.so/txid/0xbbacf0df0e44cc66f2eb5675a53e19f7c6bd63949800ceba397a0785d62eb0c7?chain=mainnet'
+}
+[41/50] Sending to: SP3QQ6X5JXY8KGMVQVRZX7NXSPXP88VCBRJ3SNCZR
+  ✓ Success - Nonce: 50
+  TxID: {
+  txid: '0x232134366301cd291b957dc714942314196e55e12965c6cba9f7df8ac0aa4f63',
+  transaction: 'https://explorer.hiro.so/txid/0x232134366301cd291b957dc714942314196e55e12965c6cba9f7df8ac0aa4f63?chain=mainnet'
+}
+[42/50] Sending to: SP1GV3Z4JJVRKSFMNQQHS1FE7JG1HN3THABZKRAZS
+  ✓ Success - Nonce: 51
+  TxID: {
+  txid: '0x1ad04391cdfa3517cd9b160c8fad55f2cc3da45a9cd8ae22511c6a76767d0f3c',
+  transaction: 'https://explorer.hiro.so/txid/0x1ad04391cdfa3517cd9b160c8fad55f2cc3da45a9cd8ae22511c6a76767d0f3c?chain=mainnet'
+}
+[43/50] Sending to: SP26Q6JVY8XRW68NY4FYA3VRW4TTR1ZA04MSXTJ7C
+  ✓ Success - Nonce: 52
+  TxID: {
+  txid: '0xc0947ca3216eddb38771e9d2c8255e115fbf3711cd0310fe5d57de91081e3748',
+  transaction: 'https://explorer.hiro.so/txid/0xc0947ca3216eddb38771e9d2c8255e115fbf3711cd0310fe5d57de91081e3748?chain=mainnet'
+}
+[44/50] Sending to: SP1ADSKZ3Q240N4S402XAZ6N46CCPDJ3DBETKVXWS
+  ✓ Success - Nonce: 53
+  TxID: {
+  txid: '0x10e2f94fa8a71330c67f2013e88b1234694ed0340540d7112425e8e645fe5ae9',
+  transaction: 'https://explorer.hiro.so/txid/0x10e2f94fa8a71330c67f2013e88b1234694ed0340540d7112425e8e645fe5ae9?chain=mainnet'
+}
+[45/50] Sending to: SP2YYQ5EVJ4PA88WKBRNC78Z5MC4JRVSBP5BJQS00
+  ✓ Success - Nonce: 54
+  TxID: {
+  txid: '0xdd7ddbd5eebbfe8f692d21c696d0d20bd7a1235015f53bf011bc7fbae7fa52bc',
+  transaction: 'https://explorer.hiro.so/txid/0xdd7ddbd5eebbfe8f692d21c696d0d20bd7a1235015f53bf011bc7fbae7fa52bc?chain=mainnet'
+}
+[46/50] Sending to: SP2466CJJSFDTTTX4PREJ4XY230K4B1M7EPVN07Y3
+  ✓ Success - Nonce: 55
+  TxID: {
+  txid: '0xcad8c2d626a281b30e198e33d1f4f2f690675fda6271fd69a7f888683950baca',
+  transaction: 'https://explorer.hiro.so/txid/0xcad8c2d626a281b30e198e33d1f4f2f690675fda6271fd69a7f888683950baca?chain=mainnet'
+}
+[47/50] Sending to: SP13ECG22682DZ5TV32TSXAD55S91QS2DCQ47BE8Y
+  ✓ Success - Nonce: 56
+  TxID: {
+  txid: '0x00d54e74b905420ca79e4fff68eced362e0f6363ebe87abbcb129b1b6b1a5916',
+  transaction: 'https://explorer.hiro.so/txid/0x00d54e74b905420ca79e4fff68eced362e0f6363ebe87abbcb129b1b6b1a5916?chain=mainnet'
+}
+[48/50] Sending to: SP3TW5EY4HCVPE84E5DRBJJN5YTZJ9TY1KBZ1P0JQ
+  ✓ Success - Nonce: 57
+  TxID: {
+  txid: '0xb4f1ce5799fd7e6e757d3d51948cc063e53bcf04a4f99f20588fe431d14f382d',
+  transaction: 'https://explorer.hiro.so/txid/0xb4f1ce5799fd7e6e757d3d51948cc063e53bcf04a4f99f20588fe431d14f382d?chain=mainnet'
+}
+[49/50] Sending to: SP24075B2VAAWAT2GF5M98B3KE5RC91A0EH40BTC4
+  ✓ Success - Nonce: 58
+  TxID: {
+  txid: '0x553d77e0b1ab414c547e3f1b799cda7d0888a1b5abccdb9ba5304c5d12b65f06',
+  transaction: 'https://explorer.hiro.so/txid/0x553d77e0b1ab414c547e3f1b799cda7d0888a1b5abccdb9ba5304c5d12b65f06?chain=mainnet'
+}
+[50/50] Sending to: SP32F42KMXQ8F4A9M88C3ZEZ9NMG36DW5GS5JQYRD
+  ✓ Success - Nonce: 59
+  TxID: {
+  txid: '0x6c665c4d5d4ef854c1576772693a78dd743f66c174e40adfcc798e002be67871',
+  transaction: 'https://explorer.hiro.so/txid/0x6c665c4d5d4ef854c1576772693a78dd743f66c174e40adfcc798e002be67871?chain=mainnet'
+}
+
+=========================================
+Transfer Summary:
+  Successful: 50
+  Failed: 0
+  Total STX sent: 5.0 STX
+  Total fees: .050 STX
+=========================================
