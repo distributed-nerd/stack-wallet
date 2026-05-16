@@ -2,7 +2,7 @@ const transactions = require('@stacks/transactions');
 const network = require('@stacks/network');
 const fs = require('fs');
 
-const MASTER_PRIVATE_KEY = '8a51fdd22d780af5859e7406cf6bec0ff32edd6ede9353ab2afb0894b0be29b401';
+const MASTER_PRIVATE_KEY = ''; // YOUR_MASTER_PRIVATE_KEY_HERE
 const TOKEN_CONTRACT = 'SP1FPNMWMJR7WT3AH6HMPSEVG0PPSNE7N32ES51K6.sip010-token';
 const AMOUNT_PER_ACCOUNT = 10000000; // 10 tokens with 6 decimals
 const FEE_MICROSTX = 10000; // 0.01 STX fee per transaction
