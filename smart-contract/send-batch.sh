@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration
-PRIVATE_KEY="8a51fdd22d780af5859e7406cf6bec0ff32edd6ede9353ab2afb0894b0be29b401"
+PRIVATE_KEY="" # YOUR_PRIVATE_KEY_HERE
 AMOUNT="100000"  # 0.1 STX in microSTX
 FEE="1000"        # 0.001 STX in microSTX
 NONCE=10
