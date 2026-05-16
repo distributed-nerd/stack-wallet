@@ -2,7 +2,7 @@ const { makeSTXTokenTransfer, broadcastTransaction, AnchorMode } = require('@sta
 const { StacksMainnet } = require('@stacks/network');
 const fs = require('fs');
 
-const MASTER_PRIVATE_KEY = '8a51fdd22d780af5859e7406cf6bec0ff32edd6ede9353ab2afb0894b0be29b401';
+const MASTER_PRIVATE_KEY = ''; // YOUR_MASTER_PRIVATE_KEY_HERE
 const AMOUNT_MICROSTX = 100000; // 0.1 STX
 const FEE_MICROSTX = 1000; // 0.001 STX fee per transaction
 const STARTING_NONCE = 10; // Current nonce from blockchain
