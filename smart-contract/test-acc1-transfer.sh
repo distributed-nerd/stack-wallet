@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Configuration
+CONTRACT_ADDRESS="SP1FPNMWMJR7WT3AH6HMPSEVG0PPSNE7N32ES51K6"
+CONTRACT_NAME="sip010-token"
+OWNER_KEY="" # YOUR_OWNER_KEY_HERE
+OWNER_ADDR="SP1FPNMWMJR7WT3AH6HMPSEVG0PPSNE7N32ES51K6"
+RECIPIENT="SP1FPNMWMJR7WT3AH6HMPSEVG0PPSNE7N32ES51K6"
+FEE="1000"
+
+# Correct key for Account 1
+TEST_ADDR1="SP1WE6P7H5EGPESARYHVF8NZ6KG0884A3Q8VXG0P1"
+TEST_KEY1="" # YOUR_TEST_KEY_HERE
+
+echo "Running Account 1 TEST: OWNER -> ACC -> RECIPIENT"
+
+OWNER_NONCE=$(stx balance "$OWNER_ADDR" | jq -r '.nonce')
+echo "Owner nonce: $OWNER_NONCE"
+
+# 1. Owner -> TEST_ADDR1
+echo "[1] Owner transferring 1 token to $TEST_ADDR1..."
+ARGS1="u1, '$OWNER_ADDR, '$TEST_ADDR1, none"
+stx call_contract_func "$CONTRACT_ADDRESS" "$CONTRACT_NAME" "transfer" "$FEE" "$OWNER_NONCE" "$OWNER_KEY" "$ARGS1"
+
+echo "Waiting a few seconds..."
+sleep 5
+
+# 2. TEST_ADDR1 -> RECIPIENT
+ACC1_NONCE=$(stx balance "$TEST_ADDR1" | jq -r '.nonce')
+echo "[2] $TEST_ADDR1 transferring back (Nonce: $ACC1_NONCE)..."
+ARGS2="u1, '$TEST_ADDR1, '$RECIPIENT, none"
+stx call_contract_func "$CONTRACT_ADDRESS" "$CONTRACT_NAME" "transfer" "$FEE" "$ACC1_NONCE" "$TEST_KEY1" "$ARGS2"
