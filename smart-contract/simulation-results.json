@@ -1,0 +1,602 @@
+[
+  {
+    "account": 1,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 1,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 2,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 2,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 3,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 3,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 4,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 4,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 5,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 5,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 6,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 6,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 7,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 7,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 8,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 8,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 9,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 9,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 10,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 10,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 11,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 11,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 12,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 12,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 13,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 13,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 14,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 14,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 15,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 15,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 16,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 16,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 17,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 17,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 18,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 18,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 19,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 19,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 20,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 20,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 21,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 21,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 22,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 22,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 23,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 23,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 24,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 24,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 25,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 25,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 26,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 26,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 27,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 27,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 28,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 28,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 29,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 29,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 30,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 30,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 31,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 31,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 32,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 32,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 33,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 33,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 34,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 34,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 35,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 35,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 36,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 36,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 37,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 37,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 38,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 38,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 39,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 39,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 40,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 40,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 41,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 41,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 42,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 42,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 43,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 43,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 44,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 44,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 45,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 45,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 46,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 46,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 47,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 47,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 48,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 48,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 49,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 49,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 50,
+    "tx": 1,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  },
+  {
+    "account": 50,
+    "tx": 2,
+    "error": "Only absolute URLs are supported",
+    "status": "failed"
+  }
+]
