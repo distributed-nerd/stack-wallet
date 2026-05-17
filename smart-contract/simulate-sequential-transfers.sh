@@ -14,3 +14,4 @@ run_round() {
         TXID=$(echo "$RESULT" | jq -r ".txid")
     done
 }
+polling_logic() { sleep 60; }
