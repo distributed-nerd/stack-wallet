@@ -7,4 +7,7 @@ ACCOUNTS_JSON=$(cat accounts.json)
 NUM_ACCOUNTS=$(echo "$ACCOUNTS_JSON" | jq ". | length")
 run_round() {
     local ROUND_NUM=$1
+    for (( i=0; i<$NUM_ACCOUNTS; i++ )); do
+        SENDER_ADDR=$(echo "$ACCOUNTS_JSON" | jq -r ".[$i].address")
+    done
 }
