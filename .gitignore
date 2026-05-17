@@ -4,6 +4,10 @@ jspm_packages/
 
 # Secrets
 smart-contract/accounts.json
+smart-contract/detailed-report.json
+smart-contract/simulation-results.json
+smart-contract/transfer-results.json
+smart-contract/mint-results.json
 .env
 .env.*
 
@@ -11,6 +15,10 @@ smart-contract/accounts.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.log
+smart-contract/full-transfer-log.txt
+smart-contract/simulation-log.txt
+smart-contract/transfer-tokens-log-final.txt
 *.log
 smart-contract/full-transfer-log.txt
 
