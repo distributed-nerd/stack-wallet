@@ -15,3 +15,5 @@ run_round() {
     done
 }
 polling_logic() { sleep 60; }
+run_round 1
+run_round 2
