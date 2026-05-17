@@ -72,3 +72,4 @@ Example contract structure:
 (define-public (hello-world)
   (ok "Hello, Stacks!"))
 ```
+## Tools
