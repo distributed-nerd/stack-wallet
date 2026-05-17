@@ -5,3 +5,4 @@ async function getNonce() {}
 async function send() {}
 // serialization
 // fetch broadcast
+// adaptive delay
