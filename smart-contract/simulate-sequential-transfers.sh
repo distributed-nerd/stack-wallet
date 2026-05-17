@@ -5,3 +5,6 @@ AMOUNT="1000000"
 FEE="1000"
 ACCOUNTS_JSON=$(cat accounts.json)
 NUM_ACCOUNTS=$(echo "$ACCOUNTS_JSON" | jq ". | length")
+run_round() {
+    local ROUND_NUM=$1
+}
