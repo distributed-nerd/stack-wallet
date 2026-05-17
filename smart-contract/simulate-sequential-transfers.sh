@@ -10,5 +10,6 @@ run_round() {
     for (( i=0; i<$NUM_ACCOUNTS; i++ )); do
         SENDER_ADDR=$(echo "$ACCOUNTS_JSON" | jq -r ".[$i].address")
         NONCE=$(stx balance "$SENDER_ADDR" | jq -r .nonce)
+        RESULT=$(stx call_contract_func --contract_address "$CONTRACT_ADDRESS" 2>&1)
     done
 }
