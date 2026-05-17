@@ -9,5 +9,6 @@ run_round() {
     local ROUND_NUM=$1
     for (( i=0; i<$NUM_ACCOUNTS; i++ )); do
         SENDER_ADDR=$(echo "$ACCOUNTS_JSON" | jq -r ".[$i].address")
+        NONCE=$(stx balance "$SENDER_ADDR" | jq -r .nonce)
     done
 }
