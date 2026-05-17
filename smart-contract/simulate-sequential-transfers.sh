@@ -15,6 +15,6 @@ run_round() {
         TXID=$(echo "$RESULT" | jq -r ".txid")
     done
 }
-polling_logic() { sleep 60; }
+polling_logic() { sleep 120; }
 run_round 1
 run_round 2
