@@ -3,3 +3,18 @@
     {
       "round": 1,
       "transactions": [
+        {
+          "id": 1,
+          "error": "Max retries reached",
+          "status": "failed"
+        },
+        {
+          "id": 2,
+          "error": "Max retries reached",
+          "status": "failed"
+        },
+        {
+          "id": 3,
+          "error": "Max retries reached",
+          "status": "failed"
+        }
