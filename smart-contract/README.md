@@ -73,3 +73,7 @@ Example contract structure:
   (ok "Hello, Stacks!"))
 ```
 ## Tools
+
+
+# Simulation Persistence
+Tracks the state of sequential token transfers for robust execution.
