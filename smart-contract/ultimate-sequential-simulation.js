@@ -43,7 +43,33 @@ async function checkTransactionStatus(txid) {
 async function sendTransaction(account, recipientAddr, nonce) {
   let attempts = 0;
   while (attempts < 8) {
+    try {
+      const txOptions = {
+        contractAddress: CONTRACT_ADDRESS,
+        contractName: CONTRACT_NAME,
+        functionName: 'transfer',
+        functionArgs: [
+          uintCV(AMOUNT),
+          principalCV(account.address),
+          principalCV(recipientAddr),
+          noneCV()
+        ],
+        senderKey: account.privateKey,
+        network: NETWORK,
+        anchorMode: AnchorMode.Any,
+        fee: FEE,
+        nonce: nonce,
+        postConditionMode: PostConditionMode.Allow
+      };
+
+      const transaction = await makeContractCall(txOptions);
+      const serializedTx = transaction.serialize();
       // Logic placeholder
+    } catch (e) {
+      attempts++;
+      console.warn(`    ! Broadcast Error [Account ${account.id}]: ${e.message} (attempt ${attempts})`);
+      await new Promise(r => setTimeout(r, 5000 * attempts));
+    }
   }
   return { status: 'failed', error: 'Max retries reached' };
 }
