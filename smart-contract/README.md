@@ -81,3 +81,5 @@ Tracks the state of sequential token transfers for robust execution.
 A high-reliability script for mass token transfers.
 ### Usage
 Run `node ultimate-sequential-simulation.js` to start.
+### Robustness
+Features include nonce retries, broadcast loops, and block polling.
