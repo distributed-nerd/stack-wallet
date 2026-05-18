@@ -151,6 +151,11 @@ async function runSimulation() {
             console.error(`  [Account ${account.id}] ✗ Failed: ${result.error}`);
             round.transactions.push({ id: account.id, error: result.error, status: 'failed' });
         }
+        
+        fs.writeFileSync(RESULTS_FILE, JSON.stringify(state, null, 2));
+        await new Promise(r => setTimeout(r, 1000));
     }
+
+    console.log(`\nRound ${roundNum} broadcast phase complete. Waiting for block confirmations...`);
   }
 }
