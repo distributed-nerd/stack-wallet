@@ -96,3 +96,16 @@ async function sendTransaction(account, recipientAddr, nonce) {
   }
   return { status: 'failed', error: 'Max retries reached' };
 }
+
+async function runSimulation() {
+  const accounts = JSON.parse(fs.readFileSync(ACCOUNTS_FILE, 'utf8'));
+  const numAccounts = accounts.length;
+  
+  let state = { rounds: [] };
+  if (fs.existsSync(RESULTS_FILE)) {
+    try {
+      state = JSON.parse(fs.readFileSync(RESULTS_FILE, 'utf-8'));
+      console.log(`Resuming simulation from ${RESULTS_FILE}`);
+    } catch (e) {}
+  }
+}
