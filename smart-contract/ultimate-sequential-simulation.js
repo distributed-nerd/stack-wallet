@@ -28,3 +28,14 @@ async function getNonce(address) {
   }
   return null;
 }
+
+async function checkTransactionStatus(txid) {
+  try {
+    const response = await fetch(`https://api.mainnet.hiro.so/extended/v1/tx/${txid}`);
+    if (!response.ok) return 'pending';
+    const data = await response.json();
+    return data.tx_status;
+  } catch (e) {
+    return 'error';
+  }
+}
