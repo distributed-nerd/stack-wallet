@@ -88,3 +88,5 @@ Features include nonce retries, broadcast loops, and block polling.
 - @stacks/transactions
 - @stacks/network
 - node-fetch
+## Contact
+For automation inquiries, please see the project dashboard.
