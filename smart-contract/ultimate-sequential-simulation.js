@@ -108,4 +108,8 @@ async function runSimulation() {
       console.log(`Resuming simulation from ${RESULTS_FILE}`);
     } catch (e) {}
   }
+  
+  console.log(`\n==================================================================`);
+  console.log(`ULTIMATE ROBUST SIMULATION: 100 Transactions (2 Rounds)`);
+  console.log(`==================================================================\n`);
 }
