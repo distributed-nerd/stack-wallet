@@ -72,6 +72,12 @@ async function sendTransaction(account, recipientAddr, nonce) {
       });
 
       const text = await response.text();
+      let broadcastResponse;
+      try {
+        broadcastResponse = JSON.parse(text);
+      } catch (e) {
+        throw new Error(`Invalid JSON response: ${text.substring(0, 100)}`);
+      }
       // Logic placeholder
     } catch (e) {
       attempts++;
