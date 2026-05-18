@@ -115,7 +115,7 @@ run_round() {
     done
 }
 
-# Run 2 more rounds for a total of 100 more transactions
+# Executing rounds 3 and 4 for continuous simulation
 run_round 3
 run_round 4
 
