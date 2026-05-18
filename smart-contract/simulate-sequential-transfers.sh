@@ -115,9 +115,9 @@ run_round() {
     done
 }
 
-# Run 2 rounds for a total of 100 transactions
-run_round 1
-run_round 2
+# Executing rounds 3 and 4 for continuous simulation
+run_round 3
+run_round 4
 
 echo ""
 echo "========================================="
