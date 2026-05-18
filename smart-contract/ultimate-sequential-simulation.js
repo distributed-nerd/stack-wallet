@@ -78,7 +78,16 @@ async function sendTransaction(account, recipientAddr, nonce) {
       } catch (e) {
         throw new Error(`Invalid JSON response: ${text.substring(0, 100)}`);
       }
-      // Logic placeholder
+
+      if (broadcastResponse.error || broadcastResponse.reason) {
+        const error = broadcastResponse.reason || broadcastResponse.error;
+        if (error === 'ConflictingNonceInMempool') {
+            return { status: 'success', txid: 'mempool', alreadyInMempool: true };
+        }
+        throw new Error(JSON.stringify(error));
+      }
+      
+      return { status: 'success', txid: broadcastResponse.txid || broadcastResponse };
     } catch (e) {
       attempts++;
       console.warn(`    ! Broadcast Error [Account ${account.id}]: ${e.message} (attempt ${attempts})`);
