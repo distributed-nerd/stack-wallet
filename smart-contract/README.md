@@ -79,3 +79,5 @@ Example contract structure:
 Tracks the state of sequential token transfers for robust execution.
 ## Ultimate Simulation
 A high-reliability script for mass token transfers.
+### Usage
+Run `node ultimate-sequential-simulation.js` to start.
