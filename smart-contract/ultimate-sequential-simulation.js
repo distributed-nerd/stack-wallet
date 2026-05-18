@@ -126,5 +126,22 @@ async function runSimulation() {
     }
 
     console.log(`>>> ROUND ${roundNum}: Processing 50 Transactions...`);
+    
+    for (let i = 0; i < numAccounts; i++) {
+        const account = accounts[i];
+        if (round.transactions.find(t => t.id === account.id && t.status !== 'failed')) {
+            // Already processed this account in this round
+            continue;
+        }
+
+        const nextIdx = (i + 1) % numAccounts;
+        const recipientAddr = accounts[nextIdx].address;
+        
+        const nonce = await getNonce(account.address);
+        if (nonce === null) {
+            console.error(`  [Account ${account.id}] ✗ Nonce failure`);
+            continue;
+        }
+    }
   }
 }
