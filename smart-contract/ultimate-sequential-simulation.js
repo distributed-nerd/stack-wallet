@@ -11,3 +11,10 @@ const FEE = 1000n;      // 0.001 STX
 const ACCOUNTS_FILE = './accounts.json';
 const NETWORK = STACKS_MAINNET;
 const RESULTS_FILE = './simulation-persistence.json';
+
+async function getNonce(address) {
+  let attempts = 0;
+  while (attempts < 5) {
+      // Logic placeholder
+  }
+}
