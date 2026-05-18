@@ -142,6 +142,15 @@ async function runSimulation() {
             console.error(`  [Account ${account.id}] ✗ Nonce failure`);
             continue;
         }
+        
+        const result = await sendTransaction(account, recipientAddr, nonce);
+        if (result.status === 'success') {
+            console.log(`  [Account ${account.id}] ✓ ${result.txid === 'mempool' ? 'Already in Mempool' : 'Broadcasted: ' + result.txid}`);
+            round.transactions.push({ id: account.id, txid: result.txid, status: 'broadcasted' });
+        } else {
+            console.error(`  [Account ${account.id}] ✗ Failed: ${result.error}`);
+            round.transactions.push({ id: account.id, error: result.error, status: 'failed' });
+        }
     }
   }
 }
