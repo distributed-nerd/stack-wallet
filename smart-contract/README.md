@@ -84,3 +84,7 @@ Run `node ultimate-sequential-simulation.js` to start.
 ### Robustness
 Features include nonce retries, broadcast loops, and block polling.
 ---
+## Dependencies
+- @stacks/transactions
+- @stacks/network
+- node-fetch
