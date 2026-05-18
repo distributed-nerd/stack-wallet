@@ -180,7 +180,22 @@ async function runSimulation() {
         pollCount++;
         process.stdout.write(`\r  (${pendingCount}/${round.transactions.length} pending... Elapsed: ${pollCount}m)    `);
         await new Promise(r => setTimeout(r, 60000));
+      } else {
+        console.log(`\n\n✓ ALL ROUND ${roundNum} TRANSACTIONS CONFIRMED!`);
+        round.confirmed = true;
+        fs.writeFileSync(RESULTS_FILE, JSON.stringify(state, null, 2));
       }
     }
+    
+    if (roundNum < 2) {
+      console.log(`\nWaiting 30 seconds before next round...`);
+      await new Promise(r => setTimeout(r, 30000));
+    }
   }
+  
+  console.log(`\n==================================================================`);
+  console.log(`SIMULATION FINISHED SUCCESSFULLY!`);
+  console.log(`==================================================================\n`);
 }
+
+runSimulation().catch(console.error);
