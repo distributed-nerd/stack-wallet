@@ -112,4 +112,12 @@ async function runSimulation() {
   console.log(`\n==================================================================`);
   console.log(`ULTIMATE ROBUST SIMULATION: 100 Transactions (2 Rounds)`);
   console.log(`==================================================================\n`);
+  
+  for (let roundNum = 1; roundNum <= 2; roundNum++) {
+    let round = state.rounds.find(r => r.round === roundNum);
+    if (!round) {
+      round = { round: roundNum, transactions: [] };
+      state.rounds.push(round);
+    }
+  }
 }
