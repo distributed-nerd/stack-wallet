@@ -73,3 +73,22 @@ Example contract structure:
   (ok "Hello, Stacks!"))
 ```
 ## Tools
+
+
+# Simulation Persistence
+Tracks the state of sequential token transfers for robust execution.
+## Ultimate Simulation
+A high-reliability script for mass token transfers.
+### Usage
+Run `node ultimate-sequential-simulation.js` to start.
+### Robustness
+Features include nonce retries, broadcast loops, and block polling.
+---
+## Dependencies
+- @stacks/transactions
+- @stacks/network
+- node-fetch
+## Contact
+For automation inquiries, please see the project dashboard.
+
+*Last updated: Mon May 18 03:09:44 PM WAT 2026*
