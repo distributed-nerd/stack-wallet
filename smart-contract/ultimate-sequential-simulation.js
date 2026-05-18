@@ -64,6 +64,14 @@ async function sendTransaction(account, recipientAddr, nonce) {
 
       const transaction = await makeContractCall(txOptions);
       const serializedTx = transaction.serialize();
+      
+      const response = await fetch(`https://api.mainnet.hiro.so/v2/transactions`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/octet-stream' },
+        body: serializedTx
+      });
+
+      const text = await response.text();
       // Logic placeholder
     } catch (e) {
       attempts++;
