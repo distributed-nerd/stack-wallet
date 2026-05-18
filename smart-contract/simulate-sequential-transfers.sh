@@ -115,9 +115,9 @@ run_round() {
     done
 }
 
-# Run 2 rounds for a total of 100 transactions
-run_round 1
-run_round 2
+# Run 2 more rounds for a total of 100 more transactions
+run_round 3
+run_round 4
 
 echo ""
 echo "========================================="
