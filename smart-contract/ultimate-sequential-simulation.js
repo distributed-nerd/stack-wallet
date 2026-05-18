@@ -119,5 +119,12 @@ async function runSimulation() {
       round = { round: roundNum, transactions: [] };
       state.rounds.push(round);
     }
+
+    if (round.confirmed) {
+      console.log(`>>> ROUND ${roundNum} ALREADY CONFIRMED. Skipping.`);
+      continue;
+    }
+
+    console.log(`>>> ROUND ${roundNum}: Processing 50 Transactions...`);
   }
 }
