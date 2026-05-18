@@ -157,5 +157,30 @@ async function runSimulation() {
     }
 
     console.log(`\nRound ${roundNum} broadcast phase complete. Waiting for block confirmations...`);
+    
+    let allConfirmed = false;
+    let pollCount = 0;
+    while (!allConfirmed && pollCount < 120) { // Max 120 mins
+      allConfirmed = true;
+      let pendingCount = 0;
+      
+      for (const tx of round.transactions) {
+        if (tx.status === 'broadcasted' && tx.txid !== 'mempool') {
+          const status = await checkTransactionStatus(tx.txid);
+          if (status === 'success') {
+            tx.status = 'confirmed';
+          } else {
+            allConfirmed = false;
+            pendingCount++;
+          }
+        }
+      }
+      
+      if (!allConfirmed) {
+        pollCount++;
+        process.stdout.write(`\r  (${pendingCount}/${round.transactions.length} pending... Elapsed: ${pollCount}m)    `);
+        await new Promise(r => setTimeout(r, 60000));
+      }
+    }
   }
 }
