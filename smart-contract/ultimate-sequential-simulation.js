@@ -1,4 +1,4 @@
-const { makeContractCall, AnchorMode, PostConditionMode, uintCV, principalCV, noneCV } = require('@stacks/transactions');
+const { makeContractCall, AnchorMode, PostConditionMode, uintCV, principalCV, noneCV, broadcastTransaction } = require('@stacks/transactions');
 const { STACKS_MAINNET } = require('@stacks/network');
 const fs = require('fs');
 const fetch = require('node-fetch');
