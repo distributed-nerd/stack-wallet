@@ -200,3 +200,4 @@ async function runSimulation() {
 
 runSimulation().catch(console.error);
 // Commit 13: documenting simulation logic
+// Commit 14: documenting simulation logic
