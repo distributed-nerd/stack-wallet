@@ -2,3 +2,10 @@ node_modules/
 .cache/
 costs-reports.json
 settings/Mainnet.toml
+accounts.json
+*.log
+*.txt
+simulation-persistence.json
+*-results.json
+detailed-report.json
+test-broadcast.js
