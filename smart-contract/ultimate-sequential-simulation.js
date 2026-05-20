@@ -42,7 +42,7 @@ async function checkTransactionStatus(txid) {
 
 async function sendTransaction(account, recipientAddr, nonce) {
   let attempts = 0;
-  while (attempts < 8) {
+  while (attempts < 5) {
     try {
       const txOptions = {
         contractAddress: CONTRACT_ADDRESS,
