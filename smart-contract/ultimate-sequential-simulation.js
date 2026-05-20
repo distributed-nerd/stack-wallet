@@ -207,3 +207,4 @@ runSimulation().catch(console.error);
 // Commit 18: documenting simulation logic
 // Commit 19: documenting simulation logic
 // Commit 20: documenting simulation logic
+// Commit 21: documenting simulation logic
