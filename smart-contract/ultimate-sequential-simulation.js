@@ -84,7 +84,7 @@ async function sendTransaction(account, recipientAddr, nonce) {
         if (error === 'ConflictingNonceInMempool') {
             return { status: 'success', txid: 'mempool', alreadyInMempool: true };
         }
-        throw new Error(JSON.stringify(error));
+        throw new Error(typeof error === "string" ? error : JSON.stringify(error));
       }
       
       return { status: 'success', txid: broadcastResponse.txid || broadcastResponse };
