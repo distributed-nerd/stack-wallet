@@ -19,7 +19,7 @@ async function test() {
       transactions.principalCV('SP1FPNMWMJR7WT3AH6HMPSEVG0PPSNE7N32ES51K6'),
       transactions.noneCV()
     ],
-    senderKey: '5c25c4bb7119d2e0a6dbb2a50799fe12a6c3a6d2510d47bc8cab6c9b5efa9b6601',
+    senderKey: 'YOUR_PRIVATE_KEY_HERE',
     network: network,
     anchorMode: transactions.AnchorMode.Any,
     fee: 1000n,
