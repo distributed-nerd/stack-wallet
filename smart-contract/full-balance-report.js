@@ -2,7 +2,7 @@ const { getAddressFromPrivateKey, TransactionVersion } = require('@stacks/transa
 const fetch = require('node-fetch');
 const fs = require('fs');
 
-const MASTER_PRIVATE_KEY = '8a51fdd22d780af5859e7406cf6bec0ff32edd6ede9353ab2afb0894b0be29b401';
+const MASTER_PRIVATE_KEY = 'YOUR_MASTER_PRIVATE_KEY_HERE';
 const TOKEN_IDENTIFIER = 'SP1FPNMWMJR7WT3AH6HMPSEVG0PPSNE7N32ES51K6.sip010-token::stack-token';
 
 async function getBalance(address) {
