@@ -23,12 +23,9 @@ yarn-error.log*
 smart-contract/full-transfer-log.txt
 smart-contract/simulation-log.txt
 smart-contract/transfer-tokens-log-final.txt
-*.log
-smart-contract/full-transfer-log.txt
-smart-contract/simulation-log.txt
-smart-contract/transfer-tokens-log-final.txt
-*.log
-smart-contract/full-transfer-log.txt
+smart-contract/simulation-600.log
+smart-contract/sequential-simulation.log
+smart-contract/simulation-600-bash.log
 
 # OS metadata
 .DS_Store
