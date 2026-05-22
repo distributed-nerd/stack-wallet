@@ -115,9 +115,10 @@ run_round() {
     done
 }
 
-# Executing rounds 3 and 4 for continuous simulation
-run_round 3
-run_round 4
+# Executing rounds 5 through 10 for continuous simulation
+for r in {5..10}; do
+    run_round $r
+done
 
 echo ""
 echo "========================================="
