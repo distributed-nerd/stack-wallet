@@ -161,6 +161,7 @@ async function main() {
 
   fs.writeFileSync('./sim-counter-100-v2-results.json', JSON.stringify({
     contract: `${CONTRACT_ADDRESS}.${CONTRACT_NAME}`,
+    fee: FEE.toString(),
     broadcastedAt: new Date().toISOString(),
     accepted: ok.length,
     rejected: fail.length,
