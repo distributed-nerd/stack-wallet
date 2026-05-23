@@ -68,3 +68,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 - Account #1 (SP1WE6P7H5...) was excluded by the min-balance filter (>=25000 uSTX)
 - Round-robin redistributed the spare 2 txs to other funded accounts
 - Preflight balance/nonce loading required retry/backoff on rate-limit text responses
+- Confirmation: 100/100 success, 0 aborts
