@@ -122,3 +122,8 @@ async function main() {
 
   // round-robin assignment of TOTAL_TXS across funded accounts
   // recipient = next account in the FULL accounts array (deterministic neighbor)
+  const plan = [];
+  for (let i = 0; i < TOTAL_TXS; i++) {
+    const acct = funded[i % funded.length];
+    const recipient = accounts[(acct.idx) % accounts.length].address; // neighbor
+    plan.push({ acct, recipient });
