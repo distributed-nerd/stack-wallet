@@ -164,3 +164,7 @@ async function main() {
       to: recipient,
       amount: TRANSFER_AMOUNT.toString(),
       nonce: n.toString(),
+      ...r,
+    });
+    if (r.ok) {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} -> ${recipient.slice(0, 10)} n=${n} -> ${r.txid}`);
