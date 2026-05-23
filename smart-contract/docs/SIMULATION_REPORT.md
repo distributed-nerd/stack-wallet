@@ -92,3 +92,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 
 - Broadcast manifests: sim-counter-100-results.json, sim-counter-100-v2-results.json (gitignored)
 - Confirmation snapshots: sim-counter-100-confirmed.json, sim-counter-100-v2-confirmed.json
+- 200 mainnet contract calls total, 200 successes, 0 aborts
