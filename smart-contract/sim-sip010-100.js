@@ -181,3 +181,7 @@ async function main() {
 
   fs.writeFileSync('./sim-sip010-100-results.json', JSON.stringify({
     contract: `${CONTRACT_ADDRESS}.${CONTRACT_NAME}`,
+    fee: FEE.toString(),
+    transferAmount: TRANSFER_AMOUNT.toString(),
+    broadcastedAt: new Date().toISOString(),
+    accepted: ok.length,
