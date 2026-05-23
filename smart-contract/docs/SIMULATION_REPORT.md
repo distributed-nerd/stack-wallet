@@ -78,3 +78,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 - Broadcasts are globally serialized to avoid in-flight rate-limit collisions
 - Interleaved scheduling: round-robin across accounts, not per-account batched
 - Retry budget: 5 attempts per broadcast, exponential backoff (2s, 4s, 6s, 8s, 10s)
+- Confirmation polling: 30s interval, exits when all txs reach terminal status
