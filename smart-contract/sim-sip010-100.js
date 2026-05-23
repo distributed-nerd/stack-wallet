@@ -106,3 +106,7 @@ async function main() {
     state.push({ ...accounts[i], ...s, idx: i + 1 });
     await new Promise(r => setTimeout(r, 400));
   }
+
+  // require enough STX for >= 2 txs and enough STK to cover them
+  const funded = state.filter(a =>
+    a.stxBalance >= TX_PER_ACCT_CAP_USTX && a.tokenBalance >= TRANSFER_AMOUNT * 2n);
