@@ -58,3 +58,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 - Per-broadcast throttle: 1500 ms (Hiro public API per-minute limit)
 - Broadcast wall-clock: ~150 seconds
 - Confirmation: 100/100 success, 0 aborts
+- All txs confirmed before first poll iteration (single block window)
