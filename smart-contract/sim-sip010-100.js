@@ -142,3 +142,8 @@ async function main() {
   for (const [addr, items] of byAddr.entries()) {
     nonceByAddr.set(addr, items[0].acct.nonce);
   }
+
+  // interleave so we don't broadcast back-to-back from the same sender
+  const perAcctQueues = [...byAddr.values()].map(items => [...items]);
+  const seq = [];
+  while (perAcctQueues.some(q => q.length > 0)) {
