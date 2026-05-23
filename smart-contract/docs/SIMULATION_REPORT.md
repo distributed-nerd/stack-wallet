@@ -45,3 +45,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 
 ### Deployment
 
+- Contract: `SP1FPNMWMJR7WT3AH6HMPSEVG0PPSNE7N32ES51K6.stack-wallet-v2`
