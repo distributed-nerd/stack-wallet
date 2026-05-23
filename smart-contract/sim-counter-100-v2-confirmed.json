@@ -1,0 +1,409 @@
+{
+  "polledAt": "2026-05-23T09:59:04.389Z",
+  "success": 100,
+  "abort": 0,
+  "pending": 0,
+  "other": 0,
+  "states": {
+    "776ded96c9c4cb4f4e62376d26e3478d39548ae4dad6b27f0d54f76b4797a23b": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "d05652d675d4e98778ea3d3fc709f23eb9c8669d30373e55f131984bf0cd04da": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "1e1c60bfb21e8dcc05e14828f6dcc892180a1a029e0bbd813e1cc239ef901a3f": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "f99ae2fc6cdc1e9d27a96e224315a9d2904ce9d72a3bfc5c0ce9dc9fa79a9355": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "1c85c7f1ca42f936ef975d655b2715dff6b4b7355bec4b2cb7f49b946fd96619": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "42c426bb0827f34373c89d6df99f36d103ff6c7df0690c0e00b1cb736d7f65a5": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "43922569076f5e8d7f10383586d6d4611ab2a44082593a2158c48a2b900e9c34": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "b74c8ffc44794dec565be50180780740b4bb0afd058ff9da6110be993fcc7334": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "a49c4e1fe2cf229e8f22c033e9840eaa7f97d68c9ec2261da80a63bfe8ea820a": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "fe02f118d13770cb3c9b129581b1129cf368912ff5c6243bcf117961ac2c71e3": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "d0602fb884eee2dcb2a5bbfce27b12830b98536ccb23391e1166447812efc4e1": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "33db4a19070ea2a82a6ff30acdb4a0b422f5df8d9fe8eaf8fcdd843c2d56017c": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "847ce2c0ccd3d48c0a38d08eb96605b8f15586846e4ccc2b377766c0adf4e96e": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "c6287c10bfefdbedb6f53226fda29f1bb56d9658240dbb7ad551701172e0ee13": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "0c55b12206b5c0c11430485ffb7affe633ff900e49a67f079ea1cd50528156c5": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "62f8f3aeaa564eac0b3fb8cb88eb645b7ff50637caad8ea655ee3ab499bf4978": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "b24d482e573b31f11ce72f8ea24e7bd2bc58d3cfd966fbccf00f83e94122a4f0": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "d45db0f328b6a6250faea905cb20990b270444ae2cf75a7e3d58de0a14ac94e8": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "8229b9cff440239c425b3a9182c84c2dccd7076aa3775ae048c809bdc767d690": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "565604ce18d89b23126c8aabd605f4261b44037155377edff39a8306062c822d": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "58aa61ef29a2b9c009e1c908d893ceb7b425eaeb59e0e41bd5696d572d86109a": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "8cf07352b07c996e9d1a47f9c93bdb0d8afd8b03818315faec4daeecb8bab81b": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "eda52bad8caa95114038a571a643d1cc2c2ca12101631ef54e80d6ecbf82e435": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "de708f47d7c009befcb22127be44d0d1b75bd26346723ec7c0aab1d2037ec3dd": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "588295dcd9ba064e31958f6fee6bfa3c4d11ca2f1b73c98c644436502bde0dbb": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "7253013ed6271bfbea949c959ae229a209201d33ba0a4c63fd2780172f92760f": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "1e4114a266f91f9ca92ea08cf6dd830ebda245e30ce044eab5b491feb1a7792a": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "adbe9908b357a44c0a1d902e09237d9e44b09c0a975657af49733ed722f45db3": {
+      "status": "success",
+      "result": "(ok -4)"
+    },
+    "f95af1cfa2ba7f2d7d5828f99a427668c527f050d54966413fdc6bb9b65bc3c5": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "fd8ddd9a7105c8b452a1140b6fd79e2c6e0a6ed16415634cb8fa47465a0b5ae0": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "2ac04becdc5a422c7645656655d1d1647f23334bd163a45ba71ebd52473d3058": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "c86efede9aeb063b7fc14190277ed898dca4e0f9b1ac58fbf31a852dea1074d0": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "82179c3b24e6efc76a685b672c91fadae191c235874984c0a424ecf6464e696f": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "c934437087a031d5c698d4a6f0f7318bfbd7f5a372e6a0c419d58e24f6a31c2a": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "e559cc3c01edf89217134b7653cda9fefb1e32e5e3c546be8c534b17cc57a230": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "fe5326fe6030485a578a6babfd752e9d9c69e8093037f188febc52a2df326463": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "bb7fe7a06b00cd7db503868ef4c44a9d0c80c7cf2c8acbe2c323df74d706dbf0": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "28c389317a63e4308033ddc6864083e595e468e9ffcf89dede227709d135d103": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "30d2ba476072a0567088dd9d6f93917100896bffc80bf130f5f6c1416ac49f88": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "41e4af0bbea90a7c6a4b88f84423533d2ddd53aa93534691c7e5d10321d88b8a": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "21666a3a6dee303f3679f7e3a4783f4e641e5a92e99f6a5d5719fce49151dd04": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "a8da44997d8a7412abeaccdb17f95b93a5d28f4008edd14176f391a133b07a58": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "cdf303871ac6503f2e1941e859187a82a82eff1879dc2574ae651d97e13a22bf": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "77ca57c253d34bead9121ee193ea28b8990347d4bc039ff749f578d7dc526e53": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "cb87d543d7f72a2e00e3e08af2448ce806a333d5ddc9da3470bef425b0247f75": {
+      "status": "success",
+      "result": "(ok 1)"
+    },
+    "a21be07f641189c4d2f1b7af55bbff1a5271b1c4e52db7af8f1a59f13ac8a40b": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "22502ca3dc486766520b641423f11a2c4c5e54ee28e9e786d2c349cbf94f6f8a": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "9a0365723a9c95e132f2c39764a0684cc0490815ddc25c6673fa41cc1e200b1a": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "65997e324ab4d32c37cbea33fd46031208f7ffa085d395b3f11f359f109b02c5": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "6d1692aa2dfaa8cfa181622e6ef1fa0f834d63f2f38b50a58e801ca190f8bcf2": {
+      "status": "success",
+      "result": "(ok -4)"
+    },
+    "842f480a7738039088642b6a48c0a0042b953d842f218dc02a5053d1582aa9b2": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "74fc79df15230041621bb2e817812527b27e58a8ee5858a62a894ed38d7b5e65": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "21ceba08f943098da718b13321de8d954e238a33fed3e2d1d0b8dd68e82ad16e": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "1f90efde7c9c9418608faf6d0276c6bb71de8e76cc23af5588dbd40aa3a787ae": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "fade197d15fb9d5f69f245c00113329f35c3eb18f25f29a14b243b1939bc5e70": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "9fc04be59370077cd09cd6f44c9f06d1f1b9798beffd699764ff9f07960561a0": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "ba70bc146a3362abf6748ce98b12636fed846c1f22d273218b8b2b36927b0010": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "03ee2877a67456343360b1d6c2c5d31b72b4d1b03fe8b6e7af40b2366235253d": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "8455401d362a29a57040ec1cb59b4f059afdfe8fac0eb8ad0f89ca2daddea4f1": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "1e68407107c2a5e9cd75ee62b9d99b8e42120b7ee5bae75783b5f7d8ff36ec44": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "1f7649c8cd3af2f049debfa9588a1d13e5d4f62727bceeb7d668b1072d31aa3e": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "6dea092632e506bd39cd49789e8d1f992448d5073ae16bd8d55369237d63917e": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "1c46b54888931b3fefe46a8ad88dd89604b8364a2df9f53e625cfd717388a4c3": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "13692dee0c88f06d5625676d10d9affc63067e83c2203dd793afe02604f8850f": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "7bbca4ef3a66a9702074a74c9956491694b9cdc83b6709571bc8691bc0c1b607": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "c91e07a118c5d3550014574a00c0ad0ed948ce76f57959d55033b80d162fdab7": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "46f383d2a3bd5b99fb9b956bc703146e18773eb9283ddf70aa9a0179046115e1": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "69d0fa5d751cb0822b70b252cccd922a5629556f6f876c0cdd1600458f6b69dd": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "1ebe37c9af1c8cd3908c048572fc2a7d22199f5499e8b7f2600aff88d80c52f4": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "0e3267258975e4ec40467b2e65789e874849917a8fc8cc56838d724ebcc137b6": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "18d96fc1d758288967ece3d22cb2dfb57ac8b4c323d7c195f712a72c43dedb18": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "d1b282b411180aa668ebfe05568404843f83cd0f11ab9ef897279d3d89c684de": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "f0116460933a59f857782371cb66da3cd5bc54ee4f9c86edd6169308550f0628": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "2811c70504c911137bc80f264d52485f5465264ccc44010a114d25256c0460f4": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "5ff3e6adbdd6158ad55906812a266e2b79b85e81139a85afb30db8024b55bfae": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "bb15f6cb0d5118ada8739494760252d4dc015c25fc7144d30cadb49e0cd3a413": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "69fdb46b0539a3053bf43dd790595c6371556edbff8e1ad7541dffc37538fe2b": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "238fde5cb1425693fd84568da1c3bc02b87bcdb004110f914518fe6821fb99d9": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "a28a6e52f010e68ed495d2b0970f66fc5797d2dbcdbe36f559e4390a2227ad1e": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "d7e226904c2f51a5e843867c75d28b8fdf93b7e02771c160a9e809f04ff5335c": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "05985e61aa67d5479bd85b5d3444c5e42581dc147a3979835ae19b3f7dc55d2c": {
+      "status": "success",
+      "result": "(ok 1)"
+    },
+    "23bea2c4886852a21a7e991ebbdcb5786ba9d0651df09270ee72e6b306192b6d": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "e7d567d8691992e573ed008866017076b704d5edb09446e3614eee5182e7da87": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "80cca8c7079ca8ef452666e5a9b7b6212b4685db2385551d77ae5845338adc82": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "a5cb196c0fbb5a29f0e9a7e93119fbc2c0062ec8d0de10f8226fd6932f95173d": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "2056d9cb75b5606f8564cca5a2d6c5cac35f9972b59c356f869c0a76e2f55063": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "2f1ff6fef990f0e0e0adf4c8ffbd41ec8f96d611c7e945e6c3de503b17153476": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "346984d6c7424d2e0b32332b879d4a3ed9433e0e204c6a9f7f0cc541437011c9": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "99fa0aaf9191c1c8e0a6dbe07be628d3d41501efa4248aacc165ffb4915f744c": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "db46fbf2fa32b2810f9ebc076ea06068610c63586373a6e499d56e8e6eeb1004": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "9c59d435386ab665f4e6a5ea4e8fee4f73650141266c75d3103f6a905bcb07ca": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "b2e81709ae060b50b02047a004f0832e66a64685844774f45ea3b5e6d3b0512a": {
+      "status": "success",
+      "result": "(ok -3)"
+    },
+    "588c7149afa3246207af1e6034cffc08ad80a9a928ebf507c1c87791114c8a7f": {
+      "status": "success",
+      "result": "(ok -2)"
+    },
+    "6437e631d3f0d6f95f997be132e4af0004fa0c14e20c3c19b5486b64700e5fde": {
+      "status": "success",
+      "result": "(ok -4)"
+    },
+    "4c7874a7e31438ccd16da6b20599ad2b16bbfe106224489bac42fbe283071d94": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "6788c0716bd625462c2648d180cdfd50898a4a71c3b0afa9fa9659d5a726c5fc": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "1a6b995372d642f22aea0a5f9f7e310254e94a3c7fad961e66ed18252b7ab4f7": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "317307226ed8187c64e5698f7b70850ef4574e06abcd95f4bf8c26621bd7ac4c": {
+      "status": "success",
+      "result": "(ok -1)"
+    },
+    "8aa5817c32b845395627fee1d45840dade1f4cbc379ce68862e9ee2d22142a97": {
+      "status": "success",
+      "result": "(ok 0)"
+    },
+    "24fa02813aa9dad6b89a5ed0e03ea03986256441429e173091ad265f46ee3928": {
+      "status": "success",
+      "result": "(ok -2)"
+    }
+  }
+}
