@@ -69,3 +69,7 @@ async function broadcastTransfer(account, recipient, nonce) {
     ],
     senderKey: account.privateKey,
     network: STACKS_MAINNET,
+    anchorMode: AnchorMode.Any,
+    postConditionMode: PostConditionMode.Allow,
+    fee: FEE,
+    nonce,
