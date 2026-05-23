@@ -64,3 +64,8 @@ async function broadcastTransfer(account, recipient, nonce) {
     functionArgs: [
       uintCV(TRANSFER_AMOUNT),
       principalCV(account.address),
+      principalCV(recipient),
+      noneCV(),
+    ],
+    senderKey: account.privateKey,
+    network: STACKS_MAINNET,
