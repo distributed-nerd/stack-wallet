@@ -62,3 +62,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 - Total fee paid in batch 1: 0.1 STX
 
 ### Batch 2 (fee 10000 uSTX = 0.01 STX per tx)
+
