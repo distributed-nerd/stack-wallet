@@ -38,3 +38,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 1. Derived master address from private key.
 2. Queried Hiro Mainnet API for STX and SIP-010 token balances.
 3. Aggregated results for all 50 accounts listed in `accounts.json`.
+
