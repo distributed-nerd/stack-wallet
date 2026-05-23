@@ -176,3 +176,8 @@ async function main() {
   }
 
   const ok = results.filter(r => r.ok);
+  const fail = results.filter(r => !r.ok);
+  console.log(`\n=== Broadcast complete: ${ok.length} accepted, ${fail.length} rejected ===`);
+
+  fs.writeFileSync('./sim-sip010-100-results.json', JSON.stringify({
+    contract: `${CONTRACT_ADDRESS}.${CONTRACT_NAME}`,
