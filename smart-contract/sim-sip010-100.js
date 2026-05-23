@@ -118,3 +118,7 @@ async function main() {
   if (funded.length === 0) {
     console.error('No eligible accounts.');
     process.exit(1);
+  }
+
+  // round-robin assignment of TOTAL_TXS across funded accounts
+  // recipient = next account in the FULL accounts array (deterministic neighbor)
