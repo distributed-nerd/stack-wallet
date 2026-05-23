@@ -189,3 +189,6 @@ async function main() {
     results,
   }, null, 2));
   console.log('Results saved to sim-sip010-100-results.json');
+}
+
+main().catch(err => { console.error('Fatal:', err); process.exit(1); });
