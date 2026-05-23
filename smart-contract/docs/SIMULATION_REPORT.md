@@ -66,3 +66,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 - Total broadcast: 100, same distribution as batch 1
 - Higher fee allows ~10x faster mempool acceptance under congestion
 - Account #1 (SP1WE6P7H5...) was excluded by the min-balance filter (>=25000 uSTX)
+- Round-robin redistributed the spare 2 txs to other funded accounts
