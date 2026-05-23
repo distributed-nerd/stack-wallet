@@ -63,3 +63,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 
 ### Batch 2 (fee 10000 uSTX = 0.01 STX per tx)
 
+- Total broadcast: 100, same distribution as batch 1
