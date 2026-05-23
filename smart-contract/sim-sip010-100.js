@@ -127,3 +127,7 @@ async function main() {
     const acct = funded[i % funded.length];
     const recipient = accounts[(acct.idx) % accounts.length].address; // neighbor
     plan.push({ acct, recipient });
+  }
+
+  // group by sender, assign sequential nonces
+  const byAddr = new Map();
