@@ -94,3 +94,5 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 - Confirmation snapshots: sim-counter-100-confirmed.json, sim-counter-100-v2-confirmed.json
 - 200 mainnet contract calls total, 200 successes, 0 aborts
 - Combined fees: 1.1 STX paid across 50 simulation accounts to one contract
+
+_End of counter sim batch report (2026-05-23)._
