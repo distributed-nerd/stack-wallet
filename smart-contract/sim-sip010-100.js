@@ -160,3 +160,7 @@ async function main() {
     const r = await broadcastTransfer(acct, recipient, n);
     results.push({
       acctIdx: acct.idx,
+      from: acct.address,
+      to: recipient,
+      amount: TRANSFER_AMOUNT.toString(),
+      nonce: n.toString(),
