@@ -83,3 +83,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 ### Observations
 
 - The Hiro public API returns plain text rate-limit messages ('Per-minute ...')
+- The stacks.js broadcastTransaction crashes on those because it assumes JSON
