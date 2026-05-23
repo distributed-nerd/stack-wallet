@@ -54,3 +54,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 ### Batch 1 (fee 1000 uSTX = 0.001 STX per tx)
 
 - Total broadcast: 100 (50 increments + 50 decrements)
+- Distribution: 2 transactions per account across all 50 accounts
