@@ -131,3 +131,7 @@ async function main() {
 
   // group by sender, assign sequential nonces
   const byAddr = new Map();
+  for (const item of plan) {
+    if (!byAddr.has(item.acct.address)) byAddr.set(item.acct.address, []);
+    byAddr.get(item.acct.address).push(item);
+  }
