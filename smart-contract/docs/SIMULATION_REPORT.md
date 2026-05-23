@@ -73,3 +73,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 
 ### Methodology
 
+- Nonces are fetched once at startup via /extended/v1/address/:addr/nonces
