@@ -49,3 +49,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 - Deploy txid: `90573d8586602292f3be9886c9b65cdb73a856e5377fa36c01585f7057b328c9`
 - Deploy nonce: 322, fee: 15000 uSTX (mempool min was 11157)
 - Source size: 11020 bytes
+- sip010-trait was already deployed at the master address; deploy script skipped that step.
