@@ -52,3 +52,6 @@ async function getState(address) {
   return {
     stxBalance: parseInt(b.stx?.balance ?? '0'),
     tokenBalance: BigInt(b.fungible_tokens?.[TOKEN_ID]?.balance ?? '0'),
+    nonce: BigInt(n.possible_next_nonce ?? 0),
+  };
+}
