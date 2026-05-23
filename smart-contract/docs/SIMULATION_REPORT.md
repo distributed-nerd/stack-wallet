@@ -77,3 +77,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 - Per-account nonces are assigned sequentially (n, n+1, n+2, ...)
 - Broadcasts are globally serialized to avoid in-flight rate-limit collisions
 - Interleaved scheduling: round-robin across accounts, not per-account batched
+- Retry budget: 5 attempts per broadcast, exponential backoff (2s, 4s, 6s, 8s, 10s)
