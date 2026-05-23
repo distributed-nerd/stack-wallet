@@ -73,3 +73,7 @@ async function broadcastTransfer(account, recipient, nonce) {
     postConditionMode: PostConditionMode.Allow,
     fee: FEE,
     nonce,
+  };
+  const tx = await makeContractCall(txOptions);
+  let lastErr;
+  for (let attempt = 0; attempt < 5; attempt++) {
