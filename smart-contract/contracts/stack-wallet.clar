@@ -21,6 +21,7 @@
 ;; data vars
 (define-data-var wallet-nonce uint u0)
 (define-data-var proposal-nonce uint u0)
+(define-data-var counter int 0)
 
 ;; role constants
 (define-constant role-owner u1)
@@ -255,7 +256,21 @@
       (merge target-member { active: false, spending-limit: u0 }))
     (ok true)))
 
+;; simple counter functions
+(define-public (increment)
+  (begin
+    (var-set counter (+ (var-get counter) 1))
+    (ok (var-get counter))))
+
+(define-public (decrement)
+  (begin
+    (var-set counter (- (var-get counter) 1))
+    (ok (var-get counter))))
+
 ;; read-only functions
+
+(define-read-only (get-counter)
+  (ok (var-get counter)))
 
 (define-read-only (get-wallet (wallet-id uint))
   (ok (map-get? wallets wallet-id)))
