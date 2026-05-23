@@ -56,3 +56,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 - Total broadcast: 100 (50 increments + 50 decrements)
 - Distribution: 2 transactions per account across all 50 accounts
 - Per-broadcast throttle: 1500 ms (Hiro public API per-minute limit)
+- Broadcast wall-clock: ~150 seconds
