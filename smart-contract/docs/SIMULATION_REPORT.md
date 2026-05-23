@@ -50,3 +50,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 - Deploy nonce: 322, fee: 15000 uSTX (mempool min was 11157)
 - Source size: 11020 bytes
 - sip010-trait was already deployed at the master address; deploy script skipped that step.
+
