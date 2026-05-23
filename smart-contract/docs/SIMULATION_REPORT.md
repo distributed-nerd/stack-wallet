@@ -86,3 +86,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 - The stacks.js broadcastTransaction crashes on those because it assumes JSON
 - Mitigation: a fetchJsonWithRetry helper that distinguishes JSON parse errors from 429s
 - Counter net change should be zero (equal increments and decrements per batch)
+- Counter value is recoverable via the get-counter read-only function
