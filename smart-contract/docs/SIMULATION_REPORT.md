@@ -47,3 +47,4 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 
 - Contract: `SP1FPNMWMJR7WT3AH6HMPSEVG0PPSNE7N32ES51K6.stack-wallet-v2`
 - Deploy txid: `90573d8586602292f3be9886c9b65cdb73a856e5377fa36c01585f7057b328c9`
+- Deploy nonce: 322, fee: 15000 uSTX (mempool min was 11157)
