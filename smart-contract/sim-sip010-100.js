@@ -31,3 +31,7 @@ async function fetchJsonWithRetry(url, attempts = 6) {
       if (r.status === 429) {
         await new Promise(r => setTimeout(r, 5000 * (i + 1)));
         continue;
+      }
+      const text = await r.text();
+      try { return JSON.parse(text); }
+      catch (e) {
