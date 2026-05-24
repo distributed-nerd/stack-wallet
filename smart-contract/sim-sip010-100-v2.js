@@ -66,3 +66,12 @@ async function broadcastTransfer(account, recipient, nonce) {
       principalCV(account.address),
       principalCV(recipient),
       noneCV(),
+    ],
+    senderKey: account.privateKey,
+    network: STACKS_MAINNET,
+    anchorMode: AnchorMode.Any,
+    postConditionMode: PostConditionMode.Allow,
+    fee: FEE,
+    nonce,
+  };
+  const tx = await makeContractCall(txOptions);
