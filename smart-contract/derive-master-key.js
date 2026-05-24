@@ -8,3 +8,14 @@ async function main() {
   if (!mnemonic) {
     console.error('MASTER_MNEMONIC env var is required');
     process.exit(1);
+  }
+
+  const wallet = await generateWallet({ secretKey: mnemonic, password: '' });
+  const account = wallet.accounts[0];
+  const stxPrivateKey = account.stxPrivateKey;
+  const address = privateKeyToAddress(stxPrivateKey, 'mainnet');
+
+  console.log(JSON.stringify({ address, stxPrivateKey }));
+}
+
+main().catch((e) => { console.error(e); process.exit(1); });
