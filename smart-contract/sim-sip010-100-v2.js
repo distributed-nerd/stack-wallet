@@ -49,3 +49,12 @@ async function getState(address) {
   const b = await fetchJsonWithRetry(`${API}/extended/v1/address/${address}/balances`);
   await new Promise(r => setTimeout(r, 200));
   const n = await fetchJsonWithRetry(`${API}/extended/v1/address/${address}/nonces`);
+  return {
+    stxBalance: parseInt(b.stx?.balance ?? '0'),
+    tokenBalance: BigInt(b.fungible_tokens?.[TOKEN_ID]?.balance ?? '0'),
+    nonce: BigInt(n.possible_next_nonce ?? 0),
+  };
+}
+
+async function broadcastTransfer(account, recipient, nonce) {
+  const txOptions = {
