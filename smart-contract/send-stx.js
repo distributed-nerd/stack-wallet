@@ -33,7 +33,7 @@ async function sendSTX() {
       };
       
       const transaction = await makeSTXTokenTransfer(txOptions);
-      const broadcastResponse = await broadcastTransaction(transaction, stacksNetwork);
+      const broadcastResponse = await broadcastTransaction({ transaction, network: stacksNetwork });
       
       console.log(`✓ Account ${account.id}: ${account.address}`);
       console.log(`  TxID: ${broadcastResponse.txid}`);
