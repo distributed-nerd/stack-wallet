@@ -3,9 +3,9 @@ const { StacksMainnet } = require('@stacks/network');
 const fs = require('fs');
 
 const MASTER_PRIVATE_KEY = ''; // YOUR_MASTER_PRIVATE_KEY_HERE
-const AMOUNT_MICROSTX = 100000; // 0.1 STX
-const FEE_MICROSTX = 1000; // 0.001 STX fee per transaction
-const STARTING_NONCE = 10; // Current nonce from blockchain
+const AMOUNT_MICROSTX = 200000; // 0.2 STX
+const FEE_MICROSTX = 10000; // 0.01 STX fee per transaction
+const STARTING_NONCE = 323; // Current nonce from blockchain
 
 async function sendSTX() {
   // Read generated accounts
@@ -14,7 +14,7 @@ async function sendSTX() {
   const stacksNetwork = new StacksMainnet();
   const results = [];
   
-  console.log(`Sending 0.1 STX to ${accounts.length} accounts...`);
+  console.log(`Sending 0.2 STX to ${accounts.length} accounts...`);
   console.log(`Starting nonce: ${STARTING_NONCE}`);
   console.log(`Total cost: ${(accounts.length * (AMOUNT_MICROSTX + FEE_MICROSTX)) / 1000000} STX\n`);
   
