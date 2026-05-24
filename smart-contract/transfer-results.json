@@ -2,62 +2,72 @@
   {
     "account": 1,
     "address": "SP1WE6P7H5EGPESARYHVF8NZ6KG0884A3Q8VXG0P1",
-    "error": "Cannot read properties of undefined (reading 'serialize')",
-    "status": "failed"
+    "nonce": "323",
+    "txid": "8af305df2b96af3ca78c7ba8cc5cea34095c90b1a0f582e4f5150534f32c560e",
+    "status": "success"
   },
   {
     "account": 2,
     "address": "SP2DTV4BG951T04XSTN1Z0NJFHTXYMSYQGCYM04WP",
-    "error": "Cannot read properties of undefined (reading 'serialize')",
-    "status": "failed"
+    "nonce": "324",
+    "txid": "4eac89bae4405ee41d20d10adce28929ed95f9da94be68fd92297dedbc4aac80",
+    "status": "success"
   },
   {
     "account": 3,
     "address": "SPX73N9AE31KS2HYFSXKXX9BC1BJCMPVY4WKH2G6",
-    "error": "Cannot read properties of undefined (reading 'serialize')",
-    "status": "failed"
+    "nonce": "325",
+    "txid": "919c8e0da3d5a27a22f61be0be622f799bced8380b446a67decaecf3fcc9828f",
+    "status": "success"
   },
   {
     "account": 4,
     "address": "SP1WDQHEA0M1TJTWYJ13NBNV4JSCAVGT2BVJY9MQV",
-    "error": "Cannot read properties of undefined (reading 'serialize')",
-    "status": "failed"
+    "nonce": "326",
+    "txid": "103cb421e538766b7c55260a8ce15766334658a0dedb51d847cae24696a5473a",
+    "status": "success"
   },
   {
     "account": 5,
     "address": "SP3F96WZ9N4T04A3DR8PQ00WH339BEBNTSZ3S7R9N",
-    "error": "Cannot read properties of undefined (reading 'serialize')",
-    "status": "failed"
+    "nonce": "327",
+    "txid": "1ebdc1f1da94ce4c1813a7570b7533b28103b297087605b67264d3a536e211b8",
+    "status": "success"
   },
   {
     "account": 6,
     "address": "SP3KF8Y4AZ6P1JH3YBY5Y4RN6A9YMCDBGW2R395W9",
-    "error": "Cannot read properties of undefined (reading 'serialize')",
-    "status": "failed"
+    "nonce": "328",
+    "txid": "18851db6d48748d7bfc4e0ab51b1e116477941c7cebb386a94a8d33f680d23da",
+    "status": "success"
   },
   {
     "account": 7,
     "address": "SP1FS3YRS8GXT6K7H6549K771HGA3ENXPM8FFFVJK",
-    "error": "Cannot read properties of undefined (reading 'serialize')",
-    "status": "failed"
+    "nonce": "329",
+    "txid": "3cdedc0ec0d966a273cf009594999409620105e0d0774b75cc14c1ad13b633fb",
+    "status": "success"
   },
   {
     "account": 8,
     "address": "SP3CT0VE7P8E6R44M4MCDS53MNNGZ27XR6YRP6XE6",
-    "error": "Cannot read properties of undefined (reading 'serialize')",
-    "status": "failed"
+    "nonce": "330",
+    "txid": "6813534264ba8244b743b403e5f7cb673fb005a7012ad8d045d721a4c9a7de14",
+    "status": "success"
   },
   {
     "account": 9,
     "address": "SP2090PYYDDN3YE0W84HAQ6VH0YHRX9G325F6SJ3D",
-    "error": "Cannot read properties of undefined (reading 'serialize')",
-    "status": "failed"
+    "nonce": "331",
+    "txid": "b8b89437bbfff7ca3258523dcfd25b04baf28cb9063a3037f0517bab8c227ce8",
+    "status": "success"
   },
   {
     "account": 10,
     "address": "SP07R282NJDMDXNKSH5JQHP58HBGSYMGY694Q15E",
-    "error": "Cannot read properties of undefined (reading 'serialize')",
-    "status": "failed"
+    "nonce": "332",
+    "txid": "b045a6f52c1f99e3a169d535a7b129cd9dd3a0b6e84123cbbb2cd01401d529b4",
+    "status": "success"
   },
   {
     "account": 11,
