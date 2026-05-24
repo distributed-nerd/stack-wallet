@@ -161,3 +161,11 @@ async function main() {
       nonce: n.toString(),
       ...r,
     });
+    if (r.ok) {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} -> ${recipient.slice(0, 10)} n=${n} -> ${r.txid}`);
+    } else {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} -> ${recipient.slice(0, 10)} n=${n} -> FAIL ${r.error}`);
+    }
+    nonceByAddr.set(acct.address, n + 1n);
+    await new Promise(r => setTimeout(r, INTERVAL_MS));
+  }
