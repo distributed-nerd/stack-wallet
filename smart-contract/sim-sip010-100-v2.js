@@ -58,3 +58,11 @@ async function getState(address) {
 
 async function broadcastTransfer(account, recipient, nonce) {
   const txOptions = {
+    contractAddress: CONTRACT_ADDRESS,
+    contractName: CONTRACT_NAME,
+    functionName: 'transfer',
+    functionArgs: [
+      uintCV(TRANSFER_AMOUNT),
+      principalCV(account.address),
+      principalCV(recipient),
+      noneCV(),
