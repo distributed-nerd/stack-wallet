@@ -109,3 +109,12 @@ async function main() {
 
   const funded = state.filter(a =>
     a.stxBalance >= TX_PER_ACCT_CAP_USTX && a.tokenBalance >= TRANSFER_AMOUNT * 2n);
+  console.log(`Eligible accounts (>= ${TX_PER_ACCT_CAP_USTX} uSTX and >= ${TRANSFER_AMOUNT * 2n} micro-STK): ${funded.length}/${accounts.length}`);
+  const skipped = state.filter(a => !funded.includes(a));
+  for (const a of skipped) {
+    console.log(`  skip #${a.idx} ${a.address.slice(0, 10)} stx=${a.stxBalance} stk=${a.tokenBalance.toString()}`);
+  }
+  if (funded.length === 0) {
+    console.error('No eligible accounts.');
+    process.exit(1);
+  }
