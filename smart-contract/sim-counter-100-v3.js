@@ -125,3 +125,13 @@ async function main() {
     for (const q of perAcctQueues) {
       if (q.length) seq.push(q.shift());
     }
+  }
+
+  const results = [];
+  const INTERVAL_MS = 1500;
+  for (let i = 0; i < seq.length; i++) {
+    const { acct, fnName } = seq[i];
+    const n = nonceByAddr.get(acct.address);
+    const r = await broadcastOne(acct, fnName, n);
+    results.push({
+      acctIdx: acct.idx,
