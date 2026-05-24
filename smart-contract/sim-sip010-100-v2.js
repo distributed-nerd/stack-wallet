@@ -23,3 +23,12 @@ const TX_PER_ACCT_CAP_USTX = 2000;  // need 2x fee per account
 const API = 'https://api.hiro.so';
 
 const accounts = JSON.parse(fs.readFileSync('./accounts.json', 'utf8'));
+
+async function fetchJsonWithRetry(url, attempts = 6) {
+  for (let i = 0; i < attempts; i++) {
+    try {
+      const r = await fetch(url);
+      if (r.status === 429) {
+        await new Promise(r => setTimeout(r, 5000 * (i + 1)));
+        continue;
+      }
