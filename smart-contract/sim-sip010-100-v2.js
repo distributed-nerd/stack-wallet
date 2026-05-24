@@ -101,3 +101,11 @@ async function main() {
   console.log(`Loading balances/nonces for ${accounts.length} accounts...`);
 
   const state = [];
+  for (let i = 0; i < accounts.length; i++) {
+    const s = await getState(accounts[i].address);
+    state.push({ ...accounts[i], ...s, idx: i + 1 });
+    await new Promise(r => setTimeout(r, 400));
+  }
+
+  const funded = state.filter(a =>
+    a.stxBalance >= TX_PER_ACCT_CAP_USTX && a.tokenBalance >= TRANSFER_AMOUNT * 2n);
