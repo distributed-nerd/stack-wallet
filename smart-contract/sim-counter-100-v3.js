@@ -37,3 +37,13 @@ async function fetchJsonWithRetry(url, attempts = 6) {
 
 async function getBalanceAndNonce(address) {
   const b = await fetchJsonWithRetry(`${API}/extended/v1/address/${address}/balances`);
+  await new Promise(r => setTimeout(r, 200));
+  const n = await fetchJsonWithRetry(`${API}/extended/v1/address/${address}/nonces`);
+  return {
+    balance: parseInt(b.stx?.balance ?? '0'),
+    nonce: BigInt(n.possible_next_nonce ?? 0),
+  };
+}
+
+async function broadcastOne(account, fnName, nonce) {
+  const txOptions = {
