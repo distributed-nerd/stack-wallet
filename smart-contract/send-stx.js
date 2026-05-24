@@ -1,5 +1,5 @@
 const { makeSTXTokenTransfer, broadcastTransaction, AnchorMode } = require('@stacks/transactions');
-const { StacksMainnet } = require('@stacks/network');
+const { STACKS_MAINNET } = require('@stacks/network');
 const fs = require('fs');
 
 const MASTER_PRIVATE_KEY = ''; // YOUR_MASTER_PRIVATE_KEY_HERE
@@ -11,7 +11,7 @@ async function sendSTX() {
   // Read generated accounts
   const accounts = JSON.parse(fs.readFileSync('./accounts.json', 'utf8'));
   
-  const stacksNetwork = new StacksMainnet();
+  const stacksNetwork = STACKS_MAINNET;
   const results = [];
   
   console.log(`Sending 0.2 STX to ${accounts.length} accounts...`);
