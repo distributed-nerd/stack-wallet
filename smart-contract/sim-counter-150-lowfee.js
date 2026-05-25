@@ -103,3 +103,18 @@ async function main() {
   for (let i = 0; i < TOTAL_TXS; i++) {
     const acct = funded[i % funded.length];
     const fnName = i % 2 === 0 ? 'increment' : 'decrement';
+    plan.push({ acct, fnName });
+  }
+
+  const byAddr = new Map();
+  for (const item of plan) {
+    if (!byAddr.has(item.acct.address)) byAddr.set(item.acct.address, []);
+    byAddr.get(item.acct.address).push(item);
+  }
+
+  console.log(`Plan: ${plan.length} txs across ${byAddr.size} accounts.`);
+  console.log(`Per-account loads: ${[...byAddr.values()].map(v => v.length).join(',')}`);
+
+  const nonceByAddr = new Map();
+  for (const [addr, items] of byAddr.entries()) {
+    nonceByAddr.set(addr, items[0].acct.nonce);
