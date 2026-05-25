@@ -133,3 +133,18 @@ async function main() {
   for (let i = 0; i < seq.length; i++) {
     const { acct, fnName } = seq[i];
     const n = nonceByAddr.get(acct.address);
+    const r = await broadcastOne(acct, fnName, n);
+    results.push({
+      acctIdx: acct.idx,
+      address: acct.address,
+      fn: fnName,
+      nonce: n.toString(),
+      ...r,
+    });
+    if (r.ok) {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} ${fnName} n=${n} -> ${r.txid}`);
+    } else {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} ${fnName} n=${n} -> FAIL ${r.error}`);
+    }
+    nonceByAddr.set(acct.address, n + 1n);
+    await new Promise(r => setTimeout(r, INTERVAL_MS));
