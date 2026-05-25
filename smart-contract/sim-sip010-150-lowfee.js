@@ -178,3 +178,15 @@ async function main() {
 
   fs.writeFileSync('./sim-sip010-150-lowfee-results.json', JSON.stringify({
     contract: `${CONTRACT_ADDRESS}.${CONTRACT_NAME}`,
+    fee: FEE.toString(),
+    transferAmount: TRANSFER_AMOUNT.toString(),
+    totalTxs: TOTAL_TXS,
+    broadcastedAt: new Date().toISOString(),
+    accepted: ok.length,
+    rejected: fail.length,
+    results,
+  }, null, 2));
+  console.log('Results saved to sim-sip010-150-lowfee-results.json');
+}
+
+main().catch(err => { console.error('Fatal:', err); process.exit(1); });
