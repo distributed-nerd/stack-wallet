@@ -163,3 +163,7 @@ async function main() {
     rejected: fail.length,
     results,
   }, null, 2));
+  console.log('Results saved to sim-counter-150-results.json');
+}
+
+main().catch(err => { console.error('Fatal:', err); process.exit(1); });
