@@ -73,3 +73,18 @@ async function broadcastOne(account, fnName, nonce) {
       const rateLimited = msg.includes('Per-minute') || msg.includes('429') || msg.includes('rate');
       if (!rateLimited && attempt > 0) break;
       const backoff = 2000 * (attempt + 1);
+      await new Promise(r => setTimeout(r, backoff));
+    }
+  }
+  return { ok: false, error: `broadcast threw: ${String(lastErr?.message || lastErr)}` };
+}
+
+async function main() {
+  console.log(`Contract: ${CONTRACT_ADDRESS}.${CONTRACT_NAME}`);
+  console.log(`Fee per tx: ${FEE} uSTX (${Number(FEE) / 1_000_000} STX)`);
+  console.log(`Target: ${TOTAL_TXS} txs (increment/decrement) across ${accounts.length} accounts`);
+  console.log(`Loading balances/nonces for ${accounts.length} accounts...`);
+
+  const accountState = [];
+  for (let i = 0; i < accounts.length; i++) {
+    const s = await getBalanceAndNonce(accounts[i].address);
