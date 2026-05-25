@@ -88,3 +88,18 @@ async function main() {
   const accountState = [];
   for (let i = 0; i < accounts.length; i++) {
     const s = await getBalanceAndNonce(accounts[i].address);
+    accountState.push({ ...accounts[i], ...s, idx: i + 1 });
+    await new Promise(r => setTimeout(r, 400));
+  }
+
+  const funded = accountState.filter(a => a.balance >= MIN_BALANCE_USTX);
+  console.log(`Funded accounts (>= ${MIN_BALANCE_USTX} uSTX): ${funded.length} / ${accounts.length}`);
+  if (funded.length === 0) {
+    console.error('No funded accounts available.');
+    process.exit(1);
+  }
+
+  const plan = [];
+  for (let i = 0; i < TOTAL_TXS; i++) {
+    const acct = funded[i % funded.length];
+    const fnName = i % 2 === 0 ? 'increment' : 'decrement';
