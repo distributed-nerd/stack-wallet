@@ -27,3 +27,12 @@ async function fetchJsonWithRetry(url, attempts = 6) {
       catch (e) {
         await new Promise(r => setTimeout(r, 5000 * (i + 1)));
         continue;
+      }
+    } catch (e) {
+      await new Promise(r => setTimeout(r, 3000 * (i + 1)));
+    }
+  }
+  throw new Error('fetchJsonWithRetry exhausted: ' + url);
+}
+
+async function getBalanceAndNonce(address) {
