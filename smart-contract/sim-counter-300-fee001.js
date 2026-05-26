@@ -134,3 +134,8 @@ async function main() {
     const { acct, fnName } = seq[i];
     const n = nonceByAddr.get(acct.address);
     const r = await broadcastOne(acct, fnName, n);
+    results.push({
+      acctIdx: acct.idx,
+      address: acct.address,
+      fn: fnName,
+      nonce: n.toString(),
