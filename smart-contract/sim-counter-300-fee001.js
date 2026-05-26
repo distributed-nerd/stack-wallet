@@ -44,3 +44,8 @@ async function getBalanceAndNonce(address) {
     nonce: BigInt(n.possible_next_nonce ?? 0),
   };
 }
+
+async function broadcastOne(account, fnName, nonce) {
+  const txOptions = {
+    contractAddress: CONTRACT_ADDRESS,
+    contractName: CONTRACT_NAME,
