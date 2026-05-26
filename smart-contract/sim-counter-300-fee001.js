@@ -94,3 +94,9 @@ async function main() {
 
   const funded = accountState.filter(a => a.balance >= MIN_BALANCE_USTX);
   console.log(`Funded accounts (>= ${MIN_BALANCE_USTX} uSTX): ${funded.length} / ${accounts.length}`);
+  if (funded.length === 0) {
+    console.error('No funded accounts available.');
+    process.exit(1);
+  }
+
+  const plan = [];
