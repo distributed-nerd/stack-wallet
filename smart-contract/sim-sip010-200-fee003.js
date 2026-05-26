@@ -157,3 +157,14 @@ async function main() {
     const r = await broadcastTransfer(acct, recipient, n);
     results.push({
       acctIdx: acct.idx,
+      from: acct.address,
+      to: recipient,
+      amount: TRANSFER_AMOUNT.toString(),
+      nonce: n.toString(),
+      ...r,
+    });
+    if (r.ok) {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} -> ${recipient.slice(0, 10)} n=${n} -> ${r.txid}`);
+    } else {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} -> ${recipient.slice(0, 10)} n=${n} -> FAIL ${r.error}`);
+    }
