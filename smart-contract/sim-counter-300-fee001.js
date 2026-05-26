@@ -117,3 +117,8 @@ async function main() {
 
   const nonceByAddr = new Map();
   for (const [addr, items] of byAddr.entries()) {
+    nonceByAddr.set(addr, items[0].acct.nonce);
+  }
+
+  const seq = [];
+  const perAcctQueues = [...byAddr.values()].map(items => [...items]);
