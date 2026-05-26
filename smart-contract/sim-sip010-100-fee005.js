@@ -78,3 +78,14 @@ async function broadcastTransfer(account, recipient, nonce) {
   const tx = await makeContractCall(txOptions);
   let lastErr;
   for (let attempt = 0; attempt < 5; attempt++) {
+    try {
+      const result = await broadcastTransaction({ transaction: tx, network: STACKS_MAINNET });
+      if (result.error) {
+        return { ok: false, error: `${result.error}: ${result.reason}`, detail: result.reason_data };
+      }
+      return { ok: true, txid: typeof result === 'string' ? result : result.txid };
+    } catch (e) {
+      lastErr = e;
+      const msg = String(e?.cause?.message || e?.message || e);
+      const rateLimited = msg.includes('Per-minute') || msg.includes('429') || msg.includes('rate');
+      if (!rateLimited && attempt > 0) break;
