@@ -55,3 +55,8 @@ async function broadcastOne(account, fnName, nonce) {
     network: STACKS_MAINNET,
     anchorMode: AnchorMode.Any,
     postConditionMode: PostConditionMode.Allow,
+    fee: FEE,
+    nonce,
+  };
+  const tx = await makeContractCall(txOptions);
+  let lastErr;
