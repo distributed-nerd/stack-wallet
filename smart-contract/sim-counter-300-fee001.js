@@ -60,3 +60,9 @@ async function broadcastOne(account, fnName, nonce) {
   };
   const tx = await makeContractCall(txOptions);
   let lastErr;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
+      const result = await broadcastTransaction({ transaction: tx, network: STACKS_MAINNET });
+      if (result.error) {
+        return { ok: false, error: `${result.error}: ${result.reason}`, detail: result.reason_data };
+      }
