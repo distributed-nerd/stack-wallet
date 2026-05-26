@@ -72,3 +72,8 @@ async function broadcastOne(account, fnName, nonce) {
       const msg = String(e?.cause?.message || e?.message || e);
       const rateLimited = msg.includes('Per-minute') || msg.includes('429') || msg.includes('rate');
       if (!rateLimited && attempt > 0) break;
+      const backoff = 2000 * (attempt + 1);
+      await new Promise(r => setTimeout(r, backoff));
+    }
+  }
+  return { ok: false, error: `broadcast threw: ${String(lastErr?.message || lastErr)}` };
