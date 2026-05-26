@@ -145,3 +145,9 @@ async function main() {
       console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} ${fnName} n=${n} -> ${r.txid}`);
     } else {
       console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} ${fnName} n=${n} -> FAIL ${r.error}`);
+    }
+    nonceByAddr.set(acct.address, n + 1n);
+    await new Promise(r => setTimeout(r, INTERVAL_MS));
+  }
+
+  const ok = results.filter(r => r.ok);
