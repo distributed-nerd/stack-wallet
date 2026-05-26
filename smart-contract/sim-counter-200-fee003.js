@@ -83,3 +83,12 @@ async function main() {
   console.log(`Contract: ${CONTRACT_ADDRESS}.${CONTRACT_NAME}`);
   console.log(`Fee per tx: ${FEE} uSTX (${Number(FEE) / 1_000_000} STX)`);
   console.log(`Target: ${TOTAL_TXS} txs (increment/decrement) across ${accounts.length} accounts`);
+  console.log(`Loading balances/nonces for ${accounts.length} accounts...`);
+
+  const accountState = [];
+  for (let i = 0; i < accounts.length; i++) {
+    const s = await getBalanceAndNonce(accounts[i].address);
+    accountState.push({ ...accounts[i], ...s, idx: i + 1 });
+    await new Promise(r => setTimeout(r, 400));
+  }
+
