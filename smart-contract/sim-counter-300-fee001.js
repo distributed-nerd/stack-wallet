@@ -32,3 +32,9 @@ async function fetchJsonWithRetry(url, attempts = 6) {
       await new Promise(r => setTimeout(r, 3000 * (i + 1)));
     }
   }
+  throw new Error('fetchJsonWithRetry exhausted: ' + url);
+}
+
+async function getBalanceAndNonce(address) {
+  const b = await fetchJsonWithRetry(`${API}/extended/v1/address/${address}/balances`);
+  await new Promise(r => setTimeout(r, 200));
