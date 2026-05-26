@@ -122,3 +122,9 @@ async function main() {
 
   const seq = [];
   const perAcctQueues = [...byAddr.values()].map(items => [...items]);
+  while (perAcctQueues.some(q => q.length > 0)) {
+    for (const q of perAcctQueues) {
+      if (q.length) seq.push(q.shift());
+    }
+  }
+
