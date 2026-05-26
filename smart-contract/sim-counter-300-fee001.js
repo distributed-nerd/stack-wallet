@@ -139,3 +139,9 @@ async function main() {
       address: acct.address,
       fn: fnName,
       nonce: n.toString(),
+      ...r,
+    });
+    if (r.ok) {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} ${fnName} n=${n} -> ${r.txid}`);
+    } else {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} ${fnName} n=${n} -> FAIL ${r.error}`);
