@@ -21,3 +21,14 @@ const TRANSFER_AMOUNT = 1000n;      // 0.001 STK (token has 6 decimals)
 const TOTAL_TXS = 200;
 const MIN_STX_USTX = 15000;         // ~4 txs worth of fee (12000) + buffer
 const MIN_TOKEN = TRANSFER_AMOUNT * 5n; // enough for 4 transfers + buffer
+const API = 'https://api.hiro.so';
+
+const accounts = JSON.parse(fs.readFileSync('./accounts.json', 'utf8'));
+
+async function fetchJsonWithRetry(url, attempts = 6) {
+  for (let i = 0; i < attempts; i++) {
+    try {
+      const r = await fetch(url);
+      if (r.status === 429) {
+        await new Promise(r => setTimeout(r, 5000 * (i + 1)));
+        continue;
