@@ -145,3 +145,15 @@ async function main() {
   const seq = [];
   while (perAcctQueues.some(q => q.length > 0)) {
     for (const q of perAcctQueues) {
+      if (q.length) seq.push(q.shift());
+    }
+  }
+
+  const results = [];
+  const INTERVAL_MS = 1500;
+  for (let i = 0; i < seq.length; i++) {
+    const { acct, recipient } = seq[i];
+    const n = nonceByAddr.get(acct.address);
+    const r = await broadcastTransfer(acct, recipient, n);
+    results.push({
+      acctIdx: acct.idx,
