@@ -10,3 +10,8 @@ const CONTRACT_NAME = 'stack-wallet-v2';
 const FEE = 1000n; // 0.001 STX per tx
 const TOTAL_TXS = 300;
 const MIN_BALANCE_USTX = 8000; // ~6 txs worth of fees (6000) + buffer
+const API = 'https://api.hiro.so';
+
+const accounts = JSON.parse(fs.readFileSync('./accounts.json', 'utf8'));
+
+async function fetchJsonWithRetry(url, attempts = 6) {
