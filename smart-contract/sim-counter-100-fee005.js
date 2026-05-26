@@ -45,3 +45,13 @@ async function getBalanceAndNonce(address) {
   };
 }
 
+async function broadcastOne(account, fnName, nonce) {
+  const txOptions = {
+    contractAddress: CONTRACT_ADDRESS,
+    contractName: CONTRACT_NAME,
+    functionName: fnName,
+    functionArgs: [],
+    senderKey: account.privateKey,
+    network: STACKS_MAINNET,
+    anchorMode: AnchorMode.Any,
+    postConditionMode: PostConditionMode.Allow,
