@@ -388,3 +388,11 @@ Contributions are welcome.
 2. Run `clarinet check` (and `clarinet test`) for contract changes, and `npm run lint` for the frontend.
 3. Keep commits focused and descriptive.
 4. Open a pull request describing the change and how you verified it.
+
+## License
+
+Released under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+Built on [Stacks](https://www.stacks.co/), [Clarinet](https://github.com/hirosystems/clarinet) by Hiro, and the [Stacks.js](https://github.com/hirosystems/stacks.js) SDK.
