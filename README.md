@@ -292,3 +292,11 @@ node check-balances.js                 # spot-check balances
 node full-balance-report.js            # full STX + STK report
 node account-status-report.js          # per-account status summary
 ```
+
+## Simulation Harness
+
+The simulation scripts drive realistic, high-volume load against the deployed contracts on mainnet. They are built for reliability over speed:
+
+- **Sequential execution** — accounts are processed one at a time to keep nonces sane.
+- **Confirmation polling** — each transaction is polled on the Hiro API until it reaches `success` before moving on.
+- **Retries & nonce correction** — broadcast loops recover from transient failures and nonce conflicts.
