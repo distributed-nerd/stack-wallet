@@ -300,3 +300,15 @@ The simulation scripts drive realistic, high-volume load against the deployed co
 - **Sequential execution** — accounts are processed one at a time to keep nonces sane.
 - **Confirmation polling** — each transaction is polled on the Hiro API until it reaches `success` before moving on.
 - **Retries & nonce correction** — broadcast loops recover from transient failures and nonce conflicts.
+
+### Counter simulations
+
+The `sim-counter-*` scripts exercise the wallet contract's `counter` increment/decrement path across many accounts at various fee levels:
+
+```bash
+node sim-counter-100-fee005.js     # 100 iterations, fee 0.005 STX
+node sim-counter-200-fee001.js     # 200 iterations, fee 0.001 STX
+node sim-counter-300-fee0025.js    # 300 iterations, fee 0.0025 STX
+```
+
+Each run emits a `.log` and a `*-results.json` artifact next to the script.
