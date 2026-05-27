@@ -229,3 +229,14 @@ clarinet console       # open an interactive REPL against the contracts
 ```
 
 Use `clarinet console` to call functions manually and inspect data maps while developing.
+
+### Frontend configuration
+
+Create `frontend/.env.local`:
+
+```env
+NEXT_PUBLIC_STX_CONTRACT_ADDRESS=SP1FPNMWMJR7WT3AH6HMPSEVG0PPSNE7N32ES51K6
+NEXT_PUBLIC_NETWORK=mainnet
+```
+
+Point `NEXT_PUBLIC_NETWORK` at `testnet` while iterating to avoid spending real STX.
