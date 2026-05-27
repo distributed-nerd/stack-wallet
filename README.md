@@ -191,3 +191,10 @@ A premium, high-performance Stacks wallet dashboard for batch account management
 `GlassCard`, `Header`, `Sidebar`, `BalanceCard`, `AccountList`, `TokenList`, `TransactionList`, `BatchSimulator`, `StatusBadge`, `Notification`, and `Skeleton` loaders. Components favor composition and a shared visual token system defined in `app/globals.css`.
 
 Wallet connection is provided through `context/StacksAuthContext.tsx`, which wraps `@stacks/connect` and exposes the authenticated session to the component tree via React Context. Balance and transaction data are fetched from the Hiro API and refreshed on demand.
+
+## Prerequisites
+
+- **Node.js** 18+ and npm
+- **Clarinet** — Clarity runtime & dev tool ([install guide](https://github.com/hirosystems/clarinet))
+- A **Stacks wallet** (Hiro Wallet / Xverse) for interacting with the dashboard
+- For deployments: a funded wallet and its mnemonic/private key
