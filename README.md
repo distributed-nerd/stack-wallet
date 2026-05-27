@@ -361,3 +361,13 @@ Always deploy to **testnet** first (fund via the Hiro faucet), verify on the exp
 | Deployer mnemonic                  | `settings/*` | Clarinet wallet for deploys (never commit)   |
 
 Frontend variables go in `frontend/.env.local`; deployment credentials go in Clarinet's `settings/Mainnet.toml` / `Testnet.toml`.
+
+## Security
+
+> [!WARNING]
+> **Never commit mainnet credentials.** Keep mnemonics and private keys out of git. `settings/Mainnet.toml` must contain real secrets only locally — add it to `.gitignore` before populating it.
+
+- Test on **testnet** before every mainnet action.
+- Treat `accounts.json` and any key material as sensitive.
+- Review fee/nonce logic before large mainnet simulation runs — they spend real STX.
+- Mainnet contract deployments are irreversible.
