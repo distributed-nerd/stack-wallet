@@ -185,3 +185,9 @@ A premium, high-performance Stacks wallet dashboard for batch account management
 | `/`            | Dashboard home — balances and account list   |
 | `/simulations` | Simulation activity and batch runs           |
 | `/settings`    | Network / contract configuration             |
+
+### Key components & state
+
+`GlassCard`, `Header`, `Sidebar`, `BalanceCard`, `AccountList`, `TokenList`, `TransactionList`, `BatchSimulator`, `StatusBadge`, `Notification`, and `Skeleton` loaders. Components favor composition and a shared visual token system defined in `app/globals.css`.
+
+Wallet connection is provided through `context/StacksAuthContext.tsx`, which wraps `@stacks/connect` and exposes the authenticated session to the component tree via React Context. Balance and transaction data are fetched from the Hiro API and refreshed on demand.
