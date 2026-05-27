@@ -371,3 +371,11 @@ Frontend variables go in `frontend/.env.local`; deployment credentials go in Cla
 - Treat `accounts.json` and any key material as sensitive.
 - Review fee/nonce logic before large mainnet simulation runs — they spend real STX.
 - Mainnet contract deployments are irreversible.
+
+## Roadmap
+
+- [ ] Expand the contract test suite (`clarinet test`) for the multisig flows.
+- [ ] Surface live simulation progress in the `/simulations` dashboard view.
+- [ ] Add a one-command end-to-end devnet bootstrap (generate → deploy → mint → simulate).
+- [ ] Parameterize the simulation harness via CLI flags instead of per-fee script copies.
+- [ ] Token metadata / explorer verification helpers.
