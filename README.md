@@ -119,3 +119,18 @@ A fungible token implementing SIP-010.
 - **Read-only:** `get-name`, `get-symbol`, `get-decimals`, `get-balance`, `get-total-supply`, `get-token-uri`
 
 `transfer` enforces that `tx-sender` is the `sender`, and supports an optional `memo` buffer that is printed on transfer.
+
+### `stack-wallet.clar` — multisig wallet / organizations
+
+A multi-signature wallet and organization-management system for SIP-010 tokens. Each wallet has a name, description, creator, active flag, and a `required-approvals` threshold.
+
+**Roles:**
+
+| Role     | Value | Purpose                         |
+| -------- | ----- | ------------------------------- |
+| Owner    | `u1`  | Full control of the wallet      |
+| Admin    | `u2`  | Manage members and settings     |
+| Member   | `u3`  | Create / vote on proposals      |
+| Viewer   | `u4`  | Read-only participation         |
+
+Members are tracked per wallet with a role, a spending limit, an added-at height, and an active flag.
