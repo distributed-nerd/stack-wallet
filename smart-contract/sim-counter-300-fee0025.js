@@ -69,3 +69,17 @@ async function broadcastOne(account, fnName, nonce) {
       return { ok: true, txid: typeof result === 'string' ? result : result.txid };
     } catch (e) {
       lastErr = e;
+      const msg = String(e?.cause?.message || e?.message || e);
+      const rateLimited = msg.includes('Per-minute') || msg.includes('429') || msg.includes('rate');
+      if (!rateLimited && attempt > 0) break;
+      const backoff = 2000 * (attempt + 1);
+      await new Promise(r => setTimeout(r, backoff));
+    }
+  }
+  return { ok: false, error: `broadcast threw: ${String(lastErr?.message || lastErr)}` };
+}
+
+async function main() {
+  console.log(`Contract: ${CONTRACT_ADDRESS}.${CONTRACT_NAME}`);
+  console.log(`Fee per tx: ${FEE} uSTX (${Number(FEE) / 1_000_000} STX)`);
+  console.log(`Target: ${TOTAL_TXS} txs (increment/decrement) across ${accounts.length} accounts`);
