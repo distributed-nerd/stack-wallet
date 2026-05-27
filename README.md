@@ -351,3 +351,13 @@ clarinet deploy --mainnet                  # then mainnet, once verified
 ```
 
 Always deploy to **testnet** first (fund via the Hiro faucet), verify on the explorer, then promote to mainnet. Mainnet deployments are permanent and contract names are unique per deployer address.
+
+## Environment Variables
+
+| Variable                           | Where        | Description                                  |
+| ---------------------------------- | ------------ | -------------------------------------------- |
+| `NEXT_PUBLIC_STX_CONTRACT_ADDRESS` | frontend     | Deployer/contract address shown in the UI    |
+| `NEXT_PUBLIC_NETWORK`              | frontend     | `mainnet` or `testnet`                       |
+| Deployer mnemonic                  | `settings/*` | Clarinet wallet for deploys (never commit)   |
+
+Frontend variables go in `frontend/.env.local`; deployment credentials go in Clarinet's `settings/Mainnet.toml` / `Testnet.toml`.
