@@ -108,3 +108,14 @@ All Clarity sources live in `smart-contract/contracts/` and are registered in `C
 ### `sip010-trait.clar`
 
 Defines the standard SIP-010 trait that the token contract implements. Declaring the trait separately lets other contracts (and the multisig wallet) accept any SIP-010-compliant token via `use-trait`/`<sip010-trait>` rather than hard-coding a single token.
+
+### `sip010-token.clar`
+
+A fungible token implementing SIP-010.
+
+- **Name / symbol / decimals:** `Stack Token` / `STK` / `6`
+- **Max supply:** `1,000,000,000` base units; the full supply is minted to the deployer on initialization.
+- **Public functions:** `transfer`, `mint` (owner-only), `burn`
+- **Read-only:** `get-name`, `get-symbol`, `get-decimals`, `get-balance`, `get-total-supply`, `get-token-uri`
+
+`transfer` enforces that `tx-sender` is the `sender`, and supports an optional `memo` buffer that is printed on transfer.
