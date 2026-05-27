@@ -324,3 +324,7 @@ node sim-sip010-300-fee0025.js
 ```
 
 These mirror the counter sims but target token transfers, which is closer to real-world usage and stresses balance/nonce handling harder.
+
+### Fee tuning
+
+Filenames encode the per-transaction fee used (`fee001` = 0.001 STX, `fee0025` = 0.0025 STX, `fee005` = 0.005 STX). Lower fees are cheaper but can stall when the mempool minimum rises; the scripts log the mempool minimum and bump fees when needed. Tune the fee to current network conditions before large runs.
