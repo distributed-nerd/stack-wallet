@@ -281,3 +281,14 @@ node mint-tokens.js                # mint STK to accounts
 ```
 
 Minting is owner-gated on-chain (`mint` asserts `tx-sender` is the contract owner), so these run from the deployer account.
+
+### Distribution & transfers
+
+```bash
+node send-stx.js                       # send STX to accounts
+./transfer-tokens-batch.sh             # batch STK transfers
+./master-distribute-tokens.sh          # orchestrated distribution
+node check-balances.js                 # spot-check balances
+node full-balance-report.js            # full STX + STK report
+node account-status-report.js          # per-account status summary
+```
