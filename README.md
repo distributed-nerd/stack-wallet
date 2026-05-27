@@ -209,3 +209,13 @@ cd stack-wallet
 ```
 
 The two workspaces (`smart-contract/` and `frontend/`) are set up independently — follow the relevant section below.
+
+### Smart contracts
+
+```bash
+cd smart-contract
+npm install            # installs Stacks.js tooling used by the scripts
+clarinet check         # type/syntax-check all contracts
+```
+
+`clarinet check` validates every contract listed in `Clarinet.toml` against the configured Clarity version.
