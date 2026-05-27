@@ -219,3 +219,13 @@ clarinet check         # type/syntax-check all contracts
 ```
 
 `clarinet check` validates every contract listed in `Clarinet.toml` against the configured Clarity version.
+
+### Running contract tests
+
+```bash
+cd smart-contract
+clarinet test          # run the test suite in tests/
+clarinet console       # open an interactive REPL against the contracts
+```
+
+Use `clarinet console` to call functions manually and inspect data maps while developing.
