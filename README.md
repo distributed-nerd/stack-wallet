@@ -271,3 +271,13 @@ node derive-master-key.js          # derive the master address from a key
 ```
 
 Generated accounts are written to `accounts.json`, which downstream scripts and the dashboard consume.
+
+### Minting
+
+```bash
+node mint-tokens.js                # mint STK to accounts
+./mint-batch.sh                    # batched minting
+./master-mint-tokens.sh            # orchestrated mint across the fleet
+```
+
+Minting is owner-gated on-chain (`mint` asserts `tx-sender` is the contract owner), so these run from the deployer account.
