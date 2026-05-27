@@ -175,3 +175,18 @@ async function main() {
   const ok = results.filter(r => r.ok);
   const fail = results.filter(r => !r.ok);
   console.log(`\n=== Broadcast complete: ${ok.length} accepted, ${fail.length} rejected ===`);
+
+  fs.writeFileSync('./sim-sip010-300-fee0025-results.json', JSON.stringify({
+    contract: `${CONTRACT_ADDRESS}.${CONTRACT_NAME}`,
+    fee: FEE.toString(),
+    transferAmount: TRANSFER_AMOUNT.toString(),
+    totalTxs: TOTAL_TXS,
+    broadcastedAt: new Date().toISOString(),
+    accepted: ok.length,
+    rejected: fail.length,
+    results,
+  }, null, 2));
+  console.log('Results saved to sim-sip010-300-fee0025-results.json');
+}
+
+main().catch(err => { console.error('Fatal:', err); process.exit(1); });
