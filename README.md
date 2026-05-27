@@ -328,3 +328,13 @@ These mirror the counter sims but target token transfers, which is closer to rea
 ### Fee tuning
 
 Filenames encode the per-transaction fee used (`fee001` = 0.001 STX, `fee0025` = 0.0025 STX, `fee005` = 0.005 STX). Lower fees are cheaper but can stall when the mempool minimum rises; the scripts log the mempool minimum and bump fees when needed. Tune the fee to current network conditions before large runs.
+
+### Results & reports
+
+Every simulation writes structured output you can diff and archive:
+
+- `*-results.json` — per-account outcome, txid, nonce, and confirmation status.
+- `*.log` — human-readable run log.
+- `docs/SIMULATION_REPORT.md` — a curated summary of balances and notable runs.
+
+Confirmed-state snapshots (e.g. `sim-counter-100-confirmed.json`) capture the on-chain result after polling completes.
