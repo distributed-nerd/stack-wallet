@@ -312,3 +312,15 @@ node sim-counter-300-fee0025.js    # 300 iterations, fee 0.0025 STX
 ```
 
 Each run emits a `.log` and a `*-results.json` artifact next to the script.
+
+### SIP-010 token simulations
+
+The `sim-sip010-*` scripts drive SIP-010 `transfer` activity across the fleet:
+
+```bash
+node sim-sip010-100-fee005.js
+node sim-sip010-200-fee001.js
+node sim-sip010-300-fee0025.js
+```
+
+These mirror the counter sims but target token transfers, which is closer to real-world usage and stresses balance/nonce handling harder.
