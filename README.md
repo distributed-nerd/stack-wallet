@@ -28,3 +28,12 @@ StackWallet started as an experiment in coordinating on-chain activity across a 
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Overview
+
+StackWallet is organized as a monorepo with two primary workspaces:
+
+- **`smart-contract/`** — Clarity contracts plus a large collection of Node.js/Bash automation for deployment, minting, token distribution, and high-volume transaction simulation against Stacks mainnet.
+- **`frontend/`** — A Next.js (App Router) dashboard for connecting a Stacks wallet, viewing balances across accounts, and visualizing simulation activity.
+
+The contracts and tooling are designed to be run end-to-end: generate accounts, deploy the token + wallet contracts, mint and distribute tokens, then drive realistic load through the simulation harness while observing results in the dashboard.
