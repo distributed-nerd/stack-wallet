@@ -134,3 +134,13 @@ A multi-signature wallet and organization-management system for SIP-010 tokens. 
 | Viewer   | `u4`  | Read-only participation         |
 
 Members are tracked per wallet with a role, a spending limit, an added-at height, and an active flag.
+
+#### Spending proposals & voting
+
+Spending is gated behind approval-based proposals:
+
+1. A member creates a proposal (recipient, amount, token).
+2. Other members vote until the wallet's `required-approvals` threshold is met.
+3. Once approved (and before expiry), the proposal can be executed, moving tokens out of the wallet.
+
+The contract guards against double-voting, expired proposals, re-executing an already-executed proposal, and spending above a member's configured limit.
