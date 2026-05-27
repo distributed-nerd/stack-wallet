@@ -177,3 +177,11 @@ A premium, high-performance Stacks wallet dashboard for batch account management
 - **Stacks.js integration** — real-time balance fetching and contract calls.
 - **Batch simulator** — coordinate interactions across the farming account fleet.
 - **Responsive & PWA-ready** — mobile-friendly with standalone install support.
+
+### Routes
+
+| Path           | Description                                  |
+| -------------- | -------------------------------------------- |
+| `/`            | Dashboard home — balances and account list   |
+| `/simulations` | Simulation activity and batch runs           |
+| `/settings`    | Network / contract configuration             |
