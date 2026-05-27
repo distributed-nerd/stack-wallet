@@ -46,3 +46,26 @@ The contracts and tooling are designed to be run end-to-end: generate accounts, 
 - **Batch account fleet management** — generate, fund, mint to, and distribute across 50+ accounts.
 - **Robust simulation harness** with nonce management, broadcast retries, and block-confirmation polling.
 - **Premium dashboard** with glassmorphism UI, real-time balances, and a batch simulator view.
+
+## Architecture
+
+```
+                 ┌──────────────────────────┐
+                 │     Next.js Dashboard     │
+                 │  (@stacks/connect, v7)    │
+                 └────────────┬─────────────┘
+                              │ read balances / submit txs
+                              ▼
+        ┌─────────────────────────────────────────┐
+        │             Stacks Mainnet               │
+        │   sip010-token   •   stack-wallet (msig)  │
+        └─────────────────────────────────────────┘
+                              ▲
+                              │ deploy / mint / distribute / simulate
+                 ┌────────────┴─────────────┐
+                 │   Node.js + Bash tooling  │
+                 │   (smart-contract/*.js)   │
+                 └──────────────────────────┘
+```
+
+The dashboard and the tooling are independent clients of the same on-chain contracts. The tooling drives writes (deploys, mints, transfers, simulations); the dashboard is primarily read/observe with wallet-initiated calls.
