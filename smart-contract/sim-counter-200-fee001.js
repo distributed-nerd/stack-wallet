@@ -140,3 +140,16 @@ async function main() {
       fn: fnName,
       nonce: n.toString(),
       ...r,
+    });
+    if (r.ok) {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} ${fnName} n=${n} -> ${r.txid}`);
+    } else {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} ${fnName} n=${n} -> FAIL ${r.error}`);
+    }
+    nonceByAddr.set(acct.address, n + 1n);
+    await new Promise(r => setTimeout(r, INTERVAL_MS));
+  }
+
+  const ok = results.filter(r => r.ok);
+  const fail = results.filter(r => !r.ok);
+  console.log(`\n=== Broadcast complete: ${ok.length} accepted, ${fail.length} rejected ===`);
