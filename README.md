@@ -240,3 +240,19 @@ NEXT_PUBLIC_NETWORK=mainnet
 ```
 
 Point `NEXT_PUBLIC_NETWORK` at `testnet` while iterating to avoid spending real STX.
+
+### Running the dashboard
+
+```bash
+cd frontend
+npm install
+npm run dev            # http://localhost:3000
+```
+
+Production build:
+
+```bash
+npm run build && npm run start
+```
+
+Populate `frontend/public/accounts.json` from the `smart-contract` directory so the dashboard can display the account fleet.
