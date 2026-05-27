@@ -87,3 +87,17 @@ async function broadcastTransfer(account, recipient, nonce) {
     } catch (e) {
       lastErr = e;
       const msg = String(e?.cause?.message || e?.message || e);
+      const rateLimited = msg.includes('Per-minute') || msg.includes('429') || msg.includes('rate');
+      if (!rateLimited && attempt > 0) break;
+      await new Promise(r => setTimeout(r, 2000 * (attempt + 1)));
+    }
+  }
+  return { ok: false, error: `broadcast threw: ${String(lastErr?.message || lastErr)}` };
+}
+
+async function main() {
+  console.log(`Contract: ${CONTRACT_ADDRESS}.${CONTRACT_NAME}`);
+  console.log(`Fee per tx: ${FEE} uSTX (${Number(FEE) / 1_000_000} STX)`);
+  console.log(`Transfer amount: ${TRANSFER_AMOUNT} micro-STK per tx`);
+  console.log(`Target: ${TOTAL_TXS} txs across ${accounts.length} accounts`);
+  console.log(`Loading balances/nonces for ${accounts.length} accounts...`);
