@@ -144,3 +144,7 @@ Spending is gated behind approval-based proposals:
 3. Once approved (and before expiry), the proposal can be executed, moving tokens out of the wallet.
 
 The contract guards against double-voting, expired proposals, re-executing an already-executed proposal, and spending above a member's configured limit.
+
+### `hello-stacks.clar`
+
+A minimal contract used as a connectivity / deployment smoke test — handy for verifying that Clarinet, network settings, and the deploy pipeline all work before touching the real contracts.
