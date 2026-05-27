@@ -101,3 +101,19 @@ async function main() {
   console.log(`Transfer amount: ${TRANSFER_AMOUNT} micro-STK per tx`);
   console.log(`Target: ${TOTAL_TXS} txs across ${accounts.length} accounts`);
   console.log(`Loading balances/nonces for ${accounts.length} accounts...`);
+
+  const state = [];
+  for (let i = 0; i < accounts.length; i++) {
+    const s = await getState(accounts[i].address);
+    state.push({ ...accounts[i], ...s, idx: i + 1 });
+    await new Promise(r => setTimeout(r, 400));
+  }
+
+  const funded = state.filter(a =>
+    a.stxBalance >= MIN_STX_USTX && a.tokenBalance >= MIN_TOKEN);
+  console.log(`Eligible accounts (>= ${MIN_STX_USTX} uSTX and >= ${MIN_TOKEN} micro-STK): ${funded.length}/${accounts.length}`);
+  const skipped = state.filter(a => !funded.includes(a));
+  for (const a of skipped) {
+    console.log(`  skip #${a.idx} ${a.address.slice(0, 10)} stx=${a.stxBalance} stk=${a.tokenBalance.toString()}`);
+  }
+  if (funded.length === 0) {
