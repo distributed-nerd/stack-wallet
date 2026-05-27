@@ -89,3 +89,14 @@ stack-wallet/
 ├── LICENSE
 └── README.md
 ```
+
+## Tech Stack
+
+| Layer            | Technology                                                        |
+| ---------------- | ----------------------------------------------------------------- |
+| Smart contracts  | Clarity, Clarinet                                                 |
+| Token standard   | SIP-010 (fungible token)                                          |
+| Frontend         | Next.js 16 (App Router), React 19, TypeScript                     |
+| Blockchain SDK   | `@stacks/connect`, `@stacks/transactions`, `@stacks/network`      |
+| Animations / UI  | Framer Motion, Lucide React, vanilla CSS design tokens            |
+| Tooling          | Node.js, Bash, Hiro API                                           |
