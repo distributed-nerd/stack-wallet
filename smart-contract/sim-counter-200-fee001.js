@@ -55,3 +55,17 @@ async function broadcastOne(account, fnName, nonce) {
     network: STACKS_MAINNET,
     anchorMode: AnchorMode.Any,
     postConditionMode: PostConditionMode.Allow,
+    fee: FEE,
+    nonce,
+  };
+  const tx = await makeContractCall(txOptions);
+  let lastErr;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
+      const result = await broadcastTransaction({ transaction: tx, network: STACKS_MAINNET });
+      if (result.error) {
+        return { ok: false, error: `${result.error}: ${result.reason}`, detail: result.reason_data };
+      }
+      return { ok: true, txid: typeof result === 'string' ? result : result.txid };
+    } catch (e) {
+      lastErr = e;
