@@ -379,3 +379,12 @@ Frontend variables go in `frontend/.env.local`; deployment credentials go in Cla
 - [ ] Add a one-command end-to-end devnet bootstrap (generate → deploy → mint → simulate).
 - [ ] Parameterize the simulation harness via CLI flags instead of per-fee script copies.
 - [ ] Token metadata / explorer verification helpers.
+
+## Contributing
+
+Contributions are welcome.
+
+1. Fork and create a feature branch.
+2. Run `clarinet check` (and `clarinet test`) for contract changes, and `npm run lint` for the frontend.
+3. Keep commits focused and descriptive.
+4. Open a pull request describing the change and how you verified it.
