@@ -256,3 +256,7 @@ npm run build && npm run start
 ```
 
 Populate `frontend/public/accounts.json` from the `smart-contract` directory so the dashboard can display the account fleet.
+
+## Tooling & Scripts
+
+The `smart-contract/` directory contains a large set of Node.js and Bash utilities for operating the contracts at scale. The most useful entry points are grouped below.
