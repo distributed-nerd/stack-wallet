@@ -260,3 +260,14 @@ Populate `frontend/public/accounts.json` from the `smart-contract` directory so 
 ## Tooling & Scripts
 
 The `smart-contract/` directory contains a large set of Node.js and Bash utilities for operating the contracts at scale. The most useful entry points are grouped below.
+
+### Account generation
+
+```bash
+node generate-accounts.js          # generate a fleet of accounts -> accounts.json
+node quick-gen-accounts.js         # lightweight variant
+./generate-mainnet-accounts.sh     # mainnet-oriented generation
+node derive-master-key.js          # derive the master address from a key
+```
+
+Generated accounts are written to `accounts.json`, which downstream scripts and the dashboard consume.
