@@ -198,3 +198,14 @@ Wallet connection is provided through `context/StacksAuthContext.tsx`, which wra
 - **Clarinet** — Clarity runtime & dev tool ([install guide](https://github.com/hirosystems/clarinet))
 - A **Stacks wallet** (Hiro Wallet / Xverse) for interacting with the dashboard
 - For deployments: a funded wallet and its mnemonic/private key
+
+## Quick Start
+
+Clone the repository:
+
+```bash
+git clone https://github.com/distributed-nerd/stack-wallet.git
+cd stack-wallet
+```
+
+The two workspaces (`smart-contract/` and `frontend/`) are set up independently — follow the relevant section below.
