@@ -100,3 +100,7 @@ stack-wallet/
 | Blockchain SDK   | `@stacks/connect`, `@stacks/transactions`, `@stacks/network`      |
 | Animations / UI  | Framer Motion, Lucide React, vanilla CSS design tokens            |
 | Tooling          | Node.js, Bash, Hiro API                                           |
+
+## Smart Contracts
+
+All Clarity sources live in `smart-contract/contracts/` and are registered in `Clarinet.toml`. There are four contracts: a SIP-010 trait, a SIP-010 token, a multisig wallet, and a minimal hello-world contract used for connectivity checks.
