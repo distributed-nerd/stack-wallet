@@ -148,3 +148,21 @@ The contract guards against double-voting, expired proposals, re-executing an al
 ### `hello-stacks.clar`
 
 A minimal contract used as a connectivity / deployment smoke test — handy for verifying that Clarinet, network settings, and the deploy pipeline all work before touching the real contracts.
+
+### Error codes
+
+The wallet contract uses a consistent error namespace:
+
+| Code   | Meaning                       |
+| ------ | ----------------------------- |
+| `u100` | Owner only                    |
+| `u101` | Not found                     |
+| `u102` | Unauthorized                  |
+| `u103` | Already exists                |
+| `u104` | Invalid parameters            |
+| `u105` | Insufficient approvals        |
+| `u106` | Already voted                 |
+| `u107` | Proposal expired              |
+| `u108` | Proposal already executed     |
+| `u109` | Not a member                  |
+| `u110` | Spending limit exceeded       |
