@@ -37,3 +37,12 @@ StackWallet is organized as a monorepo with two primary workspaces:
 - **`frontend/`** — A Next.js (App Router) dashboard for connecting a Stacks wallet, viewing balances across accounts, and visualizing simulation activity.
 
 The contracts and tooling are designed to be run end-to-end: generate accounts, deploy the token + wallet contracts, mint and distribute tokens, then drive realistic load through the simulation harness while observing results in the dashboard.
+
+## Features
+
+- **SIP-010 fungible token** (`stack-token`, symbol `STK`, 6 decimals) with mint/burn and standard transfer semantics.
+- **Multi-signature wallet contract** supporting wallets/organizations, role-based membership, spending limits, and approval-based spending proposals.
+- **Reproducible deployments** via Clarinet for devnet, testnet, and mainnet.
+- **Batch account fleet management** — generate, fund, mint to, and distribute across 50+ accounts.
+- **Robust simulation harness** with nonce management, broadcast retries, and block-confirmation polling.
+- **Premium dashboard** with glassmorphism UI, real-time balances, and a batch simulator view.
