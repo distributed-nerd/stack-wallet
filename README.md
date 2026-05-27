@@ -69,3 +69,23 @@ The contracts and tooling are designed to be run end-to-end: generate accounts, 
 ```
 
 The dashboard and the tooling are independent clients of the same on-chain contracts. The tooling drives writes (deploys, mints, transfers, simulations); the dashboard is primarily read/observe with wallet-initiated calls.
+
+## Repository Layout
+
+```
+stack-wallet/
+├── frontend/              # Next.js dashboard (App Router)
+│   ├── app/               # routes: /, /simulations, /settings
+│   ├── components/        # UI components (GlassCard, BatchSimulator, ...)
+│   ├── context/           # StacksAuthContext (wallet connection)
+│   └── public/            # static assets + accounts.json
+├── smart-contract/        # Clarity contracts + automation
+│   ├── contracts/         # *.clar source
+│   ├── tests/             # contract tests
+│   ├── settings/          # Devnet/Testnet/Mainnet.toml
+│   ├── docs/              # SIMULATION_REPORT.md
+│   ├── Clarinet.toml      # Clarinet project config
+│   └── *.js / *.sh        # deploy, mint, distribute, simulate
+├── LICENSE
+└── README.md
+```
