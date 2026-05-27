@@ -170,3 +170,10 @@ The wallet contract uses a consistent error namespace:
 ## Frontend Dashboard
 
 A premium, high-performance Stacks wallet dashboard for batch account management and contract-interaction simulations. Built with the Next.js App Router and Stacks.js v7.
+
+### Highlights
+
+- **Glassmorphism design** — layered blur, gradients, and micro-animations.
+- **Stacks.js integration** — real-time balance fetching and contract calls.
+- **Batch simulator** — coordinate interactions across the farming account fleet.
+- **Responsive & PWA-ready** — mobile-friendly with standalone install support.
