@@ -338,3 +338,16 @@ Every simulation writes structured output you can diff and archive:
 - `docs/SIMULATION_REPORT.md` — a curated summary of balances and notable runs.
 
 Confirmed-state snapshots (e.g. `sim-counter-100-confirmed.json`) capture the on-chain result after polling completes.
+
+## Deployment
+
+Full details are in [`smart-contract/DEPLOYMENT.md`](smart-contract/DEPLOYMENT.md). In short:
+
+```bash
+cd smart-contract
+clarinet deployments generate --testnet   # plan + cost estimate
+clarinet deploy --testnet                  # deploy to testnet first
+clarinet deploy --mainnet                  # then mainnet, once verified
+```
+
+Always deploy to **testnet** first (fund via the Hiro faucet), verify on the explorer, then promote to mainnet. Mainnet deployments are permanent and contract names are unique per deployer address.
