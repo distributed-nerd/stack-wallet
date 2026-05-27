@@ -166,3 +166,7 @@ The wallet contract uses a consistent error namespace:
 | `u108` | Proposal already executed     |
 | `u109` | Not a member                  |
 | `u110` | Spending limit exceeded       |
+
+## Frontend Dashboard
+
+A premium, high-performance Stacks wallet dashboard for batch account management and contract-interaction simulations. Built with the Next.js App Router and Stacks.js v7.
