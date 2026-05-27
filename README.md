@@ -104,3 +104,7 @@ stack-wallet/
 ## Smart Contracts
 
 All Clarity sources live in `smart-contract/contracts/` and are registered in `Clarinet.toml`. There are four contracts: a SIP-010 trait, a SIP-010 token, a multisig wallet, and a minimal hello-world contract used for connectivity checks.
+
+### `sip010-trait.clar`
+
+Defines the standard SIP-010 trait that the token contract implements. Declaring the trait separately lets other contracts (and the multisig wallet) accept any SIP-010-compliant token via `use-trait`/`<sip010-trait>` rather than hard-coding a single token.
