@@ -135,3 +135,8 @@ async function main() {
   }
   console.log(`Plan: ${plan.length} txs across ${byAddr.size} senders.`);
   console.log(`Per-account loads: ${[...byAddr.values()].map(v => v.length).join(',')}`);
+
+  const nonceByAddr = new Map();
+  for (const [addr, items] of byAddr.entries()) {
+    nonceByAddr.set(addr, items[0].acct.nonce);
+  }
