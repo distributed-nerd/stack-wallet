@@ -38,7 +38,7 @@ async function sendSTX() {
   const accounts = JSON.parse(fs.readFileSync('./accounts.json', 'utf8'));
   const results = [];
 
-  console.log(`Sending 0.2 STX to ${accounts.length} accounts...`);
+  console.log(`Sending 0.1 STX to ${accounts.length} accounts...`);
   console.log(`Starting nonce: ${STARTING_NONCE}`);
   console.log(`Total cost: ${(accounts.length * (AMOUNT_MICROSTX + FEE_MICROSTX)) / 1000000} STX\n`);
 
