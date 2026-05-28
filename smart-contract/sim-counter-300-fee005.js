@@ -67,3 +67,11 @@ async function broadcastOne(account, fnName, nonce) {
         return { ok: false, error: `${result.error}: ${result.reason}`, detail: result.reason_data };
       }
       return { ok: true, txid: typeof result === 'string' ? result : result.txid };
+    } catch (e) {
+      lastErr = e;
+      const msg = String(e?.cause?.message || e?.message || e);
+      const rateLimited = msg.includes('Per-minute') || msg.includes('429') || msg.includes('rate');
+      if (!rateLimited && attempt > 0) break;
+      const backoff = 2000 * (attempt + 1);
+      await new Promise(r => setTimeout(r, backoff));
+    }
