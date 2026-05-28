@@ -75,3 +75,5 @@ async function broadcastTransfer(account, recipient, nonce) {
     fee: FEE,
     nonce,
   };
+  const tx = await makeContractCall(txOptions);
+  let lastErr;
