@@ -98,3 +98,10 @@ async function main() {
     console.error('No funded accounts available.');
     process.exit(1);
   }
+
+  const plan = [];
+  for (let i = 0; i < TOTAL_TXS; i++) {
+    const acct = funded[i % funded.length];
+    const fnName = i % 2 === 0 ? 'increment' : 'decrement';
+    plan.push({ acct, fnName });
+  }
