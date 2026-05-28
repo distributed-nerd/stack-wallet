@@ -91,3 +91,6 @@ async function broadcastTransfer(account, recipient, nonce) {
       if (!rateLimited && attempt > 0) break;
       await new Promise(r => setTimeout(r, 2000 * (attempt + 1)));
     }
+  }
+  return { ok: false, error: `broadcast threw: ${String(lastErr?.message || lastErr)}` };
+}
