@@ -5,7 +5,7 @@ const fs = require('fs');
 const MASTER_PRIVATE_KEY = process.env.MASTER_PRIVATE_KEY || '';
 const AMOUNT_MICROSTX = 100000; // 0.1 STX
 const FEE_MICROSTX = 10000; // 0.01 STX fee per transaction
-const STARTING_NONCE = 323; // Current nonce from blockchain
+const STARTING_NONCE = 373; // Current nonce from blockchain
 const THROTTLE_MS = 1500; // per-broadcast throttle for Hiro public API
 
 async function broadcastWithRetry(transaction) {
