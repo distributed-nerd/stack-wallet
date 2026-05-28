@@ -13,3 +13,5 @@ const MIN_BALANCE_USTX = 10000; // ~2 txs worth of fees buffer
 const API = 'https://api.hiro.so';
 
 const accounts = JSON.parse(fs.readFileSync('./accounts.json', 'utf8'));
+
+async function fetchJsonWithRetry(url, attempts = 6) {
