@@ -38,3 +38,61 @@ A robust, sequential simulation has been started to interact with the SIP-010 to
 1. Derived master address from private key.
 2. Queried Hiro Mainnet API for STX and SIP-010 token balances.
 3. Aggregated results for all 50 accounts listed in `accounts.json`.
+
+---
+
+## Counter Sim Batch (2026-05-23): stack-wallet-v2 increment/decrement
+
+### Deployment
+
+- Contract: `SP1FPNMWMJR7WT3AH6HMPSEVG0PPSNE7N32ES51K6.stack-wallet-v2`
+- Deploy txid: `90573d8586602292f3be9886c9b65cdb73a856e5377fa36c01585f7057b328c9`
+- Deploy nonce: 322, fee: 15000 uSTX (mempool min was 11157)
+- Source size: 11020 bytes
+- sip010-trait was already deployed at the master address; deploy script skipped that step.
+
+### Batch 1 (fee 1000 uSTX = 0.001 STX per tx)
+
+- Total broadcast: 100 (50 increments + 50 decrements)
+- Distribution: 2 transactions per account across all 50 accounts
+- Per-broadcast throttle: 1500 ms (Hiro public API per-minute limit)
+- Broadcast wall-clock: ~150 seconds
+- Confirmation: 100/100 success, 0 aborts
+- All txs confirmed before first poll iteration (single block window)
+- Total fee paid in batch 1: 0.1 STX
+
+### Batch 2 (fee 10000 uSTX = 0.01 STX per tx)
+
+- Total broadcast: 100, same distribution as batch 1
+- Higher fee allows ~10x faster mempool acceptance under congestion
+- Account #1 (SP1WE6P7H5...) was excluded by the min-balance filter (>=25000 uSTX)
+- Round-robin redistributed the spare 2 txs to other funded accounts
+- Preflight balance/nonce loading required retry/backoff on rate-limit text responses
+- Confirmation: 100/100 success, 0 aborts
+- Total fee paid in batch 2: 1.0 STX
+
+### Methodology
+
+- Nonces are fetched once at startup via /extended/v1/address/:addr/nonces
+- Per-account nonces are assigned sequentially (n, n+1, n+2, ...)
+- Broadcasts are globally serialized to avoid in-flight rate-limit collisions
+- Interleaved scheduling: round-robin across accounts, not per-account batched
+- Retry budget: 5 attempts per broadcast, exponential backoff (2s, 4s, 6s, 8s, 10s)
+- Confirmation polling: 30s interval, exits when all txs reach terminal status
+
+### Observations
+
+- The Hiro public API returns plain text rate-limit messages ('Per-minute ...')
+- The stacks.js broadcastTransaction crashes on those because it assumes JSON
+- Mitigation: a fetchJsonWithRetry helper that distinguishes JSON parse errors from 429s
+- Counter net change should be zero (equal increments and decrements per batch)
+- Counter value is recoverable via the get-counter read-only function
+
+### Artifacts
+
+- Broadcast manifests: sim-counter-100-results.json, sim-counter-100-v2-results.json (gitignored)
+- Confirmation snapshots: sim-counter-100-confirmed.json, sim-counter-100-v2-confirmed.json
+- 200 mainnet contract calls total, 200 successes, 0 aborts
+- Combined fees: 1.1 STX paid across 50 simulation accounts to one contract
+
+_End of counter sim batch report (2026-05-23)._
