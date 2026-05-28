@@ -148,3 +148,45 @@ async function main() {
       if (q.length) seq.push(q.shift());
     }
   }
+
+  const results = [];
+  const INTERVAL_MS = 1500;
+  for (let i = 0; i < seq.length; i++) {
+    const { acct, recipient } = seq[i];
+    const n = nonceByAddr.get(acct.address);
+    const r = await broadcastTransfer(acct, recipient, n);
+    results.push({
+      acctIdx: acct.idx,
+      from: acct.address,
+      to: recipient,
+      amount: TRANSFER_AMOUNT.toString(),
+      nonce: n.toString(),
+      ...r,
+    });
+    if (r.ok) {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} -> ${recipient.slice(0, 10)} n=${n} -> ${r.txid}`);
+    } else {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} -> ${recipient.slice(0, 10)} n=${n} -> FAIL ${r.error}`);
+    }
+    nonceByAddr.set(acct.address, n + 1n);
+    await new Promise(r => setTimeout(r, INTERVAL_MS));
+  }
+
+  const ok = results.filter(r => r.ok);
+  const fail = results.filter(r => !r.ok);
+  console.log(`\n=== Broadcast complete: ${ok.length} accepted, ${fail.length} rejected ===`);
+
+  fs.writeFileSync('./sim-sip010-300-fee001-results.json', JSON.stringify({
+    contract: `${CONTRACT_ADDRESS}.${CONTRACT_NAME}`,
+    fee: FEE.toString(),
+    transferAmount: TRANSFER_AMOUNT.toString(),
+    totalTxs: TOTAL_TXS,
+    broadcastedAt: new Date().toISOString(),
+    accepted: ok.length,
+    rejected: fail.length,
+    results,
+  }, null, 2));
+  console.log('Results saved to sim-sip010-300-fee001-results.json');
+}
+
+main().catch(err => { console.error('Fatal:', err); process.exit(1); });
