@@ -120,3 +120,10 @@ async function main() {
     console.error('No eligible accounts.');
     process.exit(1);
   }
+
+  const plan = [];
+  for (let i = 0; i < TOTAL_TXS; i++) {
+    const acct = funded[i % funded.length];
+    const recipient = accounts[(acct.idx) % accounts.length].address;
+    plan.push({ acct, recipient });
+  }
