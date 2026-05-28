@@ -59,3 +59,4 @@ async function broadcastOne(account, fnName, nonce) {
     nonce,
   };
   const tx = await makeContractCall(txOptions);
+  let lastErr;
