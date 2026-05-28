@@ -111,3 +111,6 @@ async function main() {
     if (!byAddr.has(item.acct.address)) byAddr.set(item.acct.address, []);
     byAddr.get(item.acct.address).push(item);
   }
+
+  console.log(`Plan: ${plan.length} txs across ${byAddr.size} accounts.`);
+  console.log(`Per-account loads: ${[...byAddr.values()].map(v => v.length).join(',')}`);
