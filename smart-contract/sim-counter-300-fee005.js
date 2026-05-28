@@ -58,3 +58,4 @@ async function broadcastOne(account, fnName, nonce) {
     fee: FEE,
     nonce,
   };
+  const tx = await makeContractCall(txOptions);
