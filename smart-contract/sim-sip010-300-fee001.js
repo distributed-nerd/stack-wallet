@@ -21,3 +21,4 @@ const TRANSFER_AMOUNT = 1000n;      // 0.001 STK (token has 6 decimals)
 const TOTAL_TXS = 300;
 const MIN_STX_USTX = 7000;          // ~6 txs worth of fee (6000) + buffer
 const MIN_TOKEN = TRANSFER_AMOUNT * 7n; // enough for 6 transfers + buffer
+const API = 'https://api.hiro.so';
