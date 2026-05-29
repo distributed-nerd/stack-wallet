@@ -94,3 +94,10 @@ async function broadcastTransfer(account, recipient, nonce) {
   }
   return { ok: false, error: `broadcast threw: ${String(lastErr?.message || lastErr)}` };
 }
+
+async function main() {
+  console.log(`Contract: ${CONTRACT_ADDRESS}.${CONTRACT_NAME}`);
+  console.log(`Fee per tx: ${FEE} uSTX (${Number(FEE) / 1_000_000} STX)`);
+  console.log(`Transfer amount: ${TRANSFER_AMOUNT} micro-STK per tx`);
+  console.log(`Target: ${TOTAL_TXS} txs across ${accounts.length} accounts`);
+  console.log(`Loading balances/nonces for ${accounts.length} accounts...`);
