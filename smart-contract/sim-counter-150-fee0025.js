@@ -75,3 +75,6 @@ async function broadcastOne(account, fnName, nonce) {
       const backoff = 2000 * (attempt + 1);
       await new Promise(r => setTimeout(r, backoff));
     }
+  }
+  return { ok: false, error: `broadcast threw: ${String(lastErr?.message || lastErr)}` };
+}
