@@ -22,3 +22,5 @@ const TOTAL_TXS = 150;
 const MIN_STX_USTX = 9000;          // ~3 txs worth of fee (7500) + buffer
 const MIN_TOKEN = TRANSFER_AMOUNT * 4n; // enough for 3 transfers + buffer
 const API = 'https://api.hiro.so';
+
+const accounts = JSON.parse(fs.readFileSync('./accounts.json', 'utf8'));
