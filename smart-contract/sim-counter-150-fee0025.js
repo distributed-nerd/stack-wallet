@@ -11,3 +11,5 @@ const FEE = 2500n; // 0.0025 STX per tx
 const TOTAL_TXS = 150;
 const MIN_BALANCE_USTX = 9000; // ~3 txs worth of fees (7500) + buffer
 const API = 'https://api.hiro.so';
+
+const accounts = JSON.parse(fs.readFileSync('./accounts.json', 'utf8'));
