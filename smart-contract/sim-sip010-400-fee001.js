@@ -56,3 +56,22 @@ async function getState(address) {
     nonce: BigInt(n.possible_next_nonce ?? 0),
   };
 }
+
+async function broadcastTransfer(account, recipient, nonce) {
+  const txOptions = {
+    contractAddress: CONTRACT_ADDRESS,
+    contractName: CONTRACT_NAME,
+    functionName: 'transfer',
+    functionArgs: [
+      uintCV(TRANSFER_AMOUNT),
+      principalCV(account.address),
+      principalCV(recipient),
+      noneCV(),
+    ],
+    senderKey: account.privateKey,
+    network: STACKS_MAINNET,
+    anchorMode: AnchorMode.Any,
+    postConditionMode: PostConditionMode.Allow,
+    fee: FEE,
+    nonce,
+  };
