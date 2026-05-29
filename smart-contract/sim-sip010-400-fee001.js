@@ -148,3 +148,26 @@ async function main() {
       if (q.length) seq.push(q.shift());
     }
   }
+
+  const results = [];
+  const INTERVAL_MS = 1500;
+  for (let i = 0; i < seq.length; i++) {
+    const { acct, recipient } = seq[i];
+    const n = nonceByAddr.get(acct.address);
+    const r = await broadcastTransfer(acct, recipient, n);
+    results.push({
+      acctIdx: acct.idx,
+      from: acct.address,
+      to: recipient,
+      amount: TRANSFER_AMOUNT.toString(),
+      nonce: n.toString(),
+      ...r,
+    });
+    if (r.ok) {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} -> ${recipient.slice(0, 10)} n=${n} -> ${r.txid}`);
+    } else {
+      console.log(`  [${i + 1}/${seq.length}] #${acct.idx} ${acct.address.slice(0, 10)} -> ${recipient.slice(0, 10)} n=${n} -> FAIL ${r.error}`);
+    }
+    nonceByAddr.set(acct.address, n + 1n);
+    await new Promise(r => setTimeout(r, INTERVAL_MS));
+  }
