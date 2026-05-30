@@ -191,3 +191,7 @@ Clarinet.test({
 
 Clarinet.test({
   name: "claim-proposal-reward: rejects duplicate claim",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get('deployer')!;
+    initializeHybrid(chain, deployer);
+    const first = chain.mineBlock([
