@@ -114,3 +114,5 @@ async function main() {
   }
 
   const byAddr = new Map();
+  for (const item of plan) {
+    if (!byAddr.has(item.acct.address)) byAddr.set(item.acct.address, []);
