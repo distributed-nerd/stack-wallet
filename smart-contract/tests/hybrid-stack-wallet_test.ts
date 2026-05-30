@@ -51,3 +51,6 @@ Clarinet.test({
   name: "set-counter-cost: admin can update within bounds",
   async fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get('deployer')!;
+    initializeHybrid(chain, deployer);
+    const block = chain.mineBlock([
+      Tx.contractCall('hybrid-stack-wallet', 'set-counter-cost',
