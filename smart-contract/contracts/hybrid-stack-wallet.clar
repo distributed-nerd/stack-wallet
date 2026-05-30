@@ -57,3 +57,5 @@
 (define-map reward-claims-tally principal uint)
 (define-map executed-proposal-rewards uint bool)
 (define-map last-action-burn-block principal uint)
+(define-map wallet-pool-depositors { wallet-id: uint, depositor: principal } uint)
+
