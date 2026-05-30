@@ -99,3 +99,7 @@ async function main() {
 
   if (await contractExists(address, CONTRACT_NAME)) {
     console.log(`Contract ${CONTRACT_NAME} already deployed at ${address}; nothing to do.`);
+    return;
+  }
+
+  const nonce = await getAccountNonce(address);
