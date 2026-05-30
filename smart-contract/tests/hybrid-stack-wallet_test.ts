@@ -60,3 +60,7 @@ Clarinet.test({
     const read = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-counter-cost', [], deployer.address);
     read.result.expectOk().expectUint(2500);
   },
+});
+
+Clarinet.test({
+  name: "set-counter-cost: above max is rejected",
