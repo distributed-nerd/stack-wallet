@@ -17,3 +17,6 @@ function mintTokenTo(chain: Chain, deployer: Account, recipient: string, amount:
       [types.uint(amount), types.principal(recipient)],
       deployer.address)
   ]);
+}
+
+function initializeHybrid(chain: Chain, deployer: Account) {
