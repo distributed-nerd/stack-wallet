@@ -72,3 +72,6 @@ async function deployContract(senderKey, contractName, contractFile, nonce, fee)
   console.log(`  nonce: ${nonce}`);
   console.log(`  fee: ${fee} uSTX`);
 
+  const txOptions = {
+    contractName,
+    codeBody: contractSource,
