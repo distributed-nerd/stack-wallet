@@ -162,3 +162,6 @@ async function main() {
   fs.writeFileSync('./sim-hybrid-proposal-execute-results.json', JSON.stringify({
     contract: `${CONTRACT_ADDRESS}.${HYBRID_CONTRACT_NAME}`,
     fee: FEE.toString(),
+    totalTxs: TOTAL_TXS,
+    proposalIdBase: PROPOSAL_ID_BASE,
+    broadcastedAt: new Date().toISOString(),
