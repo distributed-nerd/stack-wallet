@@ -152,3 +152,5 @@
     (asserts! (> reward u0) ERR-NO-REWARDS)
     (asserts! (is-none (map-get? executed-proposal-rewards proposal-id))
               ERR-REWARD-ALREADY-CLAIMED)
+    (try! (as-contract (contract-call? .sip010-token mint reward caller)))
+    (map-set executed-proposal-rewards proposal-id true)
