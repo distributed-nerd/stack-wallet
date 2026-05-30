@@ -257,3 +257,5 @@
   (ok MAX-COUNTER-COST))
 
 (define-read-only (get-max-proposal-reward)
+  (ok MAX-PROPOSAL-REWARD))
+
