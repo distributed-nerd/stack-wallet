@@ -57,3 +57,6 @@ async function broadcastClaim(account, proposalId, nonce) {
   const txOptions = {
     contractAddress: CONTRACT_ADDRESS,
     contractName: HYBRID_CONTRACT_NAME,
+    functionName: 'claim-proposal-reward',
+    functionArgs: [uintCV(proposalId)],
+    senderKey: account.privateKey,
