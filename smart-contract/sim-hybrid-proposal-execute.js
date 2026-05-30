@@ -165,3 +165,6 @@ async function main() {
     totalTxs: TOTAL_TXS,
     proposalIdBase: PROPOSAL_ID_BASE,
     broadcastedAt: new Date().toISOString(),
+    accepted: ok.length,
+    rejected: fail.length,
+    results,
