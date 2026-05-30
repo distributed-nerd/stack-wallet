@@ -20,3 +20,6 @@ function mintTokenTo(chain: Chain, deployer: Account, recipient: string, amount:
 }
 
 function initializeHybrid(chain: Chain, deployer: Account) {
+  return chain.mineBlock([
+    Tx.contractCall('hybrid-stack-wallet', 'initialize', [], deployer.address)
+  ]);
