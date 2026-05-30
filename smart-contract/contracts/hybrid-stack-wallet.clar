@@ -216,3 +216,6 @@
 
 (define-read-only (get-member-action-count (member principal))
   (ok (default-to u0 (map-get? member-action-tally member))))
+
+(define-read-only (get-wallet-pool (wallet-id uint))
+  (ok (default-to u0 (map-get? wallet-token-pools wallet-id))))
