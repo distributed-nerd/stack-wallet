@@ -154,3 +154,5 @@
               ERR-REWARD-ALREADY-CLAIMED)
     (try! (as-contract (contract-call? .sip010-token mint reward caller)))
     (map-set executed-proposal-rewards proposal-id true)
+    (map-set reward-claims-tally caller
+      (+ (default-to u0 (map-get? reward-claims-tally caller)) reward))
