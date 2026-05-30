@@ -47,3 +47,6 @@ async function fetchJsonWithRetry(url, attempts = 6) {
 }
 
 async function getState(address) {
+  const b = await fetchJsonWithRetry(`${API}/extended/v1/address/${address}/balances`);
+  await new Promise(r => setTimeout(r, 200));
+  const n = await fetchJsonWithRetry(`${API}/extended/v1/address/${address}/nonces`);
