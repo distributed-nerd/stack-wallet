@@ -257,3 +257,6 @@ Clarinet.test({
       [types.uint(42)], deployer.address);
     pool.result.expectOk().expectUint(0);
   },
+});
+
+Clarinet.test({
