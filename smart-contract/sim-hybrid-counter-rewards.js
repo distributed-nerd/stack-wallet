@@ -125,3 +125,5 @@ async function main() {
     plan.push({ acct, fnName });
   }
 
+  const byAddr = new Map();
+  for (const item of plan) {
