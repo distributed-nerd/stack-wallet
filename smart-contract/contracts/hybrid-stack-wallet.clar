@@ -16,3 +16,5 @@
 
 ;; error constants
 (define-constant ERR-NOT-ADMIN              (err u200))
+(define-constant ERR-PAUSED                 (err u201))
+(define-constant ERR-NOT-INITIALIZED        (err u202))
