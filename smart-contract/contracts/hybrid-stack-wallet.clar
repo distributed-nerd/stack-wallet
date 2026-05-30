@@ -103,3 +103,5 @@
 
 ;; ----- hybrid actions -----
 
+(define-public (increment-with-burn (token <sip010-trait>))
+  (let
