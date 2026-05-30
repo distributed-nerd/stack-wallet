@@ -12,3 +12,5 @@
 (use-trait sip010-trait .sip010-trait.sip-010-trait)
 
 ;; deployer-recorded admin
+(define-constant CONTRACT-DEPLOYER tx-sender)
+
