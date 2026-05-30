@@ -18,3 +18,5 @@
 (define-constant ERR-NOT-ADMIN              (err u200))
 (define-constant ERR-PAUSED                 (err u201))
 (define-constant ERR-NOT-INITIALIZED        (err u202))
+(define-constant ERR-ALREADY-INITIALIZED    (err u203))
+(define-constant ERR-WALLET-NOT-FOUND       (err u204))
