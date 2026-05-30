@@ -241,3 +241,5 @@
 (define-read-only (was-proposal-reward-claimed (proposal-id uint))
   (ok (default-to false (map-get? executed-proposal-rewards proposal-id))))
 
+(define-read-only (get-last-action-burn-block (member principal))
+  (ok (default-to u0 (map-get? last-action-burn-block member))))
