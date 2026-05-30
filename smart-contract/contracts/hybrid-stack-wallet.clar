@@ -59,3 +59,5 @@
 (define-map last-action-burn-block principal uint)
 (define-map wallet-pool-depositors { wallet-id: uint, depositor: principal } uint)
 
+;; ----- admin functions -----
+
