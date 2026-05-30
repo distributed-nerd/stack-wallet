@@ -138,3 +138,6 @@ async function main() {
   for (let i = 0; i < seq.length; i++) {
     const { acct, proposalId } = seq[i];
     const n = nonceByAddr.get(acct.address);
+    const r = await broadcastClaim(acct, proposalId, n);
+    results.push({
+      acctIdx: acct.idx,
