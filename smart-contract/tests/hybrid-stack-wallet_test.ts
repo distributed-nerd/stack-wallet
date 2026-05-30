@@ -14,3 +14,6 @@ const ERR_COST_TOO_HIGH = 215;
 function mintTokenTo(chain: Chain, deployer: Account, recipient: string, amount: number) {
   return chain.mineBlock([
     Tx.contractCall('sip010-token', 'mint',
+      [types.uint(amount), types.principal(recipient)],
+      deployer.address)
+  ]);
