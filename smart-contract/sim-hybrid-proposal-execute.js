@@ -92,3 +92,6 @@ async function main() {
   console.log(`Target: ${TOTAL_TXS} txs (claim-proposal-reward)`);
   console.log(`Loading balances/nonces for ${accounts.length} accounts...`);
 
+  const state = [];
+  for (let i = 0; i < accounts.length; i++) {
+    const s = await getState(accounts[i].address);
