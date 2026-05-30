@@ -174,3 +174,5 @@
       (+ (default-to u0 (map-get? wallet-token-pools wallet-id)) amount))
     (map-set wallet-pool-depositors { wallet-id: wallet-id, depositor: caller }
       (+ existing-deposit amount))
+    (var-set total-pool-deposits (+ (var-get total-pool-deposits) amount))
+    (ok amount)))
