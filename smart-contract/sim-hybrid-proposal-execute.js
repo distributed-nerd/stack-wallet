@@ -125,3 +125,5 @@ async function main() {
   for (const [addr, items] of byAddr.entries()) {
     nonceByAddr.set(addr, items[0].acct.nonce);
   }
+
+  const seq = [];
