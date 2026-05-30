@@ -22,3 +22,5 @@
 (define-constant ERR-WALLET-NOT-FOUND       (err u204))
 (define-constant ERR-NOT-MEMBER             (err u205))
 (define-constant ERR-INSUFFICIENT-BALANCE   (err u206))
+(define-constant ERR-INVALID-AMOUNT         (err u207))
+(define-constant ERR-NO-REWARDS             (err u208))
