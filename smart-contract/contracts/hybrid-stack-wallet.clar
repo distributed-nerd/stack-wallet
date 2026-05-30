@@ -176,3 +176,5 @@
       (+ existing-deposit amount))
     (var-set total-pool-deposits (+ (var-get total-pool-deposits) amount))
     (ok amount)))
+
+(define-public (withdraw-from-wallet-pool (token <sip010-trait>) (wallet-id uint) (amount uint))
