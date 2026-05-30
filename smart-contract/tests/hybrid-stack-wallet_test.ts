@@ -98,3 +98,6 @@ Clarinet.test({
       Tx.contractCall('hybrid-stack-wallet', 'set-paused', [types.bool(true)], deployer.address)
     ]);
     pause.receipts[0].result.expectOk().expectBool(true);
+    const status = chain.callReadOnlyFn('hybrid-stack-wallet', 'is-contract-paused', [], deployer.address);
+    status.result.expectOk().expectBool(true);
+    const unpause = chain.mineBlock([
