@@ -188,3 +188,5 @@
     (asserts! (not (var-get is-paused)) ERR-PAUSED)
     (asserts! (var-get initialized) ERR-NOT-INITIALIZED)
     (asserts! (> amount u0) ERR-INVALID-AMOUNT)
+    (asserts! (>= caller-stake amount) ERR-INSUFFICIENT-BALANCE)
+    (asserts! (>= pool-balance amount) ERR-WITHDRAW-EXCEEDS-POOL)
