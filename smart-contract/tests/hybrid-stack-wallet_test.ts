@@ -57,3 +57,6 @@ Clarinet.test({
         [types.uint(2500)], deployer.address)
     ]);
     block.receipts[0].result.expectOk().expectUint(2500);
+    const read = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-counter-cost', [], deployer.address);
+    read.result.expectOk().expectUint(2500);
+  },
