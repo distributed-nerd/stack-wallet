@@ -168,3 +168,6 @@ async function main() {
   }
 
   const ok = results.filter(r => r.ok);
+  const fail = results.filter(r => !r.ok);
+  console.log(`\n=== Broadcast complete: ${ok.length} accepted, ${fail.length} rejected ===`);
+
