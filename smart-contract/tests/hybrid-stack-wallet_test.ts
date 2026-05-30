@@ -32,3 +32,6 @@ Clarinet.test({
     const first = initializeHybrid(chain, deployer);
     first.receipts[0].result.expectOk().expectBool(true);
     const second = initializeHybrid(chain, deployer);
+    second.receipts[0].result.expectErr().expectUint(ERR_ALREADY_INITIALIZED);
+  },
+});
