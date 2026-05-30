@@ -24,3 +24,5 @@
 (define-constant ERR-INSUFFICIENT-BALANCE   (err u206))
 (define-constant ERR-INVALID-AMOUNT         (err u207))
 (define-constant ERR-NO-REWARDS             (err u208))
+(define-constant ERR-POOL-NOT-FOUND         (err u209))
+(define-constant ERR-INVALID-TOKEN          (err u210))
