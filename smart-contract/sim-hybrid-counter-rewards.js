@@ -156,3 +156,6 @@ async function main() {
       address: acct.address,
       fn: fnName,
       nonce: n.toString(),
+      ...r,
+    });
+    if (r.ok) {
