@@ -121,3 +121,5 @@
     (var-set total-tokens-burned (+ (var-get total-tokens-burned) cost))
     (var-set action-count-global (+ (var-get action-count-global) u1))
     (ok cost)))
+
+(define-public (decrement-with-burn (token <sip010-trait>))
