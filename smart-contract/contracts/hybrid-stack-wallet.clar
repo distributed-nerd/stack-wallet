@@ -223,3 +223,5 @@
 (define-read-only (get-wallet-depositor-stake (wallet-id uint) (depositor principal))
   (ok (default-to u0 (map-get? wallet-pool-depositors { wallet-id: wallet-id, depositor: depositor }))))
 
+(define-read-only (get-total-rewards-issued)
+  (ok (var-get total-rewards-issued)))
