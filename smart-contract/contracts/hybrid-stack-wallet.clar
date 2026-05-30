@@ -75,3 +75,5 @@
     (var-set counter-action-cost new-cost)
     (ok new-cost)))
 
+(define-public (set-proposal-reward (new-reward uint))
+  (begin
