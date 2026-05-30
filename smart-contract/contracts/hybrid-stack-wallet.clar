@@ -219,3 +219,5 @@
 
 (define-read-only (get-wallet-pool (wallet-id uint))
   (ok (default-to u0 (map-get? wallet-token-pools wallet-id))))
+
+(define-read-only (get-wallet-depositor-stake (wallet-id uint) (depositor principal))
