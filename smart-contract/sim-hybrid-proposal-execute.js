@@ -20,3 +20,5 @@ const API = 'https://api.hiro.so';
 const INTERVAL_MS = 1500;
 const PROPOSAL_ID_BASE = 1000;
 
+const accounts = JSON.parse(fs.readFileSync('./accounts.json', 'utf8'));
+
