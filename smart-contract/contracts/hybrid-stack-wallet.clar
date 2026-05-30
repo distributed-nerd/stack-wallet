@@ -245,3 +245,5 @@
   (ok (default-to u0 (map-get? last-action-burn-block member))))
 
 (define-read-only (is-contract-paused)
+  (ok (var-get is-paused)))
+
