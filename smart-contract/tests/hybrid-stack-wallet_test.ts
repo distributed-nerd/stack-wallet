@@ -273,3 +273,6 @@ Clarinet.test({
       Tx.contractCall('hybrid-stack-wallet', 'withdraw-from-wallet-pool',
         [types.principal(tokenContract), types.uint(7), types.uint(2000)], deployer.address)
     ]);
+    block.receipts[0].result.expectErr().expectUint(ERR_INSUFFICIENT_BALANCE);
+  },
+});
