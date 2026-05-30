@@ -95,3 +95,5 @@
     (var-set is-paused paused)
     (ok paused)))
 
+(define-public (transfer-admin (new-admin principal))
+  (begin
