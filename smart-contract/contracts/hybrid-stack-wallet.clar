@@ -231,3 +231,5 @@
 
 (define-read-only (get-total-pool-deposits)
   (ok (var-get total-pool-deposits)))
+
+(define-read-only (get-action-count-global)
