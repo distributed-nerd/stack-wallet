@@ -77,3 +77,5 @@
 
 (define-public (set-proposal-reward (new-reward uint))
   (begin
+    (asserts! (is-eq tx-sender (var-get contract-admin)) ERR-NOT-ADMIN)
+    (asserts! (<= new-reward MAX-PROPOSAL-REWARD) ERR-REWARD-TOO-HIGH)
