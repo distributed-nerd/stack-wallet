@@ -35,3 +35,7 @@ Clarinet.test({
     second.receipts[0].result.expectErr().expectUint(ERR_ALREADY_INITIALIZED);
   },
 });
+
+Clarinet.test({
+  name: "initialize: non-admin cannot initialize",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
