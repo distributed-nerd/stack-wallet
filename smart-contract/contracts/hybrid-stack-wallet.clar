@@ -123,3 +123,5 @@
     (ok cost)))
 
 (define-public (decrement-with-burn (token <sip010-trait>))
+  (let
+    (
