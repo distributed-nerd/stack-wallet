@@ -49,3 +49,5 @@
 (define-data-var total-rewards-issued uint u0)
 (define-data-var total-tokens-burned uint u0)
 (define-data-var total-pool-deposits uint u0)
+(define-data-var action-count-global uint u0)
+
