@@ -251,3 +251,6 @@ Clarinet.test({
     const withdraw = chain.mineBlock([
       Tx.contractCall('hybrid-stack-wallet', 'withdraw-from-wallet-pool',
         [types.principal(tokenContract), types.uint(42), types.uint(50000)], deployer.address)
+    ]);
+    withdraw.receipts[0].result.expectOk().expectUint(50000);
+    const pool = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-wallet-pool',
