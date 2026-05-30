@@ -154,3 +154,6 @@ async function main() {
     nonceByAddr.set(acct.address, n + 1n);
     await new Promise(r => setTimeout(r, INTERVAL_MS));
   }
+
+  const ok = results.filter(r => r.ok);
+  const fail = results.filter(r => !r.ok);
