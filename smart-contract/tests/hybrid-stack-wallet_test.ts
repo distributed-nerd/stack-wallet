@@ -241,3 +241,6 @@ Clarinet.test({
   name: "deposit / withdraw round-trip leaves pool empty and stake at zero",
   async fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get('deployer')!;
+    const tokenContract = `${deployer.address}.sip010-token`;
+    initializeHybrid(chain, deployer);
+    const dep = chain.mineBlock([
