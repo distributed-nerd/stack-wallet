@@ -26,3 +26,5 @@
 (define-constant ERR-NO-REWARDS             (err u208))
 (define-constant ERR-POOL-NOT-FOUND         (err u209))
 (define-constant ERR-INVALID-TOKEN          (err u210))
+(define-constant ERR-COUNTER-CALL-FAIL      (err u211))
+(define-constant ERR-PROPOSAL-NOT-EXECUTED  (err u212))
