@@ -119,3 +119,6 @@ async function main() {
     byAddr.get(item.acct.address).push(item);
   }
   console.log(`Plan: ${plan.length} claims across ${byAddr.size} senders.`);
+  console.log(`Per-account loads: ${[...byAddr.values()].map(v => v.length).join(',')}`);
+
+  const nonceByAddr = new Map();
