@@ -10,3 +10,7 @@ const ERR_INVALID_AMOUNT = 207;
 const ERR_REWARD_ALREADY_CLAIMED = 213;
 const ERR_WITHDRAW_EXCEEDS_POOL = 214;
 const ERR_COST_TOO_HIGH = 215;
+
+function mintTokenTo(chain: Chain, deployer: Account, recipient: string, amount: number) {
+  return chain.mineBlock([
+    Tx.contractCall('sip010-token', 'mint',
