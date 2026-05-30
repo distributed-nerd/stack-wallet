@@ -92,3 +92,6 @@ Clarinet.test({
 Clarinet.test({
   name: "set-paused: admin can pause and unpause",
   async fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get('deployer')!;
+    initializeHybrid(chain, deployer);
+    const pause = chain.mineBlock([
