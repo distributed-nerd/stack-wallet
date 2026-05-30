@@ -70,3 +70,6 @@ Clarinet.test({
     const block = chain.mineBlock([
       Tx.contractCall('hybrid-stack-wallet', 'set-counter-cost',
         [types.uint(100000001)], deployer.address)
+    ]);
+    block.receipts[0].result.expectErr().expectUint(ERR_COST_TOO_HIGH);
+  },
