@@ -113,3 +113,7 @@ Clarinet.test({
     const deployer = accounts.get('deployer')!;
     const wallet1 = accounts.get('wallet_1')!;
     initializeHybrid(chain, deployer);
+    const block = chain.mineBlock([
+      Tx.contractCall('hybrid-stack-wallet', 'transfer-admin',
+        [types.principal(wallet1.address)], deployer.address)
+    ]);
