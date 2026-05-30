@@ -173,3 +173,6 @@ Clarinet.test({
 });
 
 Clarinet.test({
+  name: "decrement-with-burn: also burns and bumps tally",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get('deployer')!;
