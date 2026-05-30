@@ -170,3 +170,6 @@ Clarinet.test({
     const burned = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-total-tokens-burned', [], deployer.address);
     burned.result.expectOk().expectUint(1000);
   },
+});
+
+Clarinet.test({
