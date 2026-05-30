@@ -171,3 +171,5 @@ async function main() {
   const fail = results.filter(r => !r.ok);
   console.log(`\n=== Broadcast complete: ${ok.length} accepted, ${fail.length} rejected ===`);
 
+  fs.writeFileSync('./sim-hybrid-counter-rewards-results.json', JSON.stringify({
+    hybridContract: `${CONTRACT_ADDRESS}.${HYBRID_CONTRACT_NAME}`,
