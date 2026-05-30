@@ -204,3 +204,6 @@ Clarinet.test({
         [types.uint(0)], deployer.address)
     ]);
     second.receipts[0].result.expectErr().expectUint(ERR_REWARD_ALREADY_CLAIMED);
+  },
+});
+
