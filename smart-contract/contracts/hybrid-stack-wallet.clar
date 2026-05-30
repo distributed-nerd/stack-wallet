@@ -34,3 +34,5 @@
 (define-constant ERR-REWARD-TOO-HIGH        (err u216))
 (define-constant ERR-ZERO-ADDRESS           (err u217))
 
+;; safety bounds
+(define-constant MAX-COUNTER-COST u100000000)
