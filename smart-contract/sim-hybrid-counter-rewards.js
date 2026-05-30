@@ -90,3 +90,6 @@ async function broadcastHybridCall(account, fnName, nonce) {
     }
   }
   return { ok: false, error: `broadcast threw: ${String(lastErr?.message || lastErr)}` };
+}
+
+async function main() {
