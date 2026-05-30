@@ -16,3 +16,7 @@ const DEPLOY_FEE = 200000n;
 const API = 'https://api.hiro.so';
 const EXPECTED_ADDRESS = process.env.STACKS_EXPECTED_ADDRESS;
 
+async function loadPrivateKey() {
+  if (process.env.STACKS_PRIVATE_KEY) return process.env.STACKS_PRIVATE_KEY;
+
+  const tomlPath = './settings/Mainnet.toml';
