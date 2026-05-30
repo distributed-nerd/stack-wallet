@@ -145,3 +145,6 @@ async function main() {
       if (q.length) seq.push(q.shift());
     }
   }
+
+  const results = [];
+  for (let i = 0; i < seq.length; i++) {
