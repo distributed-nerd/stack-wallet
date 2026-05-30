@@ -116,3 +116,6 @@ async function main() {
   const byAddr = new Map();
   for (const item of plan) {
     if (!byAddr.has(item.acct.address)) byAddr.set(item.acct.address, []);
+    byAddr.get(item.acct.address).push(item);
+  }
+  console.log(`Plan: ${plan.length} claims across ${byAddr.size} senders.`);
