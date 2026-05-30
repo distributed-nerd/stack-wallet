@@ -52,3 +52,6 @@ async function getState(address) {
     nonce: BigInt(n.possible_next_nonce ?? 0),
   };
 }
+
+async function broadcastClaim(account, proposalId, nonce) {
+  const txOptions = {
