@@ -88,3 +88,7 @@ Clarinet.test({
     block.receipts[0].result.expectErr().expectUint(ERR_NOT_ADMIN);
   },
 });
+
+Clarinet.test({
+  name: "set-paused: admin can pause and unpause",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
