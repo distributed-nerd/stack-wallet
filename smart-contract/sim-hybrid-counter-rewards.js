@@ -148,3 +148,5 @@ async function main() {
 
   const results = [];
   for (let i = 0; i < seq.length; i++) {
+    const { acct, fnName } = seq[i];
+    const n = nonceByAddr.get(acct.address);
