@@ -142,3 +142,5 @@
     (ok cost)))
 
 (define-public (claim-proposal-reward (proposal-id uint))
+  (let
+    (
