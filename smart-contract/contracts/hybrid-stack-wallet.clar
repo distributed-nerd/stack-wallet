@@ -204,3 +204,5 @@
     (ok true)))
 
 ;; ----- read-only views -----
+
+(define-read-only (get-counter-cost)
