@@ -97,3 +97,5 @@
 
 (define-public (transfer-admin (new-admin principal))
   (begin
+    (asserts! (is-eq tx-sender (var-get contract-admin)) ERR-NOT-ADMIN)
+    (var-set contract-admin new-admin)
