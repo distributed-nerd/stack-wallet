@@ -54,3 +54,6 @@ Clarinet.test({
     initializeHybrid(chain, deployer);
     const block = chain.mineBlock([
       Tx.contractCall('hybrid-stack-wallet', 'set-counter-cost',
+        [types.uint(2500)], deployer.address)
+    ]);
+    block.receipts[0].result.expectOk().expectUint(2500);
