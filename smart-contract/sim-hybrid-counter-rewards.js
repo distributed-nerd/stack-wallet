@@ -61,3 +61,6 @@ async function broadcastHybridCall(account, fnName, nonce) {
   const txOptions = {
     contractAddress: CONTRACT_ADDRESS,
     contractName: HYBRID_CONTRACT_NAME,
+    functionName: fnName,
+    functionArgs: [
+      contractPrincipalCV(TOKEN_CONTRACT_ADDRESS, TOKEN_CONTRACT_NAME),
