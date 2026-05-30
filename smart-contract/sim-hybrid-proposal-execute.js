@@ -141,3 +141,5 @@ async function main() {
     const r = await broadcastClaim(acct, proposalId, n);
     results.push({
       acctIdx: acct.idx,
+      address: acct.address,
+      proposalId,
