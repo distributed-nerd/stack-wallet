@@ -76,3 +76,6 @@ Clarinet.test({
 });
 
 Clarinet.test({
+  name: "set-proposal-reward: admin only",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get('deployer')!;
