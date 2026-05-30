@@ -73,3 +73,6 @@ Clarinet.test({
     ]);
     block.receipts[0].result.expectErr().expectUint(ERR_COST_TOO_HIGH);
   },
+});
+
+Clarinet.test({
