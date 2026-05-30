@@ -48,3 +48,6 @@ Clarinet.test({
 });
 
 Clarinet.test({
+  name: "set-counter-cost: admin can update within bounds",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get('deployer')!;
