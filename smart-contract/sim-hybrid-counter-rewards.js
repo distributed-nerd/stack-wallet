@@ -116,3 +116,6 @@ async function main() {
   if (funded.length === 0) {
     console.error('No eligible accounts.');
     process.exit(1);
+  }
+
+  const plan = [];
