@@ -184,3 +184,5 @@
       (pool-balance (default-to u0 (map-get? wallet-token-pools wallet-id)))
       (caller-stake (default-to u0
         (map-get? wallet-pool-depositors { wallet-id: wallet-id, depositor: caller })))
+    )
+    (asserts! (not (var-get is-paused)) ERR-PAUSED)
