@@ -198,3 +198,5 @@
     (ok amount)))
 
 (define-public (reset-action-tally (member principal))
+  (begin
+    (asserts! (is-eq tx-sender (var-get contract-admin)) ERR-NOT-ADMIN)
