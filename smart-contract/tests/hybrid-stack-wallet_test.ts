@@ -42,3 +42,6 @@ Clarinet.test({
     const wallet1 = accounts.get('wallet_1')!;
     const block = chain.mineBlock([
       Tx.contractCall('hybrid-stack-wallet', 'initialize', [], wallet1.address)
+    ]);
+    block.receipts[0].result.expectErr().expectUint(ERR_NOT_ADMIN);
+  },
