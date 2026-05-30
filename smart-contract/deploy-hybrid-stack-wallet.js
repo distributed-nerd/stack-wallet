@@ -96,3 +96,6 @@ async function main() {
     console.error(`ERROR: derived address ${address} does not match STACKS_EXPECTED_ADDRESS ${EXPECTED_ADDRESS}`);
     process.exit(1);
   }
+
+  if (await contractExists(address, CONTRACT_NAME)) {
+    console.log(`Contract ${CONTRACT_NAME} already deployed at ${address}; nothing to do.`);
