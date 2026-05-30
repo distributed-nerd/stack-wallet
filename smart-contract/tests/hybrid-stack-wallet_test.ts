@@ -260,3 +260,6 @@ Clarinet.test({
 });
 
 Clarinet.test({
+  name: "withdraw-from-wallet-pool: cannot withdraw more than depositor stake",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get('deployer')!;
