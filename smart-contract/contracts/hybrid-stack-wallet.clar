@@ -79,3 +79,5 @@
   (begin
     (asserts! (is-eq tx-sender (var-get contract-admin)) ERR-NOT-ADMIN)
     (asserts! (<= new-reward MAX-PROPOSAL-REWARD) ERR-REWARD-TOO-HIGH)
+    (var-set proposal-execution-reward new-reward)
+    (ok new-reward)))
