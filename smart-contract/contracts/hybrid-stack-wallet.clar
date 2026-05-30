@@ -53,3 +53,5 @@
 
 ;; data maps
 (define-map member-action-tally principal uint)
+(define-map wallet-token-pools uint uint)
+(define-map reward-claims-tally principal uint)
