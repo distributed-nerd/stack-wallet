@@ -103,3 +103,6 @@ async function main() {
   console.log(`Eligible accounts (>= ${MIN_STX_USTX} uSTX): ${funded.length}/${accounts.length}`);
   if (funded.length === 0) {
     console.error('No eligible accounts.');
+    process.exit(1);
+  }
+
