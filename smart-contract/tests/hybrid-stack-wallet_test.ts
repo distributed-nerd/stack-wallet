@@ -107,3 +107,6 @@ Clarinet.test({
   },
 });
 
+Clarinet.test({
+  name: "transfer-admin: admin can hand off",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
