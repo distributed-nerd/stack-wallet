@@ -166,3 +166,7 @@ Clarinet.test({
     block.receipts[0].result.expectOk().expectUint(1000);
     const tally = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-member-action-count',
       [types.principal(deployer.address)], deployer.address);
+    tally.result.expectOk().expectUint(1);
+    const burned = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-total-tokens-burned', [], deployer.address);
+    burned.result.expectOk().expectUint(1000);
+  },
