@@ -150,3 +150,5 @@
     (asserts! (not (var-get is-paused)) ERR-PAUSED)
     (asserts! (var-get initialized) ERR-NOT-INITIALIZED)
     (asserts! (> reward u0) ERR-NO-REWARDS)
+    (asserts! (is-none (map-get? executed-proposal-rewards proposal-id))
+              ERR-REWARD-ALREADY-CLAIMED)
