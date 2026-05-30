@@ -29,3 +29,6 @@ async function loadPrivateKey() {
   if (!match) {
     console.error(`ERROR: no mnemonic = "..." line under [accounts.deployer] in ${tomlPath}.`);
     process.exit(1);
+  }
+  const wallet = await generateWallet({ secretKey: match[1].trim(), password: '' });
+  return wallet.accounts[0].stxPrivateKey;
