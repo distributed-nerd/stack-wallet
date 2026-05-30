@@ -153,3 +153,6 @@ async function main() {
     const r = await broadcastHybridCall(acct, fnName, n);
     results.push({
       acctIdx: acct.idx,
+      address: acct.address,
+      fn: fnName,
+      nonce: n.toString(),
