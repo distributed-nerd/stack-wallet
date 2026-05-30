@@ -93,3 +93,5 @@
   (begin
     (asserts! (is-eq tx-sender (var-get contract-admin)) ERR-NOT-ADMIN)
     (var-set is-paused paused)
+    (ok paused)))
+
