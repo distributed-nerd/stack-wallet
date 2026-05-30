@@ -109,3 +109,6 @@ async function main() {
   if (result.ok) {
     console.log(`Deployment broadcast successful.`);
     console.log(`  txid: ${result.txid}`);
+    console.log(`  Once confirmed, contract is at ${address}.${CONTRACT_NAME}`);
+  } else {
+    console.error(`Deployment failed: ${result.error}`);
