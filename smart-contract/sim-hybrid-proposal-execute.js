@@ -87,3 +87,6 @@ async function broadcastClaim(account, proposalId, nonce) {
 }
 
 async function main() {
+  console.log(`Contract: ${CONTRACT_ADDRESS}.${HYBRID_CONTRACT_NAME}`);
+  console.log(`Fee per tx: ${FEE} uSTX (${Number(FEE) / 1_000_000} STX)`);
+  console.log(`Target: ${TOTAL_TXS} txs (claim-proposal-reward)`);
