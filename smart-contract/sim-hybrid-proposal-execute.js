@@ -133,3 +133,5 @@ async function main() {
       if (q.length) seq.push(q.shift());
     }
   }
+
+  const results = [];
