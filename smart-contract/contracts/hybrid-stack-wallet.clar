@@ -168,3 +168,5 @@
     )
     (asserts! (not (var-get is-paused)) ERR-PAUSED)
     (asserts! (var-get initialized) ERR-NOT-INITIALIZED)
+    (asserts! (> amount u0) ERR-INVALID-AMOUNT)
+    (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
