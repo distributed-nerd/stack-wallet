@@ -132,3 +132,6 @@ Clarinet.test({
       Tx.contractCall('hybrid-stack-wallet', 'increment-with-burn',
         [types.principal(tokenContract)], deployer.address)
     ]);
+    block.receipts[0].result.expectErr().expectUint(ERR_NOT_INITIALIZED);
+  },
+});
