@@ -168,3 +168,5 @@ async function main() {
     accepted: ok.length,
     rejected: fail.length,
     results,
+  }, null, 2));
+  console.log('Results saved to sim-hybrid-proposal-execute-results.json');
