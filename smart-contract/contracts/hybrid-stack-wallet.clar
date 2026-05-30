@@ -83,3 +83,5 @@
     (ok new-reward)))
 
 (define-public (set-wallet-deposit (new-deposit uint))
+  (begin
+    (asserts! (is-eq tx-sender (var-get contract-admin)) ERR-NOT-ADMIN)
