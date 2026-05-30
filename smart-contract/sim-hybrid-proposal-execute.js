@@ -55,3 +55,5 @@ async function getState(address) {
 
 async function broadcastClaim(account, proposalId, nonce) {
   const txOptions = {
+    contractAddress: CONTRACT_ADDRESS,
+    contractName: HYBRID_CONTRACT_NAME,
