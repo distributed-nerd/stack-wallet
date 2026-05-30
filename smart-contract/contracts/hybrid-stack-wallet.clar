@@ -206,3 +206,5 @@
 ;; ----- read-only views -----
 
 (define-read-only (get-counter-cost)
+  (ok (var-get counter-action-cost)))
+
