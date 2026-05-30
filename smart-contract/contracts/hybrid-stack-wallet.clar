@@ -87,3 +87,5 @@
     (asserts! (is-eq tx-sender (var-get contract-admin)) ERR-NOT-ADMIN)
     (asserts! (<= new-deposit MAX-WALLET-DEPOSIT) ERR-INVALID-AMOUNT)
     (var-set wallet-creation-deposit new-deposit)
+    (ok new-deposit)))
+
