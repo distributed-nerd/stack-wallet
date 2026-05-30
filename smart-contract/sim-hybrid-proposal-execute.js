@@ -49,3 +49,6 @@ async function getState(address) {
   const n = await fetchJsonWithRetry(`${API}/extended/v1/address/${address}/nonces`);
   return {
     stxBalance: parseInt(b.stx?.balance ?? '0'),
+    nonce: BigInt(n.possible_next_nonce ?? 0),
+  };
+}
