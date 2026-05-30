@@ -64,3 +64,6 @@ Clarinet.test({
 
 Clarinet.test({
   name: "set-counter-cost: above max is rejected",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get('deployer')!;
+    initializeHybrid(chain, deployer);
