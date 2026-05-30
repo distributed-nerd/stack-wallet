@@ -232,3 +232,6 @@ Clarinet.test({
     const block = chain.mineBlock([
       Tx.contractCall('hybrid-stack-wallet', 'deposit-to-wallet-pool',
         [types.principal(tokenContract), types.uint(0), types.uint(0)], deployer.address)
+    ]);
+    block.receipts[0].result.expectErr().expectUint(ERR_INVALID_AMOUNT);
+  },
