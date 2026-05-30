@@ -254,3 +254,6 @@ Clarinet.test({
     ]);
     withdraw.receipts[0].result.expectOk().expectUint(50000);
     const pool = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-wallet-pool',
+      [types.uint(42)], deployer.address);
+    pool.result.expectOk().expectUint(0);
+  },
