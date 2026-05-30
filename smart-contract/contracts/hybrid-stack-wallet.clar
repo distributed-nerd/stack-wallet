@@ -194,3 +194,5 @@
     (map-set wallet-token-pools wallet-id (- pool-balance amount))
     (map-set wallet-pool-depositors { wallet-id: wallet-id, depositor: caller }
       (- caller-stake amount))
+    (var-set total-pool-deposits (- (var-get total-pool-deposits) amount))
+    (ok amount)))
