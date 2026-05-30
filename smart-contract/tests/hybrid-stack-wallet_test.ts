@@ -154,3 +154,6 @@ Clarinet.test({
 });
 
 Clarinet.test({
+  name: "increment-with-burn: happy path burns tokens and bumps counter",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get('deployer')!;
