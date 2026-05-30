@@ -51,3 +51,5 @@
 (define-data-var total-pool-deposits uint u0)
 (define-data-var action-count-global uint u0)
 
+;; data maps
+(define-map member-action-tally principal uint)
