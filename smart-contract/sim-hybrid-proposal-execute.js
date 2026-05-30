@@ -111,3 +111,6 @@ async function main() {
     const acct = funded[i % funded.length];
     const proposalId = PROPOSAL_ID_BASE + i;
     plan.push({ acct, proposalId });
+  }
+
+  const byAddr = new Map();
