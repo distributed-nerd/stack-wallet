@@ -276,3 +276,6 @@ Clarinet.test({
     block.receipts[0].result.expectErr().expectUint(ERR_INSUFFICIENT_BALANCE);
   },
 });
+
+Clarinet.test({
+  name: "reset-action-tally: admin can zero a member's tally",
