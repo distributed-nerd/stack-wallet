@@ -103,3 +103,6 @@ async function main() {
   }
 
   const nonce = await getAccountNonce(address);
+  console.log(`Starting nonce: ${nonce}`);
+
+  const result = await deployContract(senderKey, CONTRACT_NAME, CONTRACT_FILE, nonce, DEPLOY_FEE);
