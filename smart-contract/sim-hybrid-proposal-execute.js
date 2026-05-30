@@ -76,3 +76,6 @@ async function broadcastClaim(account, proposalId, nonce) {
       }
       return { ok: true, txid: typeof result === 'string' ? result : result.txid };
     } catch (e) {
+      lastErr = e;
+      const msg = String(e?.cause?.message || e?.message || e);
+      const rateLimited = msg.includes('Per-minute') || msg.includes('429') || msg.includes('rate');
