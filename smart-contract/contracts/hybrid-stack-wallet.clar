@@ -259,3 +259,5 @@
 (define-read-only (get-max-proposal-reward)
   (ok MAX-PROPOSAL-REWARD))
 
+(define-read-only (get-max-wallet-deposit)
+  (ok MAX-WALLET-DEPOSIT))
