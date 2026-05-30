@@ -81,3 +81,6 @@ async function deployContract(senderKey, contractName, contractFile, nonce, fee)
     postConditionMode: PostConditionMode.Allow,
     fee: BigInt(fee),
     nonce: BigInt(nonce),
+  };
+
+  const tx = await makeContractDeploy(txOptions);
