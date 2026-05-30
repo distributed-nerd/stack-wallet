@@ -200,3 +200,5 @@
 (define-public (reset-action-tally (member principal))
   (begin
     (asserts! (is-eq tx-sender (var-get contract-admin)) ERR-NOT-ADMIN)
+    (map-set member-action-tally member u0)
+    (ok true)))
