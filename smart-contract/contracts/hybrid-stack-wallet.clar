@@ -208,3 +208,5 @@
 (define-read-only (get-counter-cost)
   (ok (var-get counter-action-cost)))
 
+(define-read-only (get-proposal-reward)
+  (ok (var-get proposal-execution-reward)))
