@@ -113,3 +113,6 @@ async function main() {
   for (const a of skipped) {
     console.log(`  skip #${a.idx} ${a.address.slice(0, 10)} stx=${a.stxBalance} stk=${a.tokenBalance.toString()}`);
   }
+  if (funded.length === 0) {
+    console.error('No eligible accounts.');
+    process.exit(1);
