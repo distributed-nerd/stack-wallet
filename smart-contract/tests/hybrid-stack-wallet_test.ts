@@ -120,3 +120,6 @@ Clarinet.test({
     block.receipts[0].result.expectOk().expectPrincipal(wallet1.address);
     const get = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-admin', [], deployer.address);
     get.result.expectOk().expectPrincipal(wallet1.address);
+  },
+});
+
