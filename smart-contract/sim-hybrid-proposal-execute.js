@@ -17,3 +17,6 @@ const FEE = 2500n;
 const TOTAL_TXS = 150;
 const MIN_STX_USTX = 12000;
 const API = 'https://api.hiro.so';
+const INTERVAL_MS = 1500;
+const PROPOSAL_ID_BASE = 1000;
+
