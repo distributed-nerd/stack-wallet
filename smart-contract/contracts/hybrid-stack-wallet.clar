@@ -172,3 +172,5 @@
     (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
     (map-set wallet-token-pools wallet-id
       (+ (default-to u0 (map-get? wallet-token-pools wallet-id)) amount))
+    (map-set wallet-pool-depositors { wallet-id: wallet-id, depositor: caller }
+      (+ existing-deposit amount))
