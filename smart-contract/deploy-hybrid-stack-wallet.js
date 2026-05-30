@@ -87,3 +87,6 @@ async function deployContract(senderKey, contractName, contractFile, nonce, fee)
   return broadcastWithRetry(tx);
 }
 
+async function main() {
+  const senderKey = await loadPrivateKey();
+  const address = getAddressFromPrivateKey(senderKey, 'mainnet');
