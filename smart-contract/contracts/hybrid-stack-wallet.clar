@@ -196,3 +196,5 @@
       (- caller-stake amount))
     (var-set total-pool-deposits (- (var-get total-pool-deposits) amount))
     (ok amount)))
+
+(define-public (reset-action-tally (member principal))
