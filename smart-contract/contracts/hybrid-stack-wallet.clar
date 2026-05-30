@@ -73,3 +73,5 @@
     (asserts! (is-eq tx-sender (var-get contract-admin)) ERR-NOT-ADMIN)
     (asserts! (<= new-cost MAX-COUNTER-COST) ERR-COST-TOO-HIGH)
     (var-set counter-action-cost new-cost)
+    (ok new-cost)))
+
