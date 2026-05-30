@@ -39,3 +39,6 @@ Clarinet.test({
 Clarinet.test({
   name: "initialize: non-admin cannot initialize",
   async fn(chain: Chain, accounts: Map<string, Account>) {
+    const wallet1 = accounts.get('wallet_1')!;
+    const block = chain.mineBlock([
+      Tx.contractCall('hybrid-stack-wallet', 'initialize', [], wallet1.address)
