@@ -41,3 +41,6 @@ async function fetchJsonWithRetry(url, attempts = 6) {
     }
   }
   throw new Error('fetchJsonWithRetry exhausted: ' + url);
+}
+
+async function getState(address) {
