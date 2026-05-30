@@ -119,3 +119,6 @@ async function main() {
   }
 
   const plan = [];
+  for (let i = 0; i < TOTAL_TXS; i++) {
+    const acct = funded[i % funded.length];
+    const fnName = i % 2 === 0 ? 'increment-with-burn' : 'decrement-with-burn';
