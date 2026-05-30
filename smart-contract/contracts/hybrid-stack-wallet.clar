@@ -255,3 +255,5 @@
 
 (define-read-only (get-max-counter-cost)
   (ok MAX-COUNTER-COST))
+
+(define-read-only (get-max-proposal-reward)
