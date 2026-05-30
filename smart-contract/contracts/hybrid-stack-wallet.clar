@@ -65,3 +65,5 @@
   (begin
     (asserts! (not (var-get initialized)) ERR-ALREADY-INITIALIZED)
     (asserts! (is-eq tx-sender (var-get contract-admin)) ERR-NOT-ADMIN)
+    (var-set initialized true)
+    (ok true)))
