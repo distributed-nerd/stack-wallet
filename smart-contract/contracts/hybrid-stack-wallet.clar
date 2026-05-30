@@ -164,3 +164,5 @@
     (
       (caller tx-sender)
       (existing-deposit (default-to u0
+        (map-get? wallet-pool-depositors { wallet-id: wallet-id, depositor: caller })))
+    )
