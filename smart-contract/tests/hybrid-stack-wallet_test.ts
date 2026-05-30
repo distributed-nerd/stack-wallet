@@ -238,3 +238,6 @@ Clarinet.test({
 });
 
 Clarinet.test({
+  name: "deposit / withdraw round-trip leaves pool empty and stake at zero",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get('deployer')!;
