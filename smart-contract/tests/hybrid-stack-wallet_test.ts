@@ -117,3 +117,6 @@ Clarinet.test({
       Tx.contractCall('hybrid-stack-wallet', 'transfer-admin',
         [types.principal(wallet1.address)], deployer.address)
     ]);
+    block.receipts[0].result.expectOk().expectPrincipal(wallet1.address);
+    const get = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-admin', [], deployer.address);
+    get.result.expectOk().expectPrincipal(wallet1.address);
