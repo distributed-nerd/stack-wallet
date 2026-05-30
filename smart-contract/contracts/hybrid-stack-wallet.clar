@@ -113,3 +113,5 @@
     (asserts! (var-get initialized) ERR-NOT-INITIALIZED)
     (asserts! (> cost u0) ERR-INVALID-AMOUNT)
     (try! (contract-call? token transfer cost caller (as-contract tx-sender) none))
+    (try! (as-contract (contract-call? .sip010-token burn cost)))
+    (try! (contract-call? .stack-wallet increment))
