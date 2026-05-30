@@ -112,3 +112,6 @@ async function main() {
     console.log(`  Once confirmed, contract is at ${address}.${CONTRACT_NAME}`);
   } else {
     console.error(`Deployment failed: ${result.error}`);
+    if (result.detail) console.error(`  detail: ${JSON.stringify(result.detail)}`);
+    process.exit(1);
+  }
