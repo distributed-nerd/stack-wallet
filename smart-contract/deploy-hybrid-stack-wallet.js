@@ -66,3 +66,6 @@ async function broadcastWithRetry(transaction) {
 }
 
 async function deployContract(senderKey, contractName, contractFile, nonce, fee) {
+  const contractSource = fs.readFileSync(contractFile, 'utf8');
+  console.log(`Deploying ${contractName}`);
+  console.log(`  source size: ${contractSource.length} bytes`);
