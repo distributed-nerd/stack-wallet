@@ -145,3 +145,6 @@ Clarinet.test({
     chain.mineBlock([
       Tx.contractCall('hybrid-stack-wallet', 'set-paused', [types.bool(true)], deployer.address)
     ]);
+    const block = chain.mineBlock([
+      Tx.contractCall('hybrid-stack-wallet', 'increment-with-burn',
+        [types.principal(tokenContract)], deployer.address)
