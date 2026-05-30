@@ -288,3 +288,6 @@ Clarinet.test({
         [types.principal(tokenContract)], deployer.address)
     ]);
     const reset = chain.mineBlock([
+      Tx.contractCall('hybrid-stack-wallet', 'reset-action-tally',
+        [types.principal(deployer.address)], deployer.address)
+    ]);
