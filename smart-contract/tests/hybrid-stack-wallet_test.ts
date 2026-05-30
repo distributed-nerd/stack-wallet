@@ -223,3 +223,6 @@ Clarinet.test({
   },
 });
 
+Clarinet.test({
+  name: "deposit-to-wallet-pool: zero amount rejected",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
