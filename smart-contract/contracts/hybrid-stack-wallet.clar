@@ -81,3 +81,5 @@
     (asserts! (<= new-reward MAX-PROPOSAL-REWARD) ERR-REWARD-TOO-HIGH)
     (var-set proposal-execution-reward new-reward)
     (ok new-reward)))
+
+(define-public (set-wallet-deposit (new-deposit uint))
