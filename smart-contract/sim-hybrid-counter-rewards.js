@@ -104,3 +104,6 @@ async function main() {
     const s = await getState(accounts[i].address);
     state.push({ ...accounts[i], ...s, idx: i + 1 });
     await new Promise(r => setTimeout(r, 400));
+  }
+
+  const funded = state.filter(a =>
