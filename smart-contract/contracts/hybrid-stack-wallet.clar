@@ -212,3 +212,5 @@
   (ok (var-get proposal-execution-reward)))
 
 (define-read-only (get-wallet-deposit)
+  (ok (var-get wallet-creation-deposit)))
+
