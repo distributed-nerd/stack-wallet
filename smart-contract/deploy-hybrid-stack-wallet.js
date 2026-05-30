@@ -106,3 +106,6 @@ async function main() {
   console.log(`Starting nonce: ${nonce}`);
 
   const result = await deployContract(senderKey, CONTRACT_NAME, CONTRACT_FILE, nonce, DEPLOY_FEE);
+  if (result.ok) {
+    console.log(`Deployment broadcast successful.`);
+    console.log(`  txid: ${result.txid}`);
