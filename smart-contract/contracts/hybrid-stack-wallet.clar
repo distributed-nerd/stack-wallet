@@ -156,3 +156,5 @@
     (map-set executed-proposal-rewards proposal-id true)
     (map-set reward-claims-tally caller
       (+ (default-to u0 (map-get? reward-claims-tally caller)) reward))
+    (var-set total-rewards-issued (+ (var-get total-rewards-issued) reward))
+    (ok reward)))
