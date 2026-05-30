@@ -126,3 +126,6 @@ Clarinet.test({
 Clarinet.test({
   name: "increment-with-burn: not initialized rejects",
   async fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get('deployer')!;
+    const tokenContract = `${deployer.address}.sip010-token`;
+    const block = chain.mineBlock([
