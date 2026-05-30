@@ -60,3 +60,6 @@ async function broadcastClaim(account, proposalId, nonce) {
     functionName: 'claim-proposal-reward',
     functionArgs: [uintCV(proposalId)],
     senderKey: account.privateKey,
+    network: STACKS_MAINNET,
+    anchorMode: AnchorMode.Any,
+    postConditionMode: PostConditionMode.Allow,
