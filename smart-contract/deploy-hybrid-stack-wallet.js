@@ -90,3 +90,6 @@ async function deployContract(senderKey, contractName, contractFile, nonce, fee)
 async function main() {
   const senderKey = await loadPrivateKey();
   const address = getAddressFromPrivateKey(senderKey, 'mainnet');
+  console.log(`Deployer address: ${address}`);
+
+  if (EXPECTED_ADDRESS && EXPECTED_ADDRESS !== address) {
