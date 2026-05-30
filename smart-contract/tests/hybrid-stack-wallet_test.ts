@@ -216,3 +216,7 @@ Clarinet.test({
       Tx.contractCall('hybrid-stack-wallet', 'claim-proposal-reward',
         [types.uint(1)], deployer.address),
       Tx.contractCall('hybrid-stack-wallet', 'claim-proposal-reward',
+        [types.uint(2)], deployer.address),
+    ]);
+    const total = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-total-rewards-issued', [], deployer.address);
+    total.result.expectOk().expectUint(10000);
