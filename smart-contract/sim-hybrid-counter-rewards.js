@@ -150,3 +150,6 @@ async function main() {
   for (let i = 0; i < seq.length; i++) {
     const { acct, fnName } = seq[i];
     const n = nonceByAddr.get(acct.address);
+    const r = await broadcastHybridCall(acct, fnName, n);
+    results.push({
+      acctIdx: acct.idx,
