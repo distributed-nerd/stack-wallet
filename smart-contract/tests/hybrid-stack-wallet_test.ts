@@ -95,3 +95,6 @@ Clarinet.test({
     const deployer = accounts.get('deployer')!;
     initializeHybrid(chain, deployer);
     const pause = chain.mineBlock([
+      Tx.contractCall('hybrid-stack-wallet', 'set-paused', [types.bool(true)], deployer.address)
+    ]);
+    pause.receipts[0].result.expectOk().expectBool(true);
