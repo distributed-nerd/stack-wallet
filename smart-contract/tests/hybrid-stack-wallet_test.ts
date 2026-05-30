@@ -294,3 +294,7 @@ Clarinet.test({
     reset.receipts[0].result.expectOk().expectBool(true);
     const tally = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-member-action-count',
       [types.principal(deployer.address)], deployer.address);
+    tally.result.expectOk().expectUint(0);
+  },
+});
+
