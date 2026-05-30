@@ -201,3 +201,6 @@ Clarinet.test({
     first.receipts[0].result.expectOk().expectUint(5000);
     const second = chain.mineBlock([
       Tx.contractCall('hybrid-stack-wallet', 'claim-proposal-reward',
+        [types.uint(0)], deployer.address)
+    ]);
+    second.receipts[0].result.expectErr().expectUint(ERR_REWARD_ALREADY_CLAIMED);
