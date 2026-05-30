@@ -18,3 +18,6 @@ const TOKEN_CONTRACT_NAME = 'sip010-token';
 const TOKEN_ID = `${TOKEN_CONTRACT_ADDRESS}.${TOKEN_CONTRACT_NAME}::stack-token`;
 const FEE = 5000n;
 const TOTAL_TXS = 100;
+const MIN_STX_USTX = 35000;
+const MIN_TOKEN = 10000n;
+const API = 'https://api.hiro.so';
