@@ -96,3 +96,6 @@ async function main() {
   console.log(`Contract: ${CONTRACT_ADDRESS}.${HYBRID_CONTRACT_NAME}`);
   console.log(`Token: ${TOKEN_CONTRACT_ADDRESS}.${TOKEN_CONTRACT_NAME}`);
   console.log(`Fee per tx: ${FEE} uSTX (${Number(FEE) / 1_000_000} STX)`);
+  console.log(`Target: ${TOTAL_TXS} txs (increment-with-burn / decrement-with-burn)`);
+  console.log(`Loading balances/nonces for ${accounts.length} accounts...`);
+
