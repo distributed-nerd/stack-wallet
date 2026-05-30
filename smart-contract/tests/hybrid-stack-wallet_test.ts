@@ -45,3 +45,6 @@ Clarinet.test({
     ]);
     block.receipts[0].result.expectErr().expectUint(ERR_NOT_ADMIN);
   },
+});
+
+Clarinet.test({
