@@ -24,3 +24,6 @@ const API = 'https://api.hiro.so';
 const INTERVAL_MS = 1500;
 
 const accounts = JSON.parse(fs.readFileSync('./accounts.json', 'utf8'));
+
+async function fetchJsonWithRetry(url, attempts = 6) {
+  for (let i = 0; i < attempts; i++) {
