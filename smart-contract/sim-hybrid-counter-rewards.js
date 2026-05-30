@@ -79,3 +79,5 @@ async function broadcastHybridCall(account, fnName, nonce) {
       const result = await broadcastTransaction({ transaction: tx, network: STACKS_MAINNET });
       if (result.error) {
         return { ok: false, error: `${result.error}: ${result.reason}`, detail: result.reason_data };
+      }
+      return { ok: true, txid: typeof result === 'string' ? result : result.txid };
