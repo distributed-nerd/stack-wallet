@@ -8,3 +8,5 @@
 ;;   - withdraw-from-wallet-pool                   : returns escrowed STK to caller
 ;;   - per-member action tally tracked for reward attribution
 
+;; traits
+(use-trait sip010-trait .sip010-trait.sip-010-trait)
