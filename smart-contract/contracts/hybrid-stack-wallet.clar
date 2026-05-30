@@ -178,3 +178,5 @@
     (ok amount)))
 
 (define-public (withdraw-from-wallet-pool (token <sip010-trait>) (wallet-id uint) (amount uint))
+  (let
+    (
