@@ -78,3 +78,6 @@ async function deployContract(senderKey, contractName, contractFile, nonce, fee)
     senderKey,
     network: STACKS_MAINNET,
     anchorMode: AnchorMode.Any,
+    postConditionMode: PostConditionMode.Allow,
+    fee: BigInt(fee),
+    nonce: BigInt(nonce),
