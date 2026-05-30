@@ -226,3 +226,6 @@ Clarinet.test({
 Clarinet.test({
   name: "deposit-to-wallet-pool: zero amount rejected",
   async fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get('deployer')!;
+    const tokenContract = `${deployer.address}.sip010-token`;
+    initializeHybrid(chain, deployer);
