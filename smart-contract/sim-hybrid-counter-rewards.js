@@ -102,3 +102,5 @@ async function main() {
   const state = [];
   for (let i = 0; i < accounts.length; i++) {
     const s = await getState(accounts[i].address);
+    state.push({ ...accounts[i], ...s, idx: i + 1 });
+    await new Promise(r => setTimeout(r, 400));
