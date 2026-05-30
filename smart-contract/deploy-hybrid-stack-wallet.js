@@ -38,3 +38,6 @@ async function getAccountNonce(address) {
   const res = await fetch(`${API}/extended/v1/address/${address}/nonces`);
   const data = await res.json();
   return data.possible_next_nonce;
+}
+
+async function contractExists(address, contractName) {
