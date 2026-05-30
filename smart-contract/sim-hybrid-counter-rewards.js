@@ -81,3 +81,6 @@ async function broadcastHybridCall(account, fnName, nonce) {
         return { ok: false, error: `${result.error}: ${result.reason}`, detail: result.reason_data };
       }
       return { ok: true, txid: typeof result === 'string' ? result : result.txid };
+    } catch (e) {
+      lastErr = e;
+      const msg = String(e?.cause?.message || e?.message || e);
