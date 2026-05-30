@@ -36,3 +36,5 @@
 
 ;; safety bounds
 (define-constant MAX-COUNTER-COST u100000000)
+(define-constant MAX-PROPOSAL-REWARD u500000000)
+(define-constant MAX-WALLET-DEPOSIT u1000000000)
