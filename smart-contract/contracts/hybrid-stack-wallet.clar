@@ -225,3 +225,5 @@
 
 (define-read-only (get-total-rewards-issued)
   (ok (var-get total-rewards-issued)))
+
+(define-read-only (get-total-tokens-burned)
