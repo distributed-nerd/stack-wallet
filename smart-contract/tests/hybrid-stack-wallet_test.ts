@@ -266,3 +266,6 @@ Clarinet.test({
     const tokenContract = `${deployer.address}.sip010-token`;
     initializeHybrid(chain, deployer);
     chain.mineBlock([
+      Tx.contractCall('hybrid-stack-wallet', 'deposit-to-wallet-pool',
+        [types.principal(tokenContract), types.uint(7), types.uint(1000)], deployer.address)
+    ]);
