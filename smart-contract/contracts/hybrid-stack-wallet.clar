@@ -101,3 +101,5 @@
     (var-set contract-admin new-admin)
     (ok new-admin)))
 
+;; ----- hybrid actions -----
+
