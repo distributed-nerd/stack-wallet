@@ -30,3 +30,5 @@
 (define-constant ERR-PROPOSAL-NOT-EXECUTED  (err u212))
 (define-constant ERR-REWARD-ALREADY-CLAIMED (err u213))
 (define-constant ERR-WITHDRAW-EXCEEDS-POOL  (err u214))
+(define-constant ERR-COST-TOO-HIGH          (err u215))
+(define-constant ERR-REWARD-TOO-HIGH        (err u216))
