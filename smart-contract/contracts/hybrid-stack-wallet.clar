@@ -14,3 +14,5 @@
 ;; deployer-recorded admin
 (define-constant CONTRACT-DEPLOYER tx-sender)
 
+;; error constants
+(define-constant ERR-NOT-ADMIN              (err u200))
