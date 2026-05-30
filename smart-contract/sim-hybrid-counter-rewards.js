@@ -70,3 +70,6 @@ async function broadcastHybridCall(account, fnName, nonce) {
     anchorMode: AnchorMode.Any,
     postConditionMode: PostConditionMode.Allow,
     fee: FEE,
+    nonce,
+  };
+  const tx = await makeContractCall(txOptions);
