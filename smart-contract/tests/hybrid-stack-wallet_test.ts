@@ -220,3 +220,6 @@ Clarinet.test({
     ]);
     const total = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-total-rewards-issued', [], deployer.address);
     total.result.expectOk().expectUint(10000);
+  },
+});
+
