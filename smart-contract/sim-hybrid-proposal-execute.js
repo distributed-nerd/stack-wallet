@@ -81,3 +81,6 @@ async function broadcastClaim(account, proposalId, nonce) {
       const rateLimited = msg.includes('Per-minute') || msg.includes('429') || msg.includes('rate');
       if (!rateLimited && attempt > 0) break;
       await new Promise(r => setTimeout(r, 2000 * (attempt + 1)));
+    }
+  }
+  return { ok: false, error: `broadcast threw: ${String(lastErr?.message || lastErr)}` };
