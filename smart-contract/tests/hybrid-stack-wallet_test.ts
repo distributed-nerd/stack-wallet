@@ -279,3 +279,6 @@ Clarinet.test({
 
 Clarinet.test({
   name: "reset-action-tally: admin can zero a member's tally",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get('deployer')!;
+    const tokenContract = `${deployer.address}.sip010-token`;
