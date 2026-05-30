@@ -65,3 +65,6 @@ async function broadcastClaim(account, proposalId, nonce) {
     postConditionMode: PostConditionMode.Allow,
     fee: FEE,
     nonce,
+  };
+  const tx = await makeContractCall(txOptions);
+  let lastErr;
