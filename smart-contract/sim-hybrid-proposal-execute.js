@@ -14,3 +14,6 @@ global.fetch = fetch;
 const CONTRACT_ADDRESS = 'SP1FPNMWMJR7WT3AH6HMPSEVG0PPSNE7N32ES51K6';
 const HYBRID_CONTRACT_NAME = 'hybrid-stack-wallet';
 const FEE = 2500n;
+const TOTAL_TXS = 150;
+const MIN_STX_USTX = 12000;
+const API = 'https://api.hiro.so';
