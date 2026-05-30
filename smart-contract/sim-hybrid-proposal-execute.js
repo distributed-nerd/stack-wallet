@@ -68,3 +68,6 @@ async function broadcastClaim(account, proposalId, nonce) {
   };
   const tx = await makeContractCall(txOptions);
   let lastErr;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
+      const result = await broadcastTransaction({ transaction: tx, network: STACKS_MAINNET });
