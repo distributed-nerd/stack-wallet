@@ -28,3 +28,5 @@
 (define-constant ERR-INVALID-TOKEN          (err u210))
 (define-constant ERR-COUNTER-CALL-FAIL      (err u211))
 (define-constant ERR-PROPOSAL-NOT-EXECUTED  (err u212))
+(define-constant ERR-REWARD-ALREADY-CLAIMED (err u213))
+(define-constant ERR-WITHDRAW-EXCEEDS-POOL  (err u214))
