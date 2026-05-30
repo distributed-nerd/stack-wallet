@@ -98,3 +98,5 @@ async function main() {
     state.push({ ...accounts[i], ...s, idx: i + 1 });
     await new Promise(r => setTimeout(r, 400));
   }
+
+  const funded = state.filter(a => a.stxBalance >= MIN_STX_USTX);
