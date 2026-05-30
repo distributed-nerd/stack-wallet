@@ -64,3 +64,6 @@ async function broadcastHybridCall(account, fnName, nonce) {
     functionName: fnName,
     functionArgs: [
       contractPrincipalCV(TOKEN_CONTRACT_ADDRESS, TOKEN_CONTRACT_NAME),
+    ],
+    senderKey: account.privateKey,
+    network: STACKS_MAINNET,
