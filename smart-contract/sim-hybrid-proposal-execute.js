@@ -106,3 +106,5 @@ async function main() {
     process.exit(1);
   }
 
+  const plan = [];
+  for (let i = 0; i < TOTAL_TXS; i++) {
