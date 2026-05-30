@@ -251,3 +251,5 @@
   (ok (var-get contract-admin)))
 
 (define-read-only (is-initialized-check)
+  (ok (var-get initialized)))
+
