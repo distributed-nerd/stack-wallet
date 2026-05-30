@@ -127,3 +127,6 @@
     (
       (cost (var-get counter-action-cost))
       (caller tx-sender)
+    )
+    (asserts! (not (var-get is-paused)) ERR-PAUSED)
+    (asserts! (var-get initialized) ERR-NOT-INITIALIZED)
