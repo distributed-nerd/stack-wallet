@@ -179,3 +179,6 @@ async function main() {
     broadcastedAt: new Date().toISOString(),
     accepted: ok.length,
     rejected: fail.length,
+    results,
+  }, null, 2));
+  console.log('Results saved to sim-hybrid-counter-rewards-results.json');
