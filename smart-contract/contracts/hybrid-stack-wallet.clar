@@ -158,3 +158,5 @@
       (+ (default-to u0 (map-get? reward-claims-tally caller)) reward))
     (var-set total-rewards-issued (+ (var-get total-rewards-issued) reward))
     (ok reward)))
+
+(define-public (deposit-to-wallet-pool (token <sip010-trait>) (wallet-id uint) (amount uint))
