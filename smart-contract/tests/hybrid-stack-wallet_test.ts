@@ -85,3 +85,6 @@ Clarinet.test({
       Tx.contractCall('hybrid-stack-wallet', 'set-proposal-reward',
         [types.uint(7500)], wallet1.address)
     ]);
+    block.receipts[0].result.expectErr().expectUint(ERR_NOT_ADMIN);
+  },
+});
