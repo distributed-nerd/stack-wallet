@@ -151,3 +151,6 @@ Clarinet.test({
     ]);
     block.receipts[0].result.expectErr().expectUint(ERR_PAUSED);
   },
+});
+
+Clarinet.test({
