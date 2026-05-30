@@ -135,3 +135,6 @@ Clarinet.test({
     block.receipts[0].result.expectErr().expectUint(ERR_NOT_INITIALIZED);
   },
 });
+
+Clarinet.test({
+  name: "increment-with-burn: paused rejects",
