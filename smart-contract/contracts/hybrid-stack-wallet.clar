@@ -47,3 +47,5 @@
 (define-data-var proposal-execution-reward uint u5000)
 (define-data-var wallet-creation-deposit uint u10000)
 (define-data-var total-rewards-issued uint u0)
+(define-data-var total-tokens-burned uint u0)
+(define-data-var total-pool-deposits uint u0)
