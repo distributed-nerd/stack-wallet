@@ -298,3 +298,6 @@ Clarinet.test({
   },
 });
 
+Clarinet.test({
+  name: "read-only max bounds are exposed",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
