@@ -173,3 +173,6 @@ async function main() {
 
   fs.writeFileSync('./sim-hybrid-counter-rewards-results.json', JSON.stringify({
     hybridContract: `${CONTRACT_ADDRESS}.${HYBRID_CONTRACT_NAME}`,
+    tokenContract: `${TOKEN_CONTRACT_ADDRESS}.${TOKEN_CONTRACT_NAME}`,
+    fee: FEE.toString(),
+    totalTxs: TOTAL_TXS,
