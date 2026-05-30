@@ -26,3 +26,6 @@ function initializeHybrid(chain: Chain, deployer: Account) {
 }
 
 Clarinet.test({
+  name: "initialize: deployer can initialize, second attempt fails",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get('deployer')!;
