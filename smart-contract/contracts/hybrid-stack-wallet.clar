@@ -40,3 +40,6 @@
 (define-constant MAX-WALLET-DEPOSIT u1000000000)
 
 ;; data vars
+(define-data-var contract-admin principal CONTRACT-DEPLOYER)
+(define-data-var is-paused bool false)
+(define-data-var initialized bool false)
