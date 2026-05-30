@@ -239,3 +239,5 @@
   (ok (default-to u0 (map-get? reward-claims-tally member))))
 
 (define-read-only (was-proposal-reward-claimed (proposal-id uint))
+  (ok (default-to false (map-get? executed-proposal-rewards proposal-id))))
+
