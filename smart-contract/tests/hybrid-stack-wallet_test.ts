@@ -304,3 +304,6 @@ Clarinet.test({
     const deployer = accounts.get('deployer')!;
     const a = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-max-counter-cost', [], deployer.address);
     a.result.expectOk().expectUint(100000000);
+    const b = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-max-proposal-reward', [], deployer.address);
+    b.result.expectOk().expectUint(500000000);
+    const c = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-max-wallet-deposit', [], deployer.address);
