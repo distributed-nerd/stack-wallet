@@ -207,3 +207,6 @@ Clarinet.test({
   },
 });
 
+Clarinet.test({
+  name: "claim-proposal-reward: updates total-rewards-issued counter",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
