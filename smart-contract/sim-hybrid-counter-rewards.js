@@ -176,3 +176,6 @@ async function main() {
     tokenContract: `${TOKEN_CONTRACT_ADDRESS}.${TOKEN_CONTRACT_NAME}`,
     fee: FEE.toString(),
     totalTxs: TOTAL_TXS,
+    broadcastedAt: new Date().toISOString(),
+    accepted: ok.length,
+    rejected: fail.length,
