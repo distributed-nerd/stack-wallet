@@ -63,3 +63,6 @@ async function broadcastWithRetry(transaction) {
     }
   }
   return { ok: false, error: String(lastErr?.message || lastErr) };
+}
+
+async function deployContract(senderKey, contractName, contractFile, nonce, fee) {
