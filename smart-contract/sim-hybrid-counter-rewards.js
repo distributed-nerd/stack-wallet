@@ -21,3 +21,6 @@ const TOTAL_TXS = 100;
 const MIN_STX_USTX = 35000;
 const MIN_TOKEN = 10000n;
 const API = 'https://api.hiro.so';
+const INTERVAL_MS = 1500;
+
+const accounts = JSON.parse(fs.readFileSync('./accounts.json', 'utf8'));
