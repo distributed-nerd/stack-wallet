@@ -43,3 +43,5 @@
 (define-data-var contract-admin principal CONTRACT-DEPLOYER)
 (define-data-var is-paused bool false)
 (define-data-var initialized bool false)
+(define-data-var counter-action-cost uint u1000)
+(define-data-var proposal-execution-reward uint u5000)
