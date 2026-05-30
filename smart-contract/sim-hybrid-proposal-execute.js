@@ -100,3 +100,6 @@ async function main() {
   }
 
   const funded = state.filter(a => a.stxBalance >= MIN_STX_USTX);
+  console.log(`Eligible accounts (>= ${MIN_STX_USTX} uSTX): ${funded.length}/${accounts.length}`);
+  if (funded.length === 0) {
+    console.error('No eligible accounts.');
