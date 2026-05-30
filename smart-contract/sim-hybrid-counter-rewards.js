@@ -99,3 +99,6 @@ async function main() {
   console.log(`Target: ${TOTAL_TXS} txs (increment-with-burn / decrement-with-burn)`);
   console.log(`Loading balances/nonces for ${accounts.length} accounts...`);
 
+  const state = [];
+  for (let i = 0; i < accounts.length; i++) {
+    const s = await getState(accounts[i].address);
