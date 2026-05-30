@@ -269,3 +269,7 @@ Clarinet.test({
       Tx.contractCall('hybrid-stack-wallet', 'deposit-to-wallet-pool',
         [types.principal(tokenContract), types.uint(7), types.uint(1000)], deployer.address)
     ]);
+    const block = chain.mineBlock([
+      Tx.contractCall('hybrid-stack-wallet', 'withdraw-from-wallet-pool',
+        [types.principal(tokenContract), types.uint(7), types.uint(2000)], deployer.address)
+    ]);
