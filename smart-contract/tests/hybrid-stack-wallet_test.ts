@@ -67,3 +67,6 @@ Clarinet.test({
   async fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get('deployer')!;
     initializeHybrid(chain, deployer);
+    const block = chain.mineBlock([
+      Tx.contractCall('hybrid-stack-wallet', 'set-counter-cost',
+        [types.uint(100000001)], deployer.address)
