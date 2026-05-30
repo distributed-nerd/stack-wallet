@@ -32,3 +32,5 @@
 (define-constant ERR-WITHDRAW-EXCEEDS-POOL  (err u214))
 (define-constant ERR-COST-TOO-HIGH          (err u215))
 (define-constant ERR-REWARD-TOO-HIGH        (err u216))
+(define-constant ERR-ZERO-ADDRESS           (err u217))
+
