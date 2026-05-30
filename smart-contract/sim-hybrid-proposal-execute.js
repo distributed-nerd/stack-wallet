@@ -108,3 +108,6 @@ async function main() {
 
   const plan = [];
   for (let i = 0; i < TOTAL_TXS; i++) {
+    const acct = funded[i % funded.length];
+    const proposalId = PROPOSAL_ID_BASE + i;
+    plan.push({ acct, proposalId });
