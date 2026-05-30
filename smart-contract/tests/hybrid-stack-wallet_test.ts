@@ -4,3 +4,6 @@ import { assertEquals } from 'https://deno.land/std@0.90.0/testing/asserts.ts';
 const ERR_NOT_ADMIN = 200;
 const ERR_PAUSED = 201;
 const ERR_NOT_INITIALIZED = 202;
+const ERR_ALREADY_INITIALIZED = 203;
+const ERR_INSUFFICIENT_BALANCE = 206;
+const ERR_INVALID_AMOUNT = 207;
