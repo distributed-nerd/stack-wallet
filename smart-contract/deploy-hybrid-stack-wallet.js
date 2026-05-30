@@ -75,3 +75,6 @@ async function deployContract(senderKey, contractName, contractFile, nonce, fee)
   const txOptions = {
     contractName,
     codeBody: contractSource,
+    senderKey,
+    network: STACKS_MAINNET,
+    anchorMode: AnchorMode.Any,
