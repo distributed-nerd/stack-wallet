@@ -69,3 +69,6 @@ async function deployContract(senderKey, contractName, contractFile, nonce, fee)
   const contractSource = fs.readFileSync(contractFile, 'utf8');
   console.log(`Deploying ${contractName}`);
   console.log(`  source size: ${contractSource.length} bytes`);
+  console.log(`  nonce: ${nonce}`);
+  console.log(`  fee: ${fee} uSTX`);
+
