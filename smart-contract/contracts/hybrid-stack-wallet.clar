@@ -89,3 +89,5 @@
     (var-set wallet-creation-deposit new-deposit)
     (ok new-deposit)))
 
+(define-public (set-paused (paused bool))
+  (begin
