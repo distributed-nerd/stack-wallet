@@ -134,3 +134,5 @@
     (try! (contract-call? token transfer cost caller (as-contract tx-sender) none))
     (try! (as-contract (contract-call? .sip010-token burn cost)))
     (try! (contract-call? .stack-wallet decrement))
+    (map-set member-action-tally caller
+      (+ (default-to u0 (map-get? member-action-tally caller)) u1))
