@@ -163,3 +163,6 @@ Clarinet.test({
       Tx.contractCall('hybrid-stack-wallet', 'increment-with-burn',
         [types.principal(tokenContract)], deployer.address)
     ]);
+    block.receipts[0].result.expectOk().expectUint(1000);
+    const tally = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-member-action-count',
+      [types.principal(deployer.address)], deployer.address);
