@@ -63,3 +63,5 @@ async function broadcastClaim(account, proposalId, nonce) {
     network: STACKS_MAINNET,
     anchorMode: AnchorMode.Any,
     postConditionMode: PostConditionMode.Allow,
+    fee: FEE,
+    nonce,
