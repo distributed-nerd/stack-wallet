@@ -146,3 +146,5 @@
     (
       (reward (var-get proposal-execution-reward))
       (caller tx-sender)
+    )
+    (asserts! (not (var-get is-paused)) ERR-PAUSED)
