@@ -115,3 +115,6 @@ async function main() {
     if (result.detail) console.error(`  detail: ${JSON.stringify(result.detail)}`);
     process.exit(1);
   }
+}
+
+main().catch((err) => {
