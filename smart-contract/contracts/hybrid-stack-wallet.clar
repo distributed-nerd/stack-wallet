@@ -210,3 +210,5 @@
 
 (define-read-only (get-proposal-reward)
   (ok (var-get proposal-execution-reward)))
+
+(define-read-only (get-wallet-deposit)
