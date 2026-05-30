@@ -237,3 +237,5 @@
 
 (define-read-only (get-rewards-claimed (member principal))
   (ok (default-to u0 (map-get? reward-claims-tally member))))
+
+(define-read-only (was-proposal-reward-claimed (proposal-id uint))
