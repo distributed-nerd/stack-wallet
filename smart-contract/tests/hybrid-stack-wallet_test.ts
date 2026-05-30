@@ -285,3 +285,6 @@ Clarinet.test({
     initializeHybrid(chain, deployer);
     chain.mineBlock([
       Tx.contractCall('hybrid-stack-wallet', 'increment-with-burn',
+        [types.principal(tokenContract)], deployer.address)
+    ]);
+    const reset = chain.mineBlock([
