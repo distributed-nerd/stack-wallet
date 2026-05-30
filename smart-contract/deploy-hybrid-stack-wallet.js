@@ -93,3 +93,6 @@ async function main() {
   console.log(`Deployer address: ${address}`);
 
   if (EXPECTED_ADDRESS && EXPECTED_ADDRESS !== address) {
+    console.error(`ERROR: derived address ${address} does not match STACKS_EXPECTED_ADDRESS ${EXPECTED_ADDRESS}`);
+    process.exit(1);
+  }
