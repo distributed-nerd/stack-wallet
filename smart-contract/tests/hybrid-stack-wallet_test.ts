@@ -188,3 +188,6 @@ Clarinet.test({
     tally.result.expectOk().expectUint(1);
   },
 });
+
+Clarinet.test({
+  name: "claim-proposal-reward: rejects duplicate claim",
