@@ -107,3 +107,5 @@
   (let
     (
       (cost (var-get counter-action-cost))
+      (caller tx-sender)
+    )
