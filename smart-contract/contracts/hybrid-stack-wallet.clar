@@ -243,3 +243,5 @@
 
 (define-read-only (get-last-action-burn-block (member principal))
   (ok (default-to u0 (map-get? last-action-burn-block member))))
+
+(define-read-only (is-contract-paused)
