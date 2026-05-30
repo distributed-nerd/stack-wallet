@@ -85,3 +85,5 @@
 (define-public (set-wallet-deposit (new-deposit uint))
   (begin
     (asserts! (is-eq tx-sender (var-get contract-admin)) ERR-NOT-ADMIN)
+    (asserts! (<= new-deposit MAX-WALLET-DEPOSIT) ERR-INVALID-AMOUNT)
+    (var-set wallet-creation-deposit new-deposit)
