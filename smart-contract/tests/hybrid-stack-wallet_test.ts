@@ -123,3 +123,6 @@ Clarinet.test({
   },
 });
 
+Clarinet.test({
+  name: "increment-with-burn: not initialized rejects",
+  async fn(chain: Chain, accounts: Map<string, Account>) {
