@@ -214,3 +214,5 @@
 (define-read-only (get-wallet-deposit)
   (ok (var-get wallet-creation-deposit)))
 
+(define-read-only (get-member-action-count (member principal))
+  (ok (default-to u0 (map-get? member-action-tally member))))
