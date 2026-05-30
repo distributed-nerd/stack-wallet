@@ -301,3 +301,6 @@ Clarinet.test({
 Clarinet.test({
   name: "read-only max bounds are exposed",
   async fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get('deployer')!;
+    const a = chain.callReadOnlyFn('hybrid-stack-wallet', 'get-max-counter-cost', [], deployer.address);
+    a.result.expectOk().expectUint(100000000);
