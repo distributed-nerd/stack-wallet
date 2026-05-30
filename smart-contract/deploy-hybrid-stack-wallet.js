@@ -84,3 +84,6 @@ async function deployContract(senderKey, contractName, contractFile, nonce, fee)
   };
 
   const tx = await makeContractDeploy(txOptions);
+  return broadcastWithRetry(tx);
+}
+
