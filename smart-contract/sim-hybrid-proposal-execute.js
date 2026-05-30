@@ -160,3 +160,5 @@ async function main() {
   console.log(`\n=== Broadcast complete: ${ok.length} accepted, ${fail.length} rejected ===`);
 
   fs.writeFileSync('./sim-hybrid-proposal-execute-results.json', JSON.stringify({
+    contract: `${CONTRACT_ADDRESS}.${HYBRID_CONTRACT_NAME}`,
+    fee: FEE.toString(),
