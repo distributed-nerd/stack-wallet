@@ -144,3 +144,5 @@
 (define-public (claim-proposal-reward (proposal-id uint))
   (let
     (
+      (reward (var-get proposal-execution-reward))
+      (caller tx-sender)
