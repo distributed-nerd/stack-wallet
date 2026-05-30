@@ -119,3 +119,5 @@
       (+ (default-to u0 (map-get? member-action-tally caller)) u1))
     (map-set last-action-burn-block caller burn-block-height)
     (var-set total-tokens-burned (+ (var-get total-tokens-burned) cost))
+    (var-set action-count-global (+ (var-get action-count-global) u1))
+    (ok cost)))
