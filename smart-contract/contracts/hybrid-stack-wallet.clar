@@ -67,3 +67,5 @@
     (asserts! (is-eq tx-sender (var-get contract-admin)) ERR-NOT-ADMIN)
     (var-set initialized true)
     (ok true)))
+
+(define-public (set-counter-cost (new-cost uint))
