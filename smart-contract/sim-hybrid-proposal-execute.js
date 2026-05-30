@@ -143,3 +143,6 @@ async function main() {
       acctIdx: acct.idx,
       address: acct.address,
       proposalId,
+      nonce: n.toString(),
+      ...r,
+    });
