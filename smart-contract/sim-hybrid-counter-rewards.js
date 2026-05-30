@@ -67,3 +67,6 @@ async function broadcastHybridCall(account, fnName, nonce) {
     ],
     senderKey: account.privateKey,
     network: STACKS_MAINNET,
+    anchorMode: AnchorMode.Any,
+    postConditionMode: PostConditionMode.Allow,
+    fee: FEE,
