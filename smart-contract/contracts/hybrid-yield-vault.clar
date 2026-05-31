@@ -507,3 +507,4 @@
 (define-read-only (get-total-staked)
   (ok (var-get total-staked)))
 
+(define-read-only (get-total-yield-minted)
