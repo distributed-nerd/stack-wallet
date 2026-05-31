@@ -73,3 +73,8 @@
 (define-map allowances
   { owner: principal, spender: principal }
   uint)
+
+(define-map wallet-pools          uint uint)
+
+(define-map pool-depositors
+  { wallet-id: uint, depositor: principal }
