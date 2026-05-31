@@ -147,3 +147,4 @@
 
 (define-public (initialize)
   (begin
+    (asserts! (not (var-get initialized)) ERR-ALREADY-INITIALIZED)
