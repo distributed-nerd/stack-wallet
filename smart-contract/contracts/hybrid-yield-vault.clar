@@ -268,3 +268,4 @@
     (map-set accrued-yield-debt caller u0)
     (map-set stake-start-block caller burn-block-height)
     (var-set total-staked (+ (var-get total-staked) reward))
+    (var-set total-yield-minted (+ (var-get total-yield-minted) reward))
