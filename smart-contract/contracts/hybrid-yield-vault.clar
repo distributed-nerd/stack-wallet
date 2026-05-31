@@ -232,3 +232,5 @@
     (map-set stake-start-block caller burn-block-height)
     (map-set accrued-yield-debt caller carried)
     (var-set total-staked (- (var-get total-staked) amount))
+    (bump-action caller)
+    (ok (- current amount))))
