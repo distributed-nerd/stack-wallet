@@ -416,3 +416,4 @@
     (if (> (get yes-votes proposal) (get no-votes proposal))
       (begin
         (try! (apply-param param value))
+        (map-set proposals proposal-id (merge proposal { executed: true }))
