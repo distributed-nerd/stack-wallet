@@ -458,3 +458,4 @@
   (ok (var-get voting-window-blocks)))
 
 (define-read-only (get-quorum)
+  (ok (var-get proposal-quorum)))
