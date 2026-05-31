@@ -65,3 +65,4 @@
 (define-constant PARAM-VOTING-WINDOW    u3)
 (define-constant PARAM-QUORUM           u4)
 
+;; ===== data vars : config =====
