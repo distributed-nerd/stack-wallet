@@ -204,3 +204,4 @@
     (try! (assert-initialized))
     (try! (assert-valid-token token))
     (asserts! (> amount u0) ERR-INVALID-AMOUNT)
+    (asserts! (<= lock-blocks MAX-LOCK-BLOCKS) ERR-LOCK-TOO-LONG)
