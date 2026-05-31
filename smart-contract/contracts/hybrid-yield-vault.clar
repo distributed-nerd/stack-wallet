@@ -101,3 +101,4 @@
     new-value: uint,
     start-block: uint,
     end-block: uint,
+    yes-votes: uint,
