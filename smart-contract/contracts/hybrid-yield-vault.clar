@@ -109,3 +109,4 @@
 (define-map proposal-votes { proposal-id: uint, voter: principal } bool)
 (define-map member-reward-claims principal uint)
 
+;; ===== private helpers =====
