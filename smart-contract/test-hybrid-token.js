@@ -63,3 +63,16 @@ async function main() {
   await test('is-initialized returns bool', async () => {
     const r = await read('is-initialized');
     assert(r.success, 'not ok');
+  });
+
+  await test('get-token-cap returns uint', async () => {
+    const r = await read('get-token-cap');
+    assert(r.success, 'not ok');
+    assert(r.value.type === 'uint', `expected uint got ${r.value.type}`);
+  });
+
+  await test('get-yield-rate returns uint', async () => {
+    const r = await read('get-yield-rate');
+    assert(r.success, 'not ok');
+  });
+
