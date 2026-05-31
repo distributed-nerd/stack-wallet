@@ -449,3 +449,4 @@
   (ok (var-get initialized)))
 
 (define-read-only (get-yield-rate)
+  (ok (var-get yield-rate-bps)))
