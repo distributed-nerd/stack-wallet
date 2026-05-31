@@ -474,3 +474,4 @@
 (define-read-only (get-blocks-staked (who principal))
   (ok (blocks-staked who)))
 
+(define-read-only (get-member-action-count (who principal))
