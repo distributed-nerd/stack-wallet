@@ -55,3 +55,4 @@
 (define-constant MAX-YIELD-RATE-BPS     u2000)
 (define-constant MAX-LOCK-BLOCKS        u52560)
 (define-constant MAX-COUNTER-COST       u100000000)
+(define-constant MAX-VAULT-DEPOSIT      u1000000000)
