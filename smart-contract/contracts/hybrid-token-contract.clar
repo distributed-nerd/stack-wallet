@@ -443,3 +443,43 @@
   (ok (default-to u0 (map-get? allowances { owner: owner, spender: spender }))))
 
 (define-read-only (get-wallet-pool (wallet-id uint))
+  (ok (default-to u0 (map-get? wallet-pools wallet-id))))
+
+(define-read-only (get-depositor-stake (wallet-id uint) (depositor principal))
+  (ok (default-to u0 (map-get? pool-depositors { wallet-id: wallet-id, depositor: depositor }))))
+
+(define-read-only (get-stake (who principal))
+  (ok (default-to u0 (map-get? stake-balances who))))
+
+(define-read-only (get-stake-lock-until (who principal))
+  (ok (default-to u0 (map-get? stake-lock-until who))))
+
+(define-read-only (get-pending-yield (who principal))
+  (ok (pending-yield who)))
+
+(define-read-only (get-member-action-count (who principal))
+  (ok (default-to u0 (map-get? member-action-tally who))))
+
+(define-read-only (get-snapshot (snap-id uint))
+  (ok (map-get? supply-snapshots snap-id)))
+
+(define-read-only (get-snapshot-nonce)
+  (ok (var-get snapshot-nonce)))
+
+(define-read-only (get-max-supply)
+  (ok MAX-SUPPLY))
+
+(define-read-only (get-max-mint-per-tx)
+  (ok MAX-MINT-PER-TX))
+
+(define-read-only (get-max-batch-size)
+  (ok MAX-BATCH-SIZE))
+
+(define-read-only (get-max-pool-deposit)
+  (ok MAX-POOL-DEPOSIT))
+
+(define-read-only (get-max-yield-rate-bps)
+  (ok MAX-YIELD-RATE-BPS))
+
+(define-read-only (get-max-lock-blocks)
+  (ok MAX-LOCK-BLOCKS))
