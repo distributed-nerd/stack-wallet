@@ -43,3 +43,4 @@
 (define-constant ERR-VOTING-ENDED           (err u320))
 (define-constant ERR-NOT-PROPOSER           (err u321))
 (define-constant ERR-COUNTER-CALL-FAIL      (err u322))
+(define-constant ERR-RATE-TOO-HIGH          (err u323))
