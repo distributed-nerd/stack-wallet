@@ -436,3 +436,5 @@
           (begin (asserts! (> value u0) ERR-INVALID-AMOUNT)
                  (var-set proposal-quorum value) (ok true))
           ERR-UNKNOWN-PARAM)))))
+
+;; ===== read-only : config =====
