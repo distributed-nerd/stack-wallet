@@ -40,3 +40,6 @@ async function getAccountNonce(address) {
 }
 
 async function contractExists(address, name) {
+  const res = await fetch(`${API}/v2/contracts/source/${address}/${name}`);
+  return res.status === 200;
+}
