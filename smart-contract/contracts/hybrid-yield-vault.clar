@@ -241,3 +241,4 @@
         (reward (pending-yield tx-sender))
        )
     (try! (assert-not-paused))
+    (try! (assert-initialized))
