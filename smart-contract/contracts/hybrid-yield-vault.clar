@@ -4,3 +4,4 @@
 ;;
 ;; Subsystems:
 ;;   - staking            : lock STK tokens, accrue block-based yield
+;;   - yield              : claim accrued rewards minted from the token contract
