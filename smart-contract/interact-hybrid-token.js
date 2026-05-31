@@ -78,3 +78,11 @@ async function callContract(senderKey, functionName, functionArgs) {
     anchorMode: AnchorMode.Any,
     postConditionMode: PostConditionMode.Allow,
     fee: FEE,
+    nonce: BigInt(nonce),
+  });
+
+  const result = await broadcastTransaction({ transaction: tx, network: STACKS_MAINNET });
+  if (result.error) {
+    console.error(`Error: ${result.error} - ${result.reason}`);
+    process.exit(1);
+  }
