@@ -102,3 +102,4 @@
     start-block: uint,
     end-block: uint,
     yes-votes: uint,
+    no-votes: uint,
