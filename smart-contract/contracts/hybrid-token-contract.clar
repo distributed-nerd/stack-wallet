@@ -338,3 +338,8 @@
 
 (define-public (compound-yield)
   (let (
+        (caller  tx-sender)
+        (reward  (pending-yield caller))
+        (current (default-to u0 (map-get? stake-balances caller)))
+       )
+    (try! (assert-live))
