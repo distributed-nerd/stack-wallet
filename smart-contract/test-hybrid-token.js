@@ -76,3 +76,16 @@ async function main() {
     assert(r.success, 'not ok');
   });
 
+  await test('get-counter-cost returns uint', async () => {
+    const r = await read('get-counter-cost');
+    assert(r.success, 'not ok');
+  });
+
+  await test('get-total-minted returns uint', async () => {
+    const r = await read('get-total-minted');
+    assert(r.success, 'not ok');
+  });
+
+  await test('get-total-burned returns uint', async () => {
+    const r = await read('get-total-burned');
+    assert(r.success, 'not ok');
