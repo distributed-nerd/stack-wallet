@@ -62,3 +62,11 @@ async function getNonce(address) {
   const res = await fetch(`${API}/extended/v1/address/${address}/nonces`);
   const data = await res.json();
   return data.possible_next_nonce;
+}
+
+async function callContract(senderKey, functionName, functionArgs) {
+  const address = getAddressFromPrivateKey(senderKey, 'mainnet');
+  const nonce = await getNonce(address);
+
+  const tx = await makeContractCall({
+    contractAddress: DEPLOYER,
