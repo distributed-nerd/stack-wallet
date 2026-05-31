@@ -128,3 +128,16 @@ async function main() {
     assert(r.success, 'not ok');
     assert(r.value.value === '50', `unexpected: ${r.value.value}`);
   });
+
+  await test('get-max-pool-deposit returns uint', async () => {
+    const r = await read('get-max-pool-deposit');
+    assert(r.success, 'not ok');
+  });
+
+  await test('get-max-yield-rate-bps returns uint', async () => {
+    const r = await read('get-max-yield-rate-bps');
+    assert(r.success, 'not ok');
+    assert(r.value.value === '2000', `unexpected: ${r.value.value}`);
+  });
+
+  await test('get-max-lock-blocks returns uint', async () => {
