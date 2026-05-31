@@ -196,3 +196,4 @@
 
 (define-public (stake (token <sip010-trait>) (amount uint) (lock-blocks uint))
   (let (
+        (caller tx-sender)
