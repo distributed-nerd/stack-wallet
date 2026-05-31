@@ -448,3 +448,4 @@
 (define-read-only (is-initialized-check)
   (ok (var-get initialized)))
 
+(define-read-only (get-yield-rate)
