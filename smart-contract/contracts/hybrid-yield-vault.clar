@@ -491,3 +491,4 @@
 (define-read-only (get-vault-nonce)
   (ok (var-get vault-nonce)))
 
+;; ===== read-only : governance =====
