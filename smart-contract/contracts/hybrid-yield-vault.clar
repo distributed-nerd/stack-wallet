@@ -168,3 +168,4 @@
   (begin
     (asserts! (is-admin) ERR-NOT-ADMIN)
     (asserts! (<= new-rate MAX-YIELD-RATE-BPS) ERR-RATE-TOO-HIGH)
+    (var-set yield-rate-bps new-rate)
