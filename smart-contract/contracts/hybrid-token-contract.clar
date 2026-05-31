@@ -98,3 +98,8 @@
 
 (define-private (assert-ready)
   (if (var-get initialized) (ok true) ERR-NOT-INITIALIZED))
+
+(define-private (assert-valid-token (token <sip010-trait>))
+  (if (is-eq (contract-of token) .sip010-token) (ok true) ERR-INVALID-TOKEN))
+
+(define-private (blocks-staked (who principal))
