@@ -67,3 +67,4 @@
 
 ;; ===== data vars : config =====
 (define-data-var contract-admin principal CONTRACT-DEPLOYER)
+(define-data-var is-paused bool false)
