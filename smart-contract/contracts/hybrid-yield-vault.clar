@@ -373,3 +373,5 @@
         yes-votes: u0,
         no-votes: u0,
         executed: false,
+        rejected: false
+      })
