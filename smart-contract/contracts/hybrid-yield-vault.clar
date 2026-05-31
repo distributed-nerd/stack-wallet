@@ -240,3 +240,4 @@
         (caller tx-sender)
         (reward (pending-yield tx-sender))
        )
+    (try! (assert-not-paused))
