@@ -303,3 +303,8 @@
         (caller     tx-sender)
         (current    (default-to u0 (map-get? stake-balances caller)))
         (carried    (pending-yield caller))
+        (lock-until (default-to u0 (map-get? stake-lock-until caller)))
+       )
+    (try! (assert-live))
+    (try! (assert-ready))
+    (try! (assert-valid-token token))
