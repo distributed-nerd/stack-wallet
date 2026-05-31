@@ -38,3 +38,11 @@ const {
 } = require('@stacks/transactions');
 const { STACKS_MAINNET } = require('@stacks/network');
 const { generateWallet } = require('@stacks/wallet-sdk');
+const fetch = require('node-fetch');
+const fs = require('fs');
+
+const API = 'https://api.hiro.so';
+const DEPLOYER = process.env.STACKS_CONTRACT_ADDRESS || 'SP1FPNMWMJR7WT3AH6HMPSEVG0PPSNE7N32ES51K6';
+const CONTRACT_NAME = 'hybrid-token-contract';
+const TOKEN_CONTRACT_NAME = 'sip010-token';
+const FEE = 10000n;
