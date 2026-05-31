@@ -223,3 +223,8 @@
     (bump-action spender)
     (ok amount)))
 
+(define-public (increase-allowance (spender principal) (delta uint))
+  (let ((current (default-to u0 (map-get? allowances { owner: tx-sender, spender: spender }))))
+    (try! (assert-live))
+    (try! (assert-ready))
+    (map-set allowances { owner: tx-sender, spender: spender } (+ current delta))
