@@ -25,3 +25,6 @@ async function loadPrivateKey() {
   }
   const tomlText = fs.readFileSync(tomlPath, 'utf8');
   const match = tomlText.match(/^\s*mnemonic\s*=\s*"([^"]+)"/m);
+  if (!match) {
+    console.error('ERROR: no mnemonic line in Mainnet.toml.');
+    process.exit(1);
