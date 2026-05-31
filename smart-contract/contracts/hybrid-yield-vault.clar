@@ -90,3 +90,4 @@
 (define-map accrued-yield-debt principal uint)
 (define-map member-action-tally principal uint)
 
+;; ===== data maps : vaults =====
