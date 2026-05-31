@@ -164,3 +164,4 @@
     (var-set contract-admin new-admin)
     (ok new-admin)))
 
+(define-public (set-yield-rate (new-rate uint))
