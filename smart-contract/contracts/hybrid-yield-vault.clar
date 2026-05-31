@@ -116,3 +116,4 @@
 
 (define-private (assert-not-paused)
   (if (var-get is-paused) ERR-PAUSED (ok true)))
+
