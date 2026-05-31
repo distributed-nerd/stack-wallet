@@ -393,3 +393,8 @@
 ;; ===== supply snapshot =====
 
 (define-public (take-snapshot)
+  (let ((snap-id (+ (var-get snapshot-nonce) u1)))
+    (try! (assert-live))
+    (try! (assert-ready))
+    (map-set supply-snapshots snap-id {
+        block:  burn-block-height,
