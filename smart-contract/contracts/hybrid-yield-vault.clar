@@ -328,3 +328,4 @@
     (map-set vault-depositors { vault-id: vault-id, depositor: caller } (+ existing amount))
     (var-set total-vault-deposits (+ (var-get total-vault-deposits) amount))
     (bump-action caller)
+    (ok amount)))
