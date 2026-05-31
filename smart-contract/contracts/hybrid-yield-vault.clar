@@ -423,3 +423,4 @@
         (ok false)))))
 
 (define-private (apply-param (param uint) (value uint))
+  (if (is-eq param PARAM-YIELD-RATE)
