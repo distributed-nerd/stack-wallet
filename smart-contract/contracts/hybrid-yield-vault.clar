@@ -444,3 +444,4 @@
 
 (define-read-only (is-contract-paused)
   (ok (var-get is-paused)))
+
