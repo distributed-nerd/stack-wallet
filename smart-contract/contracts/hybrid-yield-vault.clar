@@ -30,3 +30,4 @@
 (define-constant ERR-NO-STAKE               (err u307))
 (define-constant ERR-NOTHING-TO-CLAIM       (err u308))
 (define-constant ERR-VAULT-NOT-FOUND        (err u309))
+(define-constant ERR-VAULT-EXISTS           (err u310))
