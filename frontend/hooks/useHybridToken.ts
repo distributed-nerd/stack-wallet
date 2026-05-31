@@ -142,3 +142,27 @@ export function useHybridToken() {
   const mintTo = useCallback(
     (amount: bigint, recipient: string) =>
       callContract('mint-to', [uintCV(amount), principalCV(recipient)]),
+    [callContract]
+  );
+
+  const burnFrom = useCallback(
+    (amount: bigint) => callContract('burn-from', [tokenCV(), uintCV(amount)]),
+    [callContract]
+  );
+
+  const approve = useCallback(
+    (spender: string, amount: bigint) =>
+      callContract('approve', [principalCV(spender), uintCV(amount)]),
+    [callContract]
+  );
+
+  const depositToPool = useCallback(
+    (walletId: number, amount: bigint) =>
+      callContract('deposit-to-pool', [tokenCV(), uintCV(BigInt(walletId)), uintCV(amount)]),
+    [callContract]
+  );
+
+  const withdrawFromPool = useCallback(
+    (walletId: number, amount: bigint) =>
+      callContract('withdraw-from-pool', [tokenCV(), uintCV(BigInt(walletId)), uintCV(amount)]),
+    [callContract]
