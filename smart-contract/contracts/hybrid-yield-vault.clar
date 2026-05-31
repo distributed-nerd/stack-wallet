@@ -499,3 +499,5 @@
 (define-read-only (get-vote (proposal-id uint) (voter principal))
   (ok (map-get? proposal-votes { proposal-id: proposal-id, voter: voter })))
 
+(define-read-only (get-proposal-nonce)
+  (ok (var-get proposal-nonce)))
