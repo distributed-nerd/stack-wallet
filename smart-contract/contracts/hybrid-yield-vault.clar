@@ -413,3 +413,4 @@
     (asserts! (>= burn-block-height (get end-block proposal)) ERR-VOTING-NOT-ENDED)
     (asserts! (>= (+ (get yes-votes proposal) (get no-votes proposal))
                   (var-get proposal-quorum)) ERR-QUORUM-NOT-MET)
+    (if (> (get yes-votes proposal) (get no-votes proposal))
