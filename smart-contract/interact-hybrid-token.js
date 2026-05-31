@@ -94,3 +94,11 @@ async function callContract(senderKey, functionName, functionArgs) {
 
 async function readContract(functionName, functionArgs = []) {
   const result = await callReadOnlyFunction({
+    contractAddress: DEPLOYER,
+    contractName: CONTRACT_NAME,
+    functionName,
+    functionArgs,
+    network: STACKS_MAINNET,
+    senderAddress: DEPLOYER,
+  });
+  console.log(JSON.stringify(cvToJSON(result), null, 2));
