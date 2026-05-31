@@ -49,3 +49,4 @@
 (define-constant ERR-ZERO-ADDRESS           (err u326))
 (define-constant ERR-COST-TOO-HIGH          (err u327))
 (define-constant ERR-UNKNOWN-PARAM          (err u328))
+(define-constant ERR-QUORUM-NOT-MET         (err u329))
