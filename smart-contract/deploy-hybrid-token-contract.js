@@ -49,3 +49,6 @@ async function broadcastWithRetry(transaction) {
   for (let attempt = 0; attempt < 5; attempt++) {
     try {
       const result = await broadcastTransaction({ transaction, network: STACKS_MAINNET });
+      if (result && result.error) {
+        return { ok: false, error: `${result.error}: ${result.reason}`, detail: result.reason_data };
+      }
