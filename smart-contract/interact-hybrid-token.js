@@ -70,3 +70,11 @@ async function callContract(senderKey, functionName, functionArgs) {
 
   const tx = await makeContractCall({
     contractAddress: DEPLOYER,
+    contractName: CONTRACT_NAME,
+    functionName,
+    functionArgs,
+    senderKey,
+    network: STACKS_MAINNET,
+    anchorMode: AnchorMode.Any,
+    postConditionMode: PostConditionMode.Allow,
+    fee: FEE,
