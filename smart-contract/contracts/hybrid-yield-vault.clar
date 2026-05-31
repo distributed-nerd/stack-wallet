@@ -489,3 +489,4 @@
   (ok (default-to u0 (map-get? vault-depositors { vault-id: vault-id, depositor: depositor }))))
 
 (define-read-only (get-vault-nonce)
+  (ok (var-get vault-nonce)))
