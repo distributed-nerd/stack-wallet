@@ -120,3 +120,4 @@
 (define-private (assert-initialized)
   (if (var-get initialized) (ok true) ERR-NOT-INITIALIZED))
 
+(define-private (assert-valid-token (token <sip010-trait>))
