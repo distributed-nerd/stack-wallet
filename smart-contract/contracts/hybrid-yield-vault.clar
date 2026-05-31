@@ -145,3 +145,4 @@
 
 ;; ===== admin functions =====
 
+(define-public (initialize)
