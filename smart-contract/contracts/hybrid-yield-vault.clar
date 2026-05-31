@@ -152,3 +152,4 @@
     (var-set initialized true)
     (ok true)))
 
+(define-public (set-paused (paused bool))
