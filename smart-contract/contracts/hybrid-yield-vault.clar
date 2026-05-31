@@ -39,3 +39,4 @@
 (define-constant ERR-ALREADY-VOTED          (err u316))
 (define-constant ERR-PROPOSAL-EXECUTED      (err u317))
 (define-constant ERR-PROPOSAL-REJECTED      (err u318))
+(define-constant ERR-VOTING-NOT-ENDED       (err u319))
