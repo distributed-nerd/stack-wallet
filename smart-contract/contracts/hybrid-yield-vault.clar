@@ -47,3 +47,4 @@
 (define-constant ERR-LOCK-TOO-LONG          (err u324))
 (define-constant ERR-STILL-LOCKED           (err u325))
 (define-constant ERR-ZERO-ADDRESS           (err u326))
+(define-constant ERR-COST-TOO-HIGH          (err u327))
