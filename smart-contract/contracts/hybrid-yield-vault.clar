@@ -112,3 +112,4 @@
 ;; ===== private helpers =====
 
 (define-private (is-admin)
+  (is-eq tx-sender (var-get contract-admin)))
