@@ -53,3 +53,8 @@
 (define-constant MAX-YIELD-RATE-BPS      u2000)
 (define-constant BPS-DENOMINATOR         u10000)
 (define-constant MAX-LOCK-BLOCKS         u52560)
+(define-constant MAX-COUNTER-COST        u100000000)
+
+;; ===== data vars =====
+(define-data-var contract-admin      principal CONTRACT-DEPLOYER)
+(define-data-var is-paused           bool      false)
