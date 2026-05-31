@@ -146,3 +146,77 @@ export default function HybridTokenPanel() {
                 <card.icon size={16} className={card.color} />
                 <span className="text-xs text-text-muted font-medium">{card.label}</span>
               </div>
+              <p className={`text-xl font-bold ${card.color}`}>{card.value}</p>
+              <p className="text-xs text-text-muted">STK</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Yield Rate */}
+      {stats && (
+        <div className="glass-card p-4 flex items-center justify-between">
+          <div>
+            <p className="text-xs text-text-muted font-medium">Yield Rate</p>
+            <p className="text-lg font-bold text-green-400">
+              {(Number(stats.yieldRate) / 100).toFixed(2)}% <span className="text-xs text-text-muted">per block</span>
+            </p>
+          </div>
+          <div className="text-right">
+            <p className="text-xs text-text-muted font-medium">Token Cap</p>
+            <p className="text-lg font-bold">{fmt(stats.tokenCap)} STK</p>
+          </div>
+        </div>
+      )}
+
+      {/* User Position */}
+      {userAddress && (
+        <div className="glass-card p-5 border-primary/20 bg-primary/5">
+          <h3 className="font-bold mb-4 text-sm uppercase tracking-widest text-text-muted">
+            Your Position
+          </h3>
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            <div>
+              <p className="text-xs text-text-muted">Staked</p>
+              <p className="text-xl font-bold text-primary">{fmt(userStake)} STK</p>
+            </div>
+            <div>
+              <p className="text-xs text-text-muted">Pending Yield</p>
+              <p className="text-xl font-bold text-green-400">{fmt(pendingYield)} STK</p>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <button
+              onClick={() => claimYield()}
+              disabled={loading || pendingYield === '0'}
+              className="flex-1 py-2 bg-green-500/10 border border-green-500/30 rounded-xl text-xs font-bold text-green-400 hover:bg-green-500 hover:text-white transition-all disabled:opacity-40"
+            >
+              Claim Yield
+            </button>
+            <button
+              onClick={() => compoundYield()}
+              disabled={loading || pendingYield === '0'}
+              className="flex-1 py-2 bg-primary/10 border border-primary/30 rounded-xl text-xs font-bold text-primary hover:bg-primary hover:text-white transition-all disabled:opacity-40"
+            >
+              Compound
+            </button>
+            <button
+              onClick={() => takeSnapshot()}
+              disabled={loading}
+              className="px-4 py-2 glass rounded-xl text-xs font-bold hover:bg-glass-bg transition-all disabled:opacity-40"
+            >
+              Snapshot
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Error */}
+      {error && (
+        <div className="glass-card p-4 border-red-500/30 bg-red-500/5">
+          <p className="text-red-400 text-sm font-medium">{error}</p>
+        </div>
+      )}
+    </motion.div>
+  );
+}
