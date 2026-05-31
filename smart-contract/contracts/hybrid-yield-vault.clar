@@ -118,3 +118,4 @@
   (if (var-get is-paused) ERR-PAUSED (ok true)))
 
 (define-private (assert-initialized)
+  (if (var-get initialized) (ok true) ERR-NOT-INITIALIZED))
