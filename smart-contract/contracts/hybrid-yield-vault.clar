@@ -193,3 +193,4 @@
     (ok new-quorum)))
 
 ;; ===== staking functions =====
+
