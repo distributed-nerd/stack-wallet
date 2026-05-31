@@ -37,3 +37,4 @@
 (define-constant ERR-PROPOSAL-CLOSED        (err u314))
 (define-constant ERR-PROPOSAL-OPEN          (err u315))
 (define-constant ERR-ALREADY-VOTED          (err u316))
+(define-constant ERR-PROPOSAL-EXECUTED      (err u317))
