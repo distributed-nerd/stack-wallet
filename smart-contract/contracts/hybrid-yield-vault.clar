@@ -375,3 +375,4 @@
         executed: false,
         rejected: false
       })
+    (var-set proposal-nonce proposal-id)
