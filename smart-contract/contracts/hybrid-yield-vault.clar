@@ -414,3 +414,4 @@
     (asserts! (>= (+ (get yes-votes proposal) (get no-votes proposal))
                   (var-get proposal-quorum)) ERR-QUORUM-NOT-MET)
     (if (> (get yes-votes proposal) (get no-votes proposal))
+      (begin
