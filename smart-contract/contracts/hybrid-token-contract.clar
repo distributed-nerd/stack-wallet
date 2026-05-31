@@ -208,3 +208,8 @@
     (map-set allowances { owner: tx-sender, spender: spender } amount)
     (ok amount)))
 
+(define-public (transfer-from (token <sip010-trait>) (amount uint) (owner principal) (recipient principal))
+  (let (
+        (spender tx-sender)
+        (current-allowance (default-to u0 (map-get? allowances { owner: owner, spender: spender })))
+       )
