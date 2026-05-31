@@ -12,3 +12,5 @@
 ;;
 ;; All token movements flow through the sip010-token contract; the vault holds
 ;; tokens as-contract and mints yield against accrued reward debt.
+
+;; ===== traits =====
