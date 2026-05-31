@@ -326,3 +326,5 @@
     (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
     (map-set vaults vault-id (merge vault { balance: (+ (get balance vault) amount) }))
     (map-set vault-depositors { vault-id: vault-id, depositor: caller } (+ existing amount))
+    (var-set total-vault-deposits (+ (var-get total-vault-deposits) amount))
+    (bump-action caller)
