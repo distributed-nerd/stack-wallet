@@ -93,3 +93,8 @@
 (define-private (is-admin)
   (is-eq tx-sender (var-get contract-admin)))
 
+(define-private (assert-live)
+  (if (var-get is-paused) ERR-PAUSED (ok true)))
+
+(define-private (assert-ready)
+  (if (var-get initialized) (ok true) ERR-NOT-INITIALIZED))
