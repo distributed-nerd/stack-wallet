@@ -411,3 +411,4 @@
     (asserts! (not (get executed proposal)) ERR-PROPOSAL-EXECUTED)
     (asserts! (not (get rejected proposal)) ERR-PROPOSAL-REJECTED)
     (asserts! (>= burn-block-height (get end-block proposal)) ERR-VOTING-NOT-ENDED)
+    (asserts! (>= (+ (get yes-votes proposal) (get no-votes proposal))
