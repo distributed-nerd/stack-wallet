@@ -503,3 +503,4 @@
   (ok (var-get proposal-nonce)))
 
 ;; ===== read-only : global accounting =====
+
