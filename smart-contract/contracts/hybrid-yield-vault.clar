@@ -308,3 +308,4 @@
     (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
     (map-set vaults vault-id { owner: caller, balance: amount, created-at: burn-block-height })
     (map-set vault-depositors { vault-id: vault-id, depositor: caller } amount)
+    (var-set vault-nonce vault-id)
