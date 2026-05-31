@@ -521,3 +521,4 @@
 
 ;; ===== read-only : bounds =====
 
+(define-read-only (get-max-yield-rate-bps)
