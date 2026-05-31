@@ -405,3 +405,5 @@
         (proposal (unwrap! (map-get? proposals proposal-id) ERR-PROPOSAL-NOT-FOUND))
         (param (get param proposal))
         (value (get new-value proposal))
+       )
+    (try! (assert-not-paused))
