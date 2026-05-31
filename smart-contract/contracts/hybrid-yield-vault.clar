@@ -471,3 +471,4 @@
 (define-read-only (get-pending-yield (who principal))
   (ok (pending-yield who)))
 
+(define-read-only (get-blocks-staked (who principal))
