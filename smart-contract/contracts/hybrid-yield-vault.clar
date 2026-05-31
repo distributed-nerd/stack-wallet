@@ -394,3 +394,4 @@
     (map-set proposal-votes { proposal-id: proposal-id, voter: caller } support)
     (if support
       (map-set proposals proposal-id
+        (merge proposal { yes-votes: (+ (get yes-votes proposal) weight) }))
