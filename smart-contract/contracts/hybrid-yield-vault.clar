@@ -119,3 +119,4 @@
 
 (define-private (assert-initialized)
   (if (var-get initialized) (ok true) ERR-NOT-INITIALIZED))
+
