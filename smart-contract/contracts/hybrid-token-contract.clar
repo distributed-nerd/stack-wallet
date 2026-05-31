@@ -373,3 +373,8 @@
     (var-set total-burned (+ (var-get total-burned) cost))
     (bump-action caller)
     (ok cost)))
+
+(define-public (counter-decrement-burn (token <sip010-trait>))
+  (let (
+        (caller tx-sender)
+        (cost   (var-get counter-action-cost))
