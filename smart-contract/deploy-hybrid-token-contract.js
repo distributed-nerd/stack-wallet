@@ -19,3 +19,6 @@ const EXPECTED_ADDRESS = process.env.STACKS_EXPECTED_ADDRESS;
 async function loadPrivateKey() {
   if (process.env.STACKS_PRIVATE_KEY) return process.env.STACKS_PRIVATE_KEY;
   const tomlPath = './settings/Mainnet.toml';
+  if (!fs.existsSync(tomlPath)) {
+    console.error('ERROR: no STACKS_PRIVATE_KEY env var and settings/Mainnet.toml not found.');
+    process.exit(1);
