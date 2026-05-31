@@ -62,3 +62,4 @@
 ;; ===== governance parameter selectors =====
 (define-constant PARAM-YIELD-RATE       u1)
 (define-constant PARAM-COUNTER-COST     u2)
+(define-constant PARAM-VOTING-WINDOW    u3)
