@@ -103,3 +103,8 @@
   (if (is-eq (contract-of token) .sip010-token) (ok true) ERR-INVALID-TOKEN))
 
 (define-private (blocks-staked (who principal))
+  (let ((start (default-to burn-block-height (map-get? stake-start-block who))))
+    (if (> burn-block-height start) (- burn-block-height start) u0)))
+
+(define-private (pending-yield (who principal))
+  (let (
