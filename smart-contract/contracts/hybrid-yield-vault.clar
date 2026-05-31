@@ -433,3 +433,4 @@
         (begin (asserts! (>= value MIN-VOTING-BLOCKS) ERR-INVALID-AMOUNT)
                (var-set voting-window-blocks value) (ok true))
         (if (is-eq param PARAM-QUORUM)
+          (begin (asserts! (> value u0) ERR-INVALID-AMOUNT)
