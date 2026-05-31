@@ -238,3 +238,9 @@ export function useHybridToken() {
     stakeTokens,
     unstakeTokens,
     claimYield,
+    compoundYield,
+    counterIncrementBurn,
+    counterDecrementBurn,
+    takeSnapshot,
+  };
+}
