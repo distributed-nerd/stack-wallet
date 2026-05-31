@@ -73,3 +73,6 @@ async function main() {
     console.error(`ERROR: address mismatch. Got ${address}, expected ${EXPECTED_ADDRESS}`);
     process.exit(1);
   }
+
+  const balRes = await fetch(`${API}/extended/v1/address/${address}/stx`);
+  const balData = await balRes.json();
