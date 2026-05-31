@@ -369,3 +369,4 @@
         param: param,
         new-value: new-value,
         start-block: burn-block-height,
+        end-block: (+ burn-block-height window),
