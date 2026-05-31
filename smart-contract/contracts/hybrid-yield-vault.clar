@@ -22,3 +22,4 @@
 ;; ===== error constants =====
 (define-constant ERR-NOT-ADMIN              (err u300))
 (define-constant ERR-PAUSED                 (err u301))
+(define-constant ERR-NOT-INITIALIZED        (err u302))
