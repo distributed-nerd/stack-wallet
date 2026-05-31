@@ -82,3 +82,6 @@ async function main() {
     console.log(`${CONTRACT_NAME} already deployed at ${address}. Nothing to do.`);
     return;
   }
+
+  const nonce = await getAccountNonce(address);
+  console.log(`Nonce: ${nonce}`);
