@@ -464,3 +464,4 @@
 
 (define-read-only (get-stake (who principal))
   (ok (default-to u0 (map-get? stake-balances who))))
+
