@@ -461,3 +461,4 @@
   (ok (var-get proposal-quorum)))
 
 ;; ===== read-only : staking =====
+
