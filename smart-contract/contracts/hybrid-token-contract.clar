@@ -248,3 +248,8 @@
        )
     (try! (assert-live))
     (try! (assert-ready))
+    (try! (assert-valid-token token))
+    (asserts! (> amount u0) ERR-INVALID-AMOUNT)
+    (asserts! (<= (+ pool-bal amount) MAX-POOL-DEPOSIT) ERR-POOL-OVERFLOW)
+    (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
+    (map-set wallet-pools wallet-id (+ pool-bal amount))
