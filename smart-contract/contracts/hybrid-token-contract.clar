@@ -188,3 +188,8 @@
 
 (define-public (burn-from (token <sip010-trait>) (amount uint))
   (let ((caller tx-sender))
+    (try! (assert-live))
+    (try! (assert-ready))
+    (try! (assert-valid-token token))
+    (asserts! (> amount u0) ERR-INVALID-AMOUNT)
+    (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
