@@ -70,3 +70,27 @@ export function useHybridToken() {
         setError(e.message ?? 'Unknown error');
       } finally {
         setLoading(false);
+      }
+    },
+    [userSession, network]
+  );
+
+  // ── read-only helpers ──────────────────────────────────────────────────────
+
+  const getAdmin = useCallback(() => readOnly('get-admin'), [readOnly]);
+  const isInitialized = useCallback(() => readOnly('is-initialized'), [readOnly]);
+  const isContractPaused = useCallback(() => readOnly('is-contract-paused'), [readOnly]);
+  const getTokenCap = useCallback(() => readOnly('get-token-cap'), [readOnly]);
+  const getYieldRate = useCallback(() => readOnly('get-yield-rate'), [readOnly]);
+  const getCounterCost = useCallback(() => readOnly('get-counter-cost'), [readOnly]);
+  const getTotalMinted = useCallback(() => readOnly('get-total-minted'), [readOnly]);
+  const getTotalBurned = useCallback(() => readOnly('get-total-burned'), [readOnly]);
+  const getTotalPoolDeposits = useCallback(() => readOnly('get-total-pool-deposits'), [readOnly]);
+  const getTotalYieldPaid = useCallback(() => readOnly('get-total-yield-paid'), [readOnly]);
+  const getActionNonce = useCallback(() => readOnly('get-action-nonce'), [readOnly]);
+  const getSnapshotNonce = useCallback(() => readOnly('get-snapshot-nonce'), [readOnly]);
+
+  const getAllowance = useCallback(
+    (owner: string, spender: string) =>
+      readOnly('get-allowance', [principalCV(owner), principalCV(spender)]),
+    [readOnly]
