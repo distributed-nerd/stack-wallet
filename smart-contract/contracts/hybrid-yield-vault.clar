@@ -299,3 +299,4 @@
   (let (
         (caller tx-sender)
         (vault-id (+ (var-get vault-nonce) u1))
+       )
