@@ -279,3 +279,5 @@
         (caller tx-sender)
         (cost (var-get counter-action-cost))
         (staked (default-to u0 (map-get? stake-balances tx-sender)))
+       )
+    (try! (assert-not-paused))
