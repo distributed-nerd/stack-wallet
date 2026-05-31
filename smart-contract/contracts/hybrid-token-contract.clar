@@ -148,3 +148,8 @@
     (asserts! (is-admin) ERR-NOT-ADMIN)
     (asserts! (not (is-eq new-admin (as-contract tx-sender))) ERR-ZERO-ADDRESS)
     (var-set contract-admin new-admin)
+    (ok new-admin)))
+
+(define-public (set-token-cap (new-cap uint))
+  (begin
+    (asserts! (is-admin) ERR-NOT-ADMIN)
