@@ -342,3 +342,5 @@
     (asserts! (> amount u0) ERR-INVALID-AMOUNT)
     (asserts! (>= caller-stake amount) ERR-INSUFFICIENT-STAKE)
     (asserts! (>= (get balance vault) amount) ERR-WITHDRAW-EXCEEDS-VAULT)
+    (try! (as-contract (contract-call? token transfer amount tx-sender caller none)))
+    (map-set vaults vault-id (merge vault { balance: (- (get balance vault) amount) }))
