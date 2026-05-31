@@ -287,3 +287,4 @@
     (asserts! (>= staked cost) ERR-INSUFFICIENT-STAKE)
     (try! (as-contract (contract-call? .sip010-token burn cost)))
     (map-set stake-balances caller (- staked cost))
+    (unwrap! (contract-call? .stack-wallet increment) ERR-COUNTER-CALL-FAIL)
