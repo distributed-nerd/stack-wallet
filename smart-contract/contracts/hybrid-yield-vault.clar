@@ -324,3 +324,4 @@
     (try! (assert-valid-token token))
     (asserts! (> amount u0) ERR-INVALID-AMOUNT)
     (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
+    (map-set vaults vault-id (merge vault { balance: (+ (get balance vault) amount) }))
