@@ -11,3 +11,4 @@
 ;;   - member accounting  : per-member tallies for reward attribution
 ;;
 ;; All token movements flow through the sip010-token contract; the vault holds
+;; tokens as-contract and mints yield against accrued reward debt.
