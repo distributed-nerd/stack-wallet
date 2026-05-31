@@ -93,3 +93,4 @@
 ;; ===== data maps : vaults =====
 (define-map vaults uint { owner: principal, balance: uint, created-at: uint })
 (define-map vault-depositors { vault-id: uint, depositor: principal } uint)
+
