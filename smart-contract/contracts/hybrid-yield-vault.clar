@@ -207,3 +207,4 @@
     (asserts! (<= lock-blocks MAX-LOCK-BLOCKS) ERR-LOCK-TOO-LONG)
     (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
     (map-set stake-balances caller (+ current amount))
+    (map-set stake-start-block caller burn-block-height)
