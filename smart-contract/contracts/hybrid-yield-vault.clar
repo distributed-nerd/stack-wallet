@@ -506,3 +506,4 @@
 
 (define-read-only (get-total-staked)
   (ok (var-get total-staked)))
+
