@@ -308,3 +308,8 @@
     (try! (assert-live))
     (try! (assert-ready))
     (try! (assert-valid-token token))
+    (asserts! (> amount u0) ERR-INVALID-AMOUNT)
+    (asserts! (>= current amount) ERR-INSUFFICIENT-BALANCE)
+    (asserts! (>= burn-block-height lock-until) ERR-LOCK-ACTIVE)
+    (try! (as-contract (contract-call? token transfer amount tx-sender caller none)))
+    (map-set stake-balances    caller (- current amount))
