@@ -94,3 +94,27 @@ export function useHybridToken() {
     (owner: string, spender: string) =>
       readOnly('get-allowance', [principalCV(owner), principalCV(spender)]),
     [readOnly]
+  );
+
+  const getWalletPool = useCallback(
+    (walletId: number) => readOnly('get-wallet-pool', [uintCV(BigInt(walletId))]),
+    [readOnly]
+  );
+
+  const getDepositorStake = useCallback(
+    (walletId: number, depositor: string) =>
+      readOnly('get-depositor-stake', [uintCV(BigInt(walletId)), principalCV(depositor)]),
+    [readOnly]
+  );
+
+  const getStake = useCallback(
+    (who: string) => readOnly('get-stake', [principalCV(who)]),
+    [readOnly]
+  );
+
+  const getPendingYield = useCallback(
+    (who: string) => readOnly('get-pending-yield', [principalCV(who)]),
+    [readOnly]
+  );
+
+  const getMemberActionCount = useCallback(
