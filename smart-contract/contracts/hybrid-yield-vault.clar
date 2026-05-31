@@ -271,3 +271,4 @@
     (var-set total-yield-minted (+ (var-get total-yield-minted) reward))
     (bump-action caller)
     (ok (+ current reward))))
+
