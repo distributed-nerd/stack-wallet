@@ -79,3 +79,6 @@ async function main() {
   console.log(`Balance: ${(parseInt(balData.balance) / 1_000_000).toFixed(6)} STX`);
 
   if (await contractExists(address, CONTRACT_NAME)) {
+    console.log(`${CONTRACT_NAME} already deployed at ${address}. Nothing to do.`);
+    return;
+  }
