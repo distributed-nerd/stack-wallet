@@ -479,3 +479,4 @@
 
 (define-read-only (get-member-reward-claims (who principal))
   (ok (default-to u0 (map-get? member-reward-claims who))))
+
