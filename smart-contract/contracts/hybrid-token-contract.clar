@@ -113,3 +113,8 @@
         (rate    (var-get yield-rate-bps))
         (debt    (default-to u0 (map-get? yield-debt who)))
        )
+    (+ debt (/ (* (* staked elapsed) rate) BPS-DENOMINATOR))))
+
+(define-private (bump-action (who principal))
+  (begin
+    (map-set member-action-tally who
