@@ -163,3 +163,4 @@
     (asserts! (is-admin) ERR-NOT-ADMIN)
     (var-set contract-admin new-admin)
     (ok new-admin)))
+
