@@ -384,3 +384,4 @@
         (caller tx-sender)
         (proposal (unwrap! (map-get? proposals proposal-id) ERR-PROPOSAL-NOT-FOUND))
         (weight (default-to u0 (map-get? stake-balances tx-sender)))
+       )
