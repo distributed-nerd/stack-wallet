@@ -318,3 +318,8 @@
     (bump-action caller)
     (ok (- current amount))))
 
+(define-public (claim-yield)
+  (let (
+        (caller  tx-sender)
+        (reward  (pending-yield caller))
+       )
