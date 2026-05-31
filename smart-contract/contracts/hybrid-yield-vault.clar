@@ -502,3 +502,4 @@
 (define-read-only (get-proposal-nonce)
   (ok (var-get proposal-nonce)))
 
+;; ===== read-only : global accounting =====
