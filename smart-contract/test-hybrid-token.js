@@ -24,3 +24,16 @@ async function read(fn, args = []) {
     contractName: CONTRACT,
     functionName: fn,
     functionArgs: args,
+    network: STACKS_MAINNET,
+    senderAddress: DEPLOYER,
+  });
+  return cvToJSON(result);
+}
+
+async function test(label, fn) {
+  try {
+    await fn();
+    console.log(`  PASS  ${label}`);
+    passed++;
+  } catch (e) {
+    console.error(`  FAIL  ${label}: ${e.message}`);
