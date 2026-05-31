@@ -115,3 +115,16 @@ async function main() {
     const r = await read('get-max-supply');
     assert(r.success, 'not ok');
     assert(r.value.value === '21000000000000', `unexpected cap: ${r.value.value}`);
+  });
+
+  await test('get-max-mint-per-tx returns uint', async () => {
+    const r = await read('get-max-mint-per-tx');
+    assert(r.success, 'not ok');
+    assert(r.value.value === '1000000000', `unexpected: ${r.value.value}`);
+  });
+
+  await test('get-max-batch-size returns uint', async () => {
+    const r = await read('get-max-batch-size');
+    assert(r.success, 'not ok');
+    assert(r.value.value === '50', `unexpected: ${r.value.value}`);
+  });
