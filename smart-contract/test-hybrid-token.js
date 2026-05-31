@@ -50,3 +50,16 @@ async function main() {
 
   await test('get-admin returns a principal', async () => {
     const r = await read('get-admin');
+    assert(r.success, 'not ok');
+    assert(r.value.type === 'principal', `expected principal got ${r.value.type}`);
+  });
+
+  await test('is-contract-paused returns bool', async () => {
+    const r = await read('is-contract-paused');
+    assert(r.success, 'not ok');
+    assert(typeof r.value.value === 'boolean', 'not bool');
+  });
+
+  await test('is-initialized returns bool', async () => {
+    const r = await read('is-initialized');
+    assert(r.success, 'not ok');
