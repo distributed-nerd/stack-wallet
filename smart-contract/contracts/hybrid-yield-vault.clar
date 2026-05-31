@@ -419,3 +419,4 @@
         (map-set proposals proposal-id (merge proposal { executed: true }))
         (ok true))
       (begin
+        (map-set proposals proposal-id (merge proposal { rejected: true }))
