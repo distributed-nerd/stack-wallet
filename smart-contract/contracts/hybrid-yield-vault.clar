@@ -156,3 +156,4 @@
   (begin
     (asserts! (is-admin) ERR-NOT-ADMIN)
     (var-set is-paused paused)
+    (ok paused)))
