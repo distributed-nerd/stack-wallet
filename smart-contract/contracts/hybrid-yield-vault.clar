@@ -166,3 +166,4 @@
 
 (define-public (set-yield-rate (new-rate uint))
   (begin
+    (asserts! (is-admin) ERR-NOT-ADMIN)
