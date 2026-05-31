@@ -515,3 +515,5 @@
 
 (define-read-only (get-total-vault-deposits)
   (ok (var-get total-vault-deposits)))
+
+(define-read-only (get-action-count-global)
