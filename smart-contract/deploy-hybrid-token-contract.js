@@ -76,3 +76,6 @@ async function main() {
 
   const balRes = await fetch(`${API}/extended/v1/address/${address}/stx`);
   const balData = await balRes.json();
+  console.log(`Balance: ${(parseInt(balData.balance) / 1_000_000).toFixed(6)} STX`);
+
+  if (await contractExists(address, CONTRACT_NAME)) {
