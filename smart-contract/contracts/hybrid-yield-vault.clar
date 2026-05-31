@@ -178,3 +178,4 @@
     (var-set counter-action-cost new-cost)
     (ok new-cost)))
 
+(define-public (set-voting-window (new-window uint))
