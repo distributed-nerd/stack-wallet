@@ -123,3 +123,8 @@
     true))
 
 (define-private (do-transfer (token <sip010-trait>) (amount uint) (from principal) (to principal))
+  (begin
+    (asserts! (not (is-eq from to)) ERR-SELF-TRANSFER)
+    (asserts! (> amount u0) ERR-INVALID-AMOUNT)
+    (contract-call? token transfer amount from to none)))
+
