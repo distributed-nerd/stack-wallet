@@ -288,3 +288,8 @@
     (try! (assert-live))
     (try! (assert-ready))
     (try! (assert-valid-token token))
+    (asserts! (> amount u0) ERR-INVALID-AMOUNT)
+    (asserts! (<= lock-blocks MAX-LOCK-BLOCKS) ERR-INVALID-AMOUNT)
+    (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
+    (map-set stake-balances    caller (+ current amount))
+    (map-set stake-start-block caller burn-block-height)
