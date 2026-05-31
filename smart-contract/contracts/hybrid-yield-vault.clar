@@ -485,3 +485,4 @@
 (define-read-only (get-vault (vault-id uint))
   (ok (map-get? vaults vault-id)))
 
+(define-read-only (get-vault-depositor-stake (vault-id uint) (depositor principal))
