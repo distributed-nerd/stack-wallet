@@ -150,3 +150,15 @@ async function main() {
     case 'compound-yield':
       return callContract(senderKey, 'compound-yield', []);
     case 'counter-increment-burn':
+      return callContract(senderKey, 'counter-increment-burn', [tokenCV()]);
+    case 'counter-decrement-burn':
+      return callContract(senderKey, 'counter-decrement-burn', [tokenCV()]);
+    case 'take-snapshot':
+      return callContract(senderKey, 'take-snapshot', []);
+    default:
+      console.error(`Unknown command: ${cmd}`);
+      process.exit(1);
+  }
+}
+
+main().catch(err => { console.error('Fatal:', err); process.exit(1); });
