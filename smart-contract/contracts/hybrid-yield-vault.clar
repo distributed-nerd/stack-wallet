@@ -355,3 +355,4 @@
   (let (
         (caller tx-sender)
         (proposal-id (+ (var-get proposal-nonce) u1))
+        (window (var-get voting-window-blocks))
