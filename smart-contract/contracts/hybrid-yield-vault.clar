@@ -367,3 +367,4 @@
     (map-set proposals proposal-id {
         proposer: caller,
         param: param,
+        new-value: new-value,
