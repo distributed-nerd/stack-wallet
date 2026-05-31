@@ -423,3 +423,8 @@
 
 (define-read-only (get-counter-cost)
   (ok (var-get counter-action-cost)))
+
+(define-read-only (get-total-minted)
+  (ok (var-get total-minted)))
+
+(define-read-only (get-total-burned)
