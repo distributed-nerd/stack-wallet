@@ -284,3 +284,4 @@
     (try! (assert-initialized))
     (try! (assert-valid-token token))
     (asserts! (> cost u0) ERR-INVALID-AMOUNT)
+    (asserts! (>= staked cost) ERR-INSUFFICIENT-STAKE)
