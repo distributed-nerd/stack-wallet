@@ -380,3 +380,4 @@
     (ok proposal-id)))
 
 (define-public (vote (proposal-id uint) (support bool))
+  (let (
