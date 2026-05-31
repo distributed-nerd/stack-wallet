@@ -210,3 +210,4 @@
     (map-set stake-start-block caller burn-block-height)
     (map-set accrued-yield-debt caller carried)
     (map-set stake-lock-until caller (+ burn-block-height lock-blocks))
+    (var-set total-staked (+ (var-get total-staked) amount))
