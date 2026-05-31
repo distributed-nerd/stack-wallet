@@ -219,3 +219,4 @@
         (caller tx-sender)
         (current (default-to u0 (map-get? stake-balances tx-sender)))
         (carried (pending-yield tx-sender))
+        (lock-until (default-to u0 (map-get? stake-lock-until tx-sender)))
