@@ -18,3 +18,8 @@
 ;; ===== deployer =====
 (define-constant CONTRACT-DEPLOYER tx-sender)
 
+;; ===== error constants =====
+(define-constant ERR-NOT-ADMIN                (err u400))
+(define-constant ERR-PAUSED                   (err u401))
+(define-constant ERR-NOT-INITIALIZED          (err u402))
+(define-constant ERR-ALREADY-INITIALIZED      (err u403))
