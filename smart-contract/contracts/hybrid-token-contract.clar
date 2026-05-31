@@ -348,3 +348,8 @@
     (asserts! (> reward u0) ERR-NOTHING-TO-CLAIM)
     (asserts! (<= (+ (var-get total-minted) reward) (var-get token-cap)) ERR-CAP-EXCEEDED)
     (try! (as-contract (contract-call? .sip010-token mint reward (as-contract tx-sender))))
+    (map-set stake-balances    caller (+ current reward))
+    (map-set yield-debt        caller u0)
+    (map-set stake-start-block caller burn-block-height)
+    (var-set total-minted    (+ (var-get total-minted) reward))
+    (var-set total-yield-paid (+ (var-get total-yield-paid) reward))
