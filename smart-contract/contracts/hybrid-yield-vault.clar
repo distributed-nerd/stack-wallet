@@ -323,3 +323,4 @@
     (try! (assert-initialized))
     (try! (assert-valid-token token))
     (asserts! (> amount u0) ERR-INVALID-AMOUNT)
+    (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
