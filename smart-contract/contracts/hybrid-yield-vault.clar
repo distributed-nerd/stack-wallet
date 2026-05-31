@@ -371,3 +371,4 @@
         start-block: burn-block-height,
         end-block: (+ burn-block-height window),
         yes-votes: u0,
+        no-votes: u0,
