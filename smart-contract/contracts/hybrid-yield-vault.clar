@@ -251,3 +251,4 @@
       (+ (default-to u0 (map-get? member-reward-claims caller)) reward))
     (var-set total-yield-minted (+ (var-get total-yield-minted) reward))
     (bump-action caller)
+    (ok reward)))
