@@ -413,3 +413,8 @@
   (ok (var-get is-paused)))
 
 (define-read-only (is-initialized)
+  (ok (var-get initialized)))
+
+(define-read-only (get-token-cap)
+  (ok (var-get token-cap)))
+
