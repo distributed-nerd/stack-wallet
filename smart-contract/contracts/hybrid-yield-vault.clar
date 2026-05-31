@@ -492,3 +492,4 @@
   (ok (var-get vault-nonce)))
 
 ;; ===== read-only : governance =====
+
