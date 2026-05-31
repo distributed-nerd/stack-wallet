@@ -6,3 +6,4 @@
 ;;   - staking            : lock STK tokens, accrue block-based yield
 ;;   - yield              : claim accrued rewards minted from the token contract
 ;;   - governance         : create / vote / execute parameter proposals
+;;   - vault escrow       : per-vault deposits keyed by depositor
