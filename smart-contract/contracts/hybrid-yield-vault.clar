@@ -72,3 +72,4 @@
 (define-data-var yield-rate-bps uint u100)
 (define-data-var counter-action-cost uint u1000)
 (define-data-var voting-window-blocks uint u144)
+(define-data-var proposal-quorum uint u3)
