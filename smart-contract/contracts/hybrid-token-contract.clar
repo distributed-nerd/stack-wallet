@@ -158,3 +158,8 @@
     (ok new-cap)))
 
 (define-public (set-yield-rate (new-rate uint))
+  (begin
+    (asserts! (is-admin) ERR-NOT-ADMIN)
+    (asserts! (<= new-rate MAX-YIELD-RATE-BPS) ERR-RATE-TOO-HIGH)
+    (var-set yield-rate-bps new-rate)
+    (ok new-rate)))
