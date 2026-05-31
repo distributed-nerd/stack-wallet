@@ -298,3 +298,8 @@
     (bump-action caller)
     (ok (+ current amount))))
 
+(define-public (unstake-tokens (token <sip010-trait>) (amount uint))
+  (let (
+        (caller     tx-sender)
+        (current    (default-to u0 (map-get? stake-balances caller)))
+        (carried    (pending-yield caller))
