@@ -178,3 +178,8 @@
     (try! (assert-live))
     (try! (assert-ready))
     (asserts! (is-admin) ERR-NOT-ADMIN)
+    (asserts! (> amount u0) ERR-INVALID-AMOUNT)
+    (asserts! (<= amount MAX-MINT-PER-TX) ERR-INVALID-AMOUNT)
+    (asserts! (<= (+ (var-get total-minted) amount) (var-get token-cap)) ERR-CAP-EXCEEDED)
+    (try! (as-contract (contract-call? .sip010-token mint amount recipient)))
+    (var-set total-minted (+ (var-get total-minted) amount))
