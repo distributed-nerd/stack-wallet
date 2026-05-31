@@ -272,3 +272,4 @@
     (bump-action caller)
     (ok (+ current reward))))
 
+;; ===== counter bridge =====
