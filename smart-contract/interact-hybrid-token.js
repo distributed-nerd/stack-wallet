@@ -118,3 +118,11 @@ async function main() {
   if (cmd === 'read') {
     const [fnName, ...fnArgs] = args;
     const cvArgs = fnArgs.map(a => {
+      if (/^\d+$/.test(a)) return uintCV(BigInt(a));
+      return principalCV(a);
+    });
+    return readContract(fnName, cvArgs);
+  }
+
+  const senderKey = await loadPrivateKey();
+
