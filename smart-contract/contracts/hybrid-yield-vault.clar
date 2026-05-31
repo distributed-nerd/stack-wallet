@@ -171,3 +171,4 @@
     (var-set yield-rate-bps new-rate)
     (ok new-rate)))
 
+(define-public (set-counter-cost (new-cost uint))
