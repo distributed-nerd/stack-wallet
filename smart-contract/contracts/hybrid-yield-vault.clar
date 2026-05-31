@@ -134,3 +134,4 @@
         (rate (var-get yield-rate-bps))
         (debt (default-to u0 (map-get? accrued-yield-debt who)))
        )
+    (+ debt (/ (* (* staked elapsed) rate) BPS-DENOMINATOR))))
