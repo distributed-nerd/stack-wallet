@@ -293,3 +293,8 @@
     (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
     (map-set stake-balances    caller (+ current amount))
     (map-set stake-start-block caller burn-block-height)
+    (map-set yield-debt        caller carried)
+    (map-set stake-lock-until  caller (+ burn-block-height lock-blocks))
+    (bump-action caller)
+    (ok (+ current amount))))
+
