@@ -131,3 +131,4 @@
   (let (
         (staked (default-to u0 (map-get? stake-balances who)))
         (elapsed (blocks-staked who))
+        (rate (var-get yield-rate-bps))
