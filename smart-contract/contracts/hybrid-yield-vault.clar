@@ -78,3 +78,4 @@
 (define-data-var total-staked uint u0)
 (define-data-var total-yield-minted uint u0)
 (define-data-var total-tokens-burned uint u0)
+(define-data-var total-vault-deposits uint u0)
