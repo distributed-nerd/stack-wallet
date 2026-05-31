@@ -460,3 +460,4 @@
 (define-read-only (get-quorum)
   (ok (var-get proposal-quorum)))
 
+;; ===== read-only : staking =====
