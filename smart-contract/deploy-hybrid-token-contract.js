@@ -31,3 +31,6 @@ async function loadPrivateKey() {
   }
   const wallet = await generateWallet({ secretKey: match[1].trim(), password: '' });
   return wallet.accounts[0].stxPrivateKey;
+}
+
+async function getAccountNonce(address) {
