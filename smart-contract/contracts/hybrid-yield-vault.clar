@@ -7,3 +7,4 @@
 ;;   - yield              : claim accrued rewards minted from the token contract
 ;;   - governance         : create / vote / execute parameter proposals
 ;;   - vault escrow       : per-vault deposits keyed by depositor
+;;   - counter bridge     : advance stack-wallet counter by burning stake
