@@ -173,3 +173,4 @@
 
 (define-public (set-counter-cost (new-cost uint))
   (begin
+    (asserts! (is-admin) ERR-NOT-ADMIN)
