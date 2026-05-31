@@ -198,3 +198,8 @@
     (bump-action caller)
     (ok amount)))
 
+;; ===== allowance model =====
+
+(define-public (approve (spender principal) (amount uint))
+  (begin
+    (try! (assert-live))
