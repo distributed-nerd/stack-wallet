@@ -218,3 +218,8 @@
     (try! (assert-valid-token token))
     (asserts! (>= current-allowance amount) ERR-INSUFFICIENT-ALLOWANCE)
     (asserts! (> amount u0) ERR-INVALID-AMOUNT)
+    (try! (do-transfer token amount owner recipient))
+    (map-set allowances { owner: owner, spender: spender } (- current-allowance amount))
+    (bump-action spender)
+    (ok amount)))
+
