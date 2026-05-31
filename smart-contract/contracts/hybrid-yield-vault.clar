@@ -237,3 +237,4 @@
 
 (define-public (claim-yield)
   (let (
+        (caller tx-sender)
