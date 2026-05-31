@@ -214,3 +214,4 @@
     (bump-action caller)
     (ok (+ current amount))))
 
+(define-public (unstake (token <sip010-trait>) (amount uint))
