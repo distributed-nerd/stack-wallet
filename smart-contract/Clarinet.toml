@@ -19,6 +19,12 @@ path = "contracts/sip010-token.clar"
 [contracts.stack-wallet]
 path = "contracts/stack-wallet.clar"
 
+[contracts.hybrid-stack-wallet]
+path = "contracts/hybrid-stack-wallet.clar"
+
+[contracts.hybrid-yield-vault]
+path = "contracts/hybrid-yield-vault.clar"
+
 [repl]
 costs_version = 3
 parser_version = 2
