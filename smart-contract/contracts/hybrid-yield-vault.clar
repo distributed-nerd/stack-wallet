@@ -59,3 +59,5 @@
 (define-constant BPS-DENOMINATOR        u10000)
 (define-constant MIN-VOTING-BLOCKS      u10)
 
+;; ===== governance parameter selectors =====
+(define-constant PARAM-YIELD-RATE       u1)
