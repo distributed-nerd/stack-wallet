@@ -43,3 +43,8 @@
 (define-constant ERR-NOTHING-TO-CLAIM         (err u421))
 (define-constant ERR-ALREADY-MEMBER           (err u422))
 (define-constant ERR-SNAPSHOT-NOT-FOUND       (err u423))
+(define-constant ERR-COST-TOO-HIGH            (err u424))
+
+;; ===== safety bounds =====
+(define-constant MAX-SUPPLY              u21000000000000)
+(define-constant MAX-MINT-PER-TX         u1000000000)
