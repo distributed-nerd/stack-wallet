@@ -331,3 +331,4 @@
     (ok amount)))
 
 (define-public (withdraw-from-vault (token <sip010-trait>) (vault-id uint) (amount uint))
+  (let (
