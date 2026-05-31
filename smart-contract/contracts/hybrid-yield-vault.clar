@@ -105,3 +105,4 @@
     no-votes: uint,
     executed: bool,
     rejected: bool
+  })
