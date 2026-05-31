@@ -182,3 +182,4 @@
   (begin
     (asserts! (is-admin) ERR-NOT-ADMIN)
     (asserts! (>= new-window MIN-VOTING-BLOCKS) ERR-INVALID-AMOUNT)
+    (var-set voting-window-blocks new-window)
