@@ -28,3 +28,5 @@
 (define-constant ERR-INVALID-AMOUNT         (err u305))
 (define-constant ERR-INSUFFICIENT-STAKE     (err u306))
 (define-constant ERR-NO-STAKE               (err u307))
+(define-constant ERR-NOTHING-TO-CLAIM       (err u308))
+(define-constant ERR-VAULT-NOT-FOUND        (err u309))
