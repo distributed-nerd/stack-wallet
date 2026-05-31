@@ -403,3 +403,8 @@
       })
     (var-set snapshot-nonce snap-id)
     (ok snap-id)))
+
+;; ===== read-only =====
+
+(define-read-only (get-admin)
+  (ok (var-get contract-admin)))
