@@ -459,3 +459,4 @@
 
 (define-read-only (get-quorum)
   (ok (var-get proposal-quorum)))
+
