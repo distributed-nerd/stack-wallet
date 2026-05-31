@@ -316,3 +316,4 @@
 (define-public (deposit-to-vault (token <sip010-trait>) (vault-id uint) (amount uint))
   (let (
         (caller tx-sender)
+        (vault (unwrap! (map-get? vaults vault-id) ERR-VAULT-NOT-FOUND))
