@@ -183,3 +183,8 @@
     (asserts! (<= (+ (var-get total-minted) amount) (var-get token-cap)) ERR-CAP-EXCEEDED)
     (try! (as-contract (contract-call? .sip010-token mint amount recipient)))
     (var-set total-minted (+ (var-get total-minted) amount))
+    (bump-action recipient)
+    (ok amount)))
+
+(define-public (burn-from (token <sip010-trait>) (amount uint))
+  (let ((caller tx-sender))
