@@ -529,3 +529,4 @@
 
 (define-read-only (get-max-counter-cost)
   (ok MAX-COUNTER-COST))
+
