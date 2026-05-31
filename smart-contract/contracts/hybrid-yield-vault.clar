@@ -213,3 +213,4 @@
     (var-set total-staked (+ (var-get total-staked) amount))
     (bump-action caller)
     (ok (+ current amount))))
+
