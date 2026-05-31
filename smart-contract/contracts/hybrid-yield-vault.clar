@@ -245,3 +245,4 @@
     (asserts! (> (default-to u0 (map-get? stake-balances caller)) u0) ERR-NO-STAKE)
     (asserts! (> reward u0) ERR-NOTHING-TO-CLAIM)
     (try! (as-contract (contract-call? .sip010-token mint reward caller)))
+    (map-set accrued-yield-debt caller u0)
