@@ -48,3 +48,8 @@
 ;; ===== safety bounds =====
 (define-constant MAX-SUPPLY              u21000000000000)
 (define-constant MAX-MINT-PER-TX         u1000000000)
+(define-constant MAX-BATCH-SIZE          u50)
+(define-constant MAX-POOL-DEPOSIT        u1000000000)
+(define-constant MAX-YIELD-RATE-BPS      u2000)
+(define-constant BPS-DENOMINATOR         u10000)
+(define-constant MAX-LOCK-BLOCKS         u52560)
