@@ -292,3 +292,4 @@
     (var-set total-tokens-burned (+ (var-get total-tokens-burned) cost))
     (bump-action caller)
     (ok cost)))
+
