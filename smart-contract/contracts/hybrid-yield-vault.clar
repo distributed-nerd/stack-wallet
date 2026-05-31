@@ -509,3 +509,4 @@
 
 (define-read-only (get-total-yield-minted)
   (ok (var-get total-yield-minted)))
+
