@@ -180,3 +180,4 @@
 
 (define-public (set-voting-window (new-window uint))
   (begin
+    (asserts! (is-admin) ERR-NOT-ADMIN)
