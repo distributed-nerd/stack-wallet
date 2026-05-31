@@ -230,3 +230,4 @@
     (try! (as-contract (contract-call? token transfer amount tx-sender caller none)))
     (map-set stake-balances caller (- current amount))
     (map-set stake-start-block caller burn-block-height)
+    (map-set accrued-yield-debt caller carried)
