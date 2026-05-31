@@ -235,3 +235,4 @@
     (bump-action caller)
     (ok (- current amount))))
 
+(define-public (claim-yield)
