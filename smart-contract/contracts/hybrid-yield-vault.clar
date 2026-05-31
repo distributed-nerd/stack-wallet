@@ -266,3 +266,4 @@
     (try! (as-contract (contract-call? .sip010-token mint reward (as-contract tx-sender))))
     (map-set stake-balances caller (+ current reward))
     (map-set accrued-yield-debt caller u0)
+    (map-set stake-start-block caller burn-block-height)
