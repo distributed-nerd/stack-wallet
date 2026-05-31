@@ -486,3 +486,4 @@
   (ok (map-get? vaults vault-id)))
 
 (define-read-only (get-vault-depositor-stake (vault-id uint) (depositor principal))
+  (ok (default-to u0 (map-get? vault-depositors { vault-id: vault-id, depositor: depositor }))))
