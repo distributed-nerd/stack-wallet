@@ -354,3 +354,4 @@
 (define-public (create-proposal (param uint) (new-value uint))
   (let (
         (caller tx-sender)
+        (proposal-id (+ (var-get proposal-nonce) u1))
