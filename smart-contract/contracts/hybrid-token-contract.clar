@@ -238,3 +238,8 @@
     (map-set allowances { owner: tx-sender, spender: spender } (- current delta))
     (ok (- current delta))))
 
+;; ===== wallet pool escrow =====
+
+(define-public (deposit-to-pool (token <sip010-trait>) (wallet-id uint) (amount uint))
+  (let (
+        (caller   tx-sender)
