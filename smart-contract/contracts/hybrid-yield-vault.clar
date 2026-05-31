@@ -289,3 +289,4 @@
     (map-set stake-balances caller (- staked cost))
     (unwrap! (contract-call? .stack-wallet increment) ERR-COUNTER-CALL-FAIL)
     (var-set total-staked (- (var-get total-staked) cost))
+    (var-set total-tokens-burned (+ (var-get total-tokens-burned) cost))
