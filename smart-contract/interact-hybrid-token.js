@@ -110,3 +110,11 @@ function tokenCV() {
 
 async function main() {
   const [,, cmd, ...args] = process.argv;
+  if (!cmd) {
+    console.log('Usage: node interact-hybrid-token.js <command> [args...]');
+    process.exit(0);
+  }
+
+  if (cmd === 'read') {
+    const [fnName, ...fnArgs] = args;
+    const cvArgs = fnArgs.map(a => {
