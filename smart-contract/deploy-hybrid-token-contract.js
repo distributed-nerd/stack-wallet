@@ -85,3 +85,31 @@ async function main() {
 
   const nonce = await getAccountNonce(address);
   console.log(`Nonce: ${nonce}`);
+
+  const contractSource = fs.readFileSync(CONTRACT_FILE, 'utf8');
+  console.log(`Source: ${contractSource.length} bytes`);
+
+  const tx = await makeContractDeploy({
+    contractName: CONTRACT_NAME,
+    codeBody: contractSource,
+    senderKey,
+    network: STACKS_MAINNET,
+    anchorMode: AnchorMode.Any,
+    postConditionMode: PostConditionMode.Allow,
+    fee: DEPLOY_FEE,
+    nonce: BigInt(nonce),
+  });
+
+  const result = await broadcastWithRetry(tx);
+  if (result.ok) {
+    console.log(`SUCCESS  txid: ${result.txid}`);
+    console.log(`Explorer: https://explorer.hiro.so/txid/${result.txid}?chain=mainnet`);
+    console.log(`Contract: ${address}.${CONTRACT_NAME}`);
+  } else {
+    console.error(`FAILED: ${result.error}`);
+    if (result.detail) console.error('Detail:', JSON.stringify(result.detail, null, 2));
+    process.exit(1);
+  }
+}
+
+main().catch(err => { console.error('Fatal:', err); process.exit(1); });
