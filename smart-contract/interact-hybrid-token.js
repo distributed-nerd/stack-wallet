@@ -102,3 +102,11 @@ async function readContract(functionName, functionArgs = []) {
     senderAddress: DEPLOYER,
   });
   console.log(JSON.stringify(cvToJSON(result), null, 2));
+}
+
+function tokenCV() {
+  return contractPrincipalCV(DEPLOYER, TOKEN_CONTRACT_NAME);
+}
+
+async function main() {
+  const [,, cmd, ...args] = process.argv;
