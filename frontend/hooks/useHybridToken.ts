@@ -46,3 +46,27 @@ export function useHybridToken() {
   const callContract = useCallback(
     async (functionName: string, functionArgs: any[]) => {
       setLoading(true);
+      setError(null);
+      try {
+        const userData = userSession.loadUserData();
+        const senderAddress = userData.profile.stxAddress.mainnet;
+
+        await makeContractCall({
+          contractAddress: DEPLOYER,
+          contractName: CONTRACT,
+          functionName,
+          functionArgs,
+          network,
+          anchorMode: AnchorMode.Any,
+          postConditionMode: PostConditionMode.Allow,
+          onFinish: (data: any) => {
+            console.log('TX broadcast:', data.txId);
+          },
+          onCancel: () => {
+            setError('Transaction cancelled');
+          },
+        } as any);
+      } catch (e: any) {
+        setError(e.message ?? 'Unknown error');
+      } finally {
+        setLoading(false);
