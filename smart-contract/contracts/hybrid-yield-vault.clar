@@ -141,3 +141,4 @@
     (map-set member-action-tally who
       (+ (default-to u0 (map-get? member-action-tally who)) u1))
     (var-set action-count-global (+ (var-get action-count-global) u1))
+    true))
