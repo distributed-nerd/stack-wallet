@@ -46,3 +46,11 @@ const DEPLOYER = process.env.STACKS_CONTRACT_ADDRESS || 'SP1FPNMWMJR7WT3AH6HMPSE
 const CONTRACT_NAME = 'hybrid-token-contract';
 const TOKEN_CONTRACT_NAME = 'sip010-token';
 const FEE = 10000n;
+
+async function loadPrivateKey() {
+  if (process.env.STACKS_PRIVATE_KEY) return process.env.STACKS_PRIVATE_KEY;
+  const tomlPath = './settings/Mainnet.toml';
+  if (!fs.existsSync(tomlPath)) { console.error('No key source found.'); process.exit(1); }
+  const tomlText = fs.readFileSync(tomlPath, 'utf8');
+  const match = tomlText.match(/^\s*mnemonic\s*=\s*"([^"]+)"/m);
+  if (!match) { console.error('No mnemonic in Mainnet.toml'); process.exit(1); }
