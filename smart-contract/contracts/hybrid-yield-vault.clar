@@ -467,3 +467,4 @@
 
 (define-read-only (get-stake-lock-until (who principal))
   (ok (default-to u0 (map-get? stake-lock-until who))))
+
