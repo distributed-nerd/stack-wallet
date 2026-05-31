@@ -13,3 +13,8 @@
 ;; Depends on: .sip010-trait  .sip010-token  .stack-wallet
 
 ;; ===== traits =====
+(use-trait sip010-trait .sip010-trait.sip-010-trait)
+
+;; ===== deployer =====
+(define-constant CONTRACT-DEPLOYER tx-sender)
+
