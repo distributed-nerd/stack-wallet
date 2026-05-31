@@ -141,3 +141,16 @@ async function main() {
   });
 
   await test('get-max-lock-blocks returns uint', async () => {
+    const r = await read('get-max-lock-blocks');
+    assert(r.success, 'not ok');
+    assert(r.value.value === '52560', `unexpected: ${r.value.value}`);
+  });
+
+  await test('get-allowance for deployer self returns 0', async () => {
+    const r = await read('get-allowance', [principalCV(DEPLOYER), principalCV(DEPLOYER)]);
+    assert(r.success, 'not ok');
+    assert(r.value.value === '0', `expected 0 got ${r.value.value}`);
+  });
+
+  await test('get-wallet-pool for id 0 returns 0', async () => {
+    const r = await read('get-wallet-pool', [uintCV(0n)]);
