@@ -253,3 +253,4 @@
     (bump-action caller)
     (ok reward)))
 
+(define-public (compound-yield)
