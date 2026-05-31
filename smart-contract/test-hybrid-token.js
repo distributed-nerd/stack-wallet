@@ -89,3 +89,16 @@ async function main() {
   await test('get-total-burned returns uint', async () => {
     const r = await read('get-total-burned');
     assert(r.success, 'not ok');
+  });
+
+  await test('get-total-pool-deposits returns uint', async () => {
+    const r = await read('get-total-pool-deposits');
+    assert(r.success, 'not ok');
+  });
+
+  await test('get-total-yield-paid returns uint', async () => {
+    const r = await read('get-total-yield-paid');
+    assert(r.success, 'not ok');
+  });
+
+  await test('get-action-nonce returns uint', async () => {
