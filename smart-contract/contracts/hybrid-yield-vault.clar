@@ -512,3 +512,4 @@
 
 (define-read-only (get-total-tokens-burned)
   (ok (var-get total-tokens-burned)))
+
