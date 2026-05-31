@@ -286,3 +286,4 @@
     (asserts! (> cost u0) ERR-INVALID-AMOUNT)
     (asserts! (>= staked cost) ERR-INSUFFICIENT-STAKE)
     (try! (as-contract (contract-call? .sip010-token burn cost)))
+    (map-set stake-balances caller (- staked cost))
