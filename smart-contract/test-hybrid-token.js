@@ -154,3 +154,16 @@ async function main() {
 
   await test('get-wallet-pool for id 0 returns 0', async () => {
     const r = await read('get-wallet-pool', [uintCV(0n)]);
+    assert(r.success, 'not ok');
+    assert(r.value.value === '0', `expected 0 got ${r.value.value}`);
+  });
+
+  await test('get-stake for deployer returns 0', async () => {
+    const r = await read('get-stake', [principalCV(DEPLOYER)]);
+    assert(r.success, 'not ok');
+    assert(r.value.value === '0', `expected 0 got ${r.value.value}`);
+  });
+
+  await test('get-pending-yield for deployer returns 0', async () => {
+    const r = await read('get-pending-yield', [principalCV(DEPLOYER)]);
+    assert(r.success, 'not ok');
