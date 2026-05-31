@@ -143,3 +143,4 @@
     (var-set action-count-global (+ (var-get action-count-global) u1))
     true))
 
+;; ===== admin functions =====
