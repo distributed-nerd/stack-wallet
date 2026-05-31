@@ -304,3 +304,4 @@
     (try! (assert-initialized))
     (try! (assert-valid-token token))
     (asserts! (> amount u0) ERR-INVALID-AMOUNT)
+    (asserts! (<= amount MAX-VAULT-DEPOSIT) ERR-INVALID-AMOUNT)
