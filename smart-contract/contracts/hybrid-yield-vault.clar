@@ -344,3 +344,4 @@
     (asserts! (>= (get balance vault) amount) ERR-WITHDRAW-EXCEEDS-VAULT)
     (try! (as-contract (contract-call? token transfer amount tx-sender caller none)))
     (map-set vaults vault-id (merge vault { balance: (- (get balance vault) amount) }))
+    (map-set vault-depositors { vault-id: vault-id, depositor: caller } (- caller-stake amount))
