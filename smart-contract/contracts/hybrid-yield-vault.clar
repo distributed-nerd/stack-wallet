@@ -3,3 +3,4 @@
 ;; governance and escrow vaults.
 ;;
 ;; Subsystems:
+;;   - staking            : lock STK tokens, accrue block-based yield
