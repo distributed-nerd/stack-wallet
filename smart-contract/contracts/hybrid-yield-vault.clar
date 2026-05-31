@@ -530,3 +530,5 @@
 (define-read-only (get-max-counter-cost)
   (ok MAX-COUNTER-COST))
 
+(define-read-only (get-max-vault-deposit)
+  (ok MAX-VAULT-DEPOSIT))
