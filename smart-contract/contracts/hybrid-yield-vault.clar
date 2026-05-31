@@ -57,3 +57,4 @@
 (define-constant MAX-COUNTER-COST       u100000000)
 (define-constant MAX-VAULT-DEPOSIT      u1000000000)
 (define-constant BPS-DENOMINATOR        u10000)
+(define-constant MIN-VOTING-BLOCKS      u10)
