@@ -213,3 +213,8 @@
         (spender tx-sender)
         (current-allowance (default-to u0 (map-get? allowances { owner: owner, spender: spender })))
        )
+    (try! (assert-live))
+    (try! (assert-ready))
+    (try! (assert-valid-token token))
+    (asserts! (>= current-allowance amount) ERR-INSUFFICIENT-ALLOWANCE)
+    (asserts! (> amount u0) ERR-INVALID-AMOUNT)
