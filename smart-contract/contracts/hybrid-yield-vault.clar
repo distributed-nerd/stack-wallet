@@ -387,3 +387,4 @@
        )
     (try! (assert-not-paused))
     (try! (assert-initialized))
+    (asserts! (> weight u0) ERR-NO-STAKE)
