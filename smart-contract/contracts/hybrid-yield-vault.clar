@@ -408,3 +408,4 @@
        )
     (try! (assert-not-paused))
     (try! (assert-initialized))
+    (asserts! (not (get executed proposal)) ERR-PROPOSAL-EXECUTED)
