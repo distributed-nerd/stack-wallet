@@ -319,3 +319,4 @@
         (vault (unwrap! (map-get? vaults vault-id) ERR-VAULT-NOT-FOUND))
         (existing (default-to u0 (map-get? vault-depositors { vault-id: vault-id, depositor: caller })))
        )
+    (try! (assert-not-paused))
