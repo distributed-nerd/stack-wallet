@@ -504,3 +504,4 @@
 
 ;; ===== read-only : global accounting =====
 
+(define-read-only (get-total-staked)
