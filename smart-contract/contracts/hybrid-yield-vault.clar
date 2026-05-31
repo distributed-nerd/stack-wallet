@@ -306,3 +306,4 @@
     (asserts! (> amount u0) ERR-INVALID-AMOUNT)
     (asserts! (<= amount MAX-VAULT-DEPOSIT) ERR-INVALID-AMOUNT)
     (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
+    (map-set vaults vault-id { owner: caller, balance: amount, created-at: burn-block-height })
