@@ -61,3 +61,6 @@ async function broadcastWithRetry(transaction) {
       await new Promise(r => setTimeout(r, 3000 * (attempt + 1)));
     }
   }
+  return { ok: false, error: String(lastErr?.message || lastErr) };
+}
+
