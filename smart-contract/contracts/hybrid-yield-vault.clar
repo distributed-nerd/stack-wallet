@@ -481,3 +481,4 @@
   (ok (default-to u0 (map-get? member-reward-claims who))))
 
 ;; ===== read-only : vaults =====
+
