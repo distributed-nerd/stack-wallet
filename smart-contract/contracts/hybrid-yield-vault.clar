@@ -427,3 +427,4 @@
     (begin (asserts! (<= value MAX-YIELD-RATE-BPS) ERR-RATE-TOO-HIGH)
            (var-set yield-rate-bps value) (ok true))
     (if (is-eq param PARAM-COUNTER-COST)
+      (begin (asserts! (<= value MAX-COUNTER-COST) ERR-COST-TOO-HIGH)
