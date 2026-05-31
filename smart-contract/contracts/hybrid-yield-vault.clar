@@ -226,3 +226,4 @@
     (try! (assert-valid-token token))
     (asserts! (> amount u0) ERR-INVALID-AMOUNT)
     (asserts! (>= current amount) ERR-INSUFFICIENT-STAKE)
+    (asserts! (>= burn-block-height lock-until) ERR-STILL-LOCKED)
