@@ -193,3 +193,8 @@
     (try! (assert-valid-token token))
     (asserts! (> amount u0) ERR-INVALID-AMOUNT)
     (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
+    (try! (as-contract (contract-call? .sip010-token burn amount)))
+    (var-set total-burned (+ (var-get total-burned) amount))
+    (bump-action caller)
+    (ok amount)))
+
