@@ -167,3 +167,16 @@ async function main() {
   await test('get-pending-yield for deployer returns 0', async () => {
     const r = await read('get-pending-yield', [principalCV(DEPLOYER)]);
     assert(r.success, 'not ok');
+    assert(r.value.value === '0', `expected 0 got ${r.value.value}`);
+  });
+
+  await test('get-member-action-count for deployer returns 0', async () => {
+    const r = await read('get-member-action-count', [principalCV(DEPLOYER)]);
+    assert(r.success, 'not ok');
+    assert(r.value.value === '0', `expected 0 got ${r.value.value}`);
+  });
+
+  console.log(`\nResults: ${passed} passed, ${failed} failed\n`);
+  if (failed > 0) process.exit(1);
+}
+
