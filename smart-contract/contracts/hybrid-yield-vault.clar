@@ -84,3 +84,4 @@
 (define-data-var action-count-global uint u0)
 
 ;; ===== data maps : staking =====
+(define-map stake-balances principal uint)
