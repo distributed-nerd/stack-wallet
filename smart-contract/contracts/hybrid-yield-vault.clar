@@ -381,3 +381,4 @@
 
 (define-public (vote (proposal-id uint) (support bool))
   (let (
+        (caller tx-sender)
