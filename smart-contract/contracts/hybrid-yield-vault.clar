@@ -420,3 +420,4 @@
         (ok true))
       (begin
         (map-set proposals proposal-id (merge proposal { rejected: true }))
+        (ok false)))))
