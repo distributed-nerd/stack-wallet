@@ -85,3 +85,4 @@
 
 ;; ===== data maps : staking =====
 (define-map stake-balances principal uint)
+(define-map stake-start-block principal uint)
