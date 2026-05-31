@@ -153,3 +153,4 @@
     (ok true)))
 
 (define-public (set-paused (paused bool))
+  (begin
