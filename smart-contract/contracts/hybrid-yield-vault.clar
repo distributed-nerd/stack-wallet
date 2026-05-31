@@ -421,3 +421,5 @@
       (begin
         (map-set proposals proposal-id (merge proposal { rejected: true }))
         (ok false)))))
+
+(define-private (apply-param (param uint) (value uint))
