@@ -457,3 +457,4 @@
 (define-read-only (get-voting-window)
   (ok (var-get voting-window-blocks)))
 
+(define-read-only (get-quorum)
