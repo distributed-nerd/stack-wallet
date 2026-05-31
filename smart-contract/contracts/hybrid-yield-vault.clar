@@ -291,3 +291,4 @@
     (var-set total-staked (- (var-get total-staked) cost))
     (var-set total-tokens-burned (+ (var-get total-tokens-burned) cost))
     (bump-action caller)
+    (ok cost)))
