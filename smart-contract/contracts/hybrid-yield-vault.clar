@@ -297,3 +297,4 @@
 
 (define-public (create-vault (token <sip010-trait>) (amount uint))
   (let (
+        (caller tx-sender)
