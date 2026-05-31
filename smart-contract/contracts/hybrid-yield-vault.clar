@@ -455,3 +455,4 @@
   (ok (var-get counter-action-cost)))
 
 (define-read-only (get-voting-window)
+  (ok (var-get voting-window-blocks)))
