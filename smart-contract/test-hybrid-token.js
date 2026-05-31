@@ -180,3 +180,4 @@ async function main() {
   if (failed > 0) process.exit(1);
 }
 
+main().catch(err => { console.error('Fatal:', err); process.exit(1); });
