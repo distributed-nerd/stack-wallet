@@ -222,3 +222,4 @@
         (lock-until (default-to u0 (map-get? stake-lock-until tx-sender)))
        )
     (try! (assert-not-paused))
+    (try! (assert-initialized))
