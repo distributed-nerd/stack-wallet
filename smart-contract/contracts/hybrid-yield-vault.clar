@@ -54,3 +54,4 @@
 ;; ===== safety bounds =====
 (define-constant MAX-YIELD-RATE-BPS     u2000)
 (define-constant MAX-LOCK-BLOCKS        u52560)
+(define-constant MAX-COUNTER-COST       u100000000)
