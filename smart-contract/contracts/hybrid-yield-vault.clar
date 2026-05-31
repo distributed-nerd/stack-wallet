@@ -33,3 +33,4 @@
 (define-constant ERR-VAULT-EXISTS           (err u310))
 (define-constant ERR-NOT-VAULT-OWNER        (err u311))
 (define-constant ERR-WITHDRAW-EXCEEDS-VAULT (err u312))
+(define-constant ERR-PROPOSAL-NOT-FOUND     (err u313))
