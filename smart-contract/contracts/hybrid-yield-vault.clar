@@ -66,3 +66,4 @@
 (define-constant PARAM-QUORUM           u4)
 
 ;; ===== data vars : config =====
+(define-data-var contract-admin principal CONTRACT-DEPLOYER)
