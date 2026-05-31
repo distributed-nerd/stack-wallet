@@ -22,3 +22,27 @@ const TOKEN_CONTRACT = 'sip010-token';
 function tokenCV() {
   return contractPrincipalCV(DEPLOYER, TOKEN_CONTRACT);
 }
+
+export function useHybridToken() {
+  const { userSession, network } = useStacks();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const readOnly = useCallback(
+    async (functionName: string, functionArgs: any[] = []) => {
+      const result = await callReadOnlyFunction({
+        contractAddress: DEPLOYER,
+        contractName: CONTRACT,
+        functionName,
+        functionArgs,
+        network,
+        senderAddress: DEPLOYER,
+      });
+      return cvToJSON(result);
+    },
+    [network]
+  );
+
+  const callContract = useCallback(
+    async (functionName: string, functionArgs: any[]) => {
+      setLoading(true);
