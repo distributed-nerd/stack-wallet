@@ -263,3 +263,5 @@
     (try! (assert-initialized))
     (asserts! (> current u0) ERR-NO-STAKE)
     (asserts! (> reward u0) ERR-NOTHING-TO-CLAIM)
+    (try! (as-contract (contract-call? .sip010-token mint reward (as-contract tx-sender))))
+    (map-set stake-balances caller (+ current reward))
