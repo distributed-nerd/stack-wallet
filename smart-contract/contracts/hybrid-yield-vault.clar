@@ -103,3 +103,4 @@
     end-block: uint,
     yes-votes: uint,
     no-votes: uint,
+    executed: bool,
