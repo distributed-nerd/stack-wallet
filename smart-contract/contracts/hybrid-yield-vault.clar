@@ -81,3 +81,4 @@
 (define-data-var total-vault-deposits uint u0)
 (define-data-var proposal-nonce uint u0)
 (define-data-var vault-nonce uint u0)
+(define-data-var action-count-global uint u0)
