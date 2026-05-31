@@ -36,3 +36,4 @@
 (define-constant ERR-PROPOSAL-NOT-FOUND     (err u313))
 (define-constant ERR-PROPOSAL-CLOSED        (err u314))
 (define-constant ERR-PROPOSAL-OPEN          (err u315))
+(define-constant ERR-ALREADY-VOTED          (err u316))
