@@ -201,3 +201,5 @@
         (carried (pending-yield tx-sender))
        )
     (try! (assert-not-paused))
+    (try! (assert-initialized))
+    (try! (assert-valid-token token))
