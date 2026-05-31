@@ -127,3 +127,4 @@
   (let ((start (default-to burn-block-height (map-get? stake-start-block who))))
     (if (> burn-block-height start) (- burn-block-height start) u0)))
 
+(define-private (pending-yield (who principal))
