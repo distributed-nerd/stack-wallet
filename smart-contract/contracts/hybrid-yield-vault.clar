@@ -75,3 +75,5 @@
 (define-data-var proposal-quorum uint u3)
 
 ;; ===== data vars : accounting =====
+(define-data-var total-staked uint u0)
+(define-data-var total-yield-minted uint u0)
