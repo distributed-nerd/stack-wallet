@@ -88,3 +88,8 @@
 (define-map batch-receipts        uint { executed-at: uint, count: uint, total-amount: uint })
 (define-map supply-snapshots      uint { block: uint, supply: uint, burned: uint })
 
+;; ===== private helpers =====
+
+(define-private (is-admin)
+  (is-eq tx-sender (var-get contract-admin)))
+
