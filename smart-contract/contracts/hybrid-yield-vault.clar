@@ -63,3 +63,4 @@
 (define-constant PARAM-YIELD-RATE       u1)
 (define-constant PARAM-COUNTER-COST     u2)
 (define-constant PARAM-VOTING-WINDOW    u3)
+(define-constant PARAM-QUORUM           u4)
