@@ -136,3 +136,4 @@
        )
     (+ debt (/ (* (* staked elapsed) rate) BPS-DENOMINATOR))))
 
+(define-private (bump-action (who principal))
