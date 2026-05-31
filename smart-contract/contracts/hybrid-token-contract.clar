@@ -228,3 +228,8 @@
     (try! (assert-live))
     (try! (assert-ready))
     (map-set allowances { owner: tx-sender, spender: spender } (+ current delta))
+    (ok (+ current delta))))
+
+(define-public (decrease-allowance (spender principal) (delta uint))
+  (let ((current (default-to u0 (map-get? allowances { owner: tx-sender, spender: spender }))))
+    (try! (assert-live))
