@@ -8,3 +8,4 @@
 ;;   - governance         : create / vote / execute parameter proposals
 ;;   - vault escrow       : per-vault deposits keyed by depositor
 ;;   - counter bridge     : advance stack-wallet counter by burning stake
+;;   - member accounting  : per-member tallies for reward attribution
