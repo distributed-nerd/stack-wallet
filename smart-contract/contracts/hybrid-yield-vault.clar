@@ -397,3 +397,4 @@
         (merge proposal { yes-votes: (+ (get yes-votes proposal) weight) }))
       (map-set proposals proposal-id
         (merge proposal { no-votes: (+ (get no-votes proposal) weight) })))
+    (bump-action caller)
