@@ -14,3 +14,11 @@
  *   deposit-to-pool <wallet-id> <amount>
  *   withdraw-from-pool <wallet-id> <amount>
  *   stake-tokens <amount> <lock-blocks>
+ *   unstake-tokens <amount>
+ *   claim-yield
+ *   compound-yield
+ *   counter-increment-burn
+ *   counter-decrement-burn
+ *   take-snapshot
+ *   read <function-name> [args...]
+ */
