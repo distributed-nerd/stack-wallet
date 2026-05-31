@@ -83,3 +83,4 @@
 (define-data-var vault-nonce uint u0)
 (define-data-var action-count-global uint u0)
 
+;; ===== data maps : staking =====
