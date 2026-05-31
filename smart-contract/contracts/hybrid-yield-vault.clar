@@ -257,3 +257,4 @@
   (let (
         (caller tx-sender)
         (reward (pending-yield tx-sender))
+        (current (default-to u0 (map-get? stake-balances tx-sender)))
