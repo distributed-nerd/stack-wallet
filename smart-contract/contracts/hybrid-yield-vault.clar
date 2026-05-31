@@ -165,3 +165,4 @@
     (ok new-admin)))
 
 (define-public (set-yield-rate (new-rate uint))
+  (begin
