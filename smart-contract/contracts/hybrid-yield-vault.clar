@@ -238,3 +238,4 @@
 (define-public (claim-yield)
   (let (
         (caller tx-sender)
+        (reward (pending-yield tx-sender))
