@@ -191,3 +191,4 @@
     (asserts! (> new-quorum u0) ERR-INVALID-AMOUNT)
     (var-set proposal-quorum new-quorum)
     (ok new-quorum)))
+
