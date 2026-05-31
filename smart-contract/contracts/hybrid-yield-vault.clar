@@ -392,3 +392,4 @@
     (asserts! (is-none (map-get? proposal-votes { proposal-id: proposal-id, voter: caller }))
               ERR-ALREADY-VOTED)
     (map-set proposal-votes { proposal-id: proposal-id, voter: caller } support)
+    (if support
