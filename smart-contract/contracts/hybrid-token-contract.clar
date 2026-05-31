@@ -68,3 +68,8 @@
 (define-data-var total-yield-paid    uint      u0)
 (define-data-var action-nonce        uint      u0)
 (define-data-var snapshot-nonce      uint      u0)
+
+;; ===== data maps =====
+(define-map allowances
+  { owner: principal, spender: principal }
+  uint)
