@@ -430,3 +430,4 @@
       (begin (asserts! (<= value MAX-COUNTER-COST) ERR-COST-TOO-HIGH)
              (var-set counter-action-cost value) (ok true))
       (if (is-eq param PARAM-VOTING-WINDOW)
+        (begin (asserts! (>= value MIN-VOTING-BLOCKS) ERR-INVALID-AMOUNT)
