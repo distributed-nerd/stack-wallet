@@ -69,3 +69,4 @@
 (define-data-var contract-admin principal CONTRACT-DEPLOYER)
 (define-data-var is-paused bool false)
 (define-data-var initialized bool false)
+(define-data-var yield-rate-bps uint u100)
