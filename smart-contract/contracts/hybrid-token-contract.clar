@@ -313,3 +313,8 @@
     (asserts! (>= burn-block-height lock-until) ERR-LOCK-ACTIVE)
     (try! (as-contract (contract-call? token transfer amount tx-sender caller none)))
     (map-set stake-balances    caller (- current amount))
+    (map-set stake-start-block caller burn-block-height)
+    (map-set yield-debt        caller carried)
+    (bump-action caller)
+    (ok (- current amount))))
+
