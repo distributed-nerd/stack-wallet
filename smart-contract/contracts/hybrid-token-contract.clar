@@ -283,3 +283,8 @@
   (let (
         (caller  tx-sender)
         (current (default-to u0 (map-get? stake-balances caller)))
+        (carried (pending-yield caller))
+       )
+    (try! (assert-live))
+    (try! (assert-ready))
+    (try! (assert-valid-token token))
