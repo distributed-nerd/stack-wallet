@@ -275,3 +275,4 @@
 ;; ===== counter bridge =====
 
 (define-public (advance-counter-by-burn (token <sip010-trait>))
+  (let (
