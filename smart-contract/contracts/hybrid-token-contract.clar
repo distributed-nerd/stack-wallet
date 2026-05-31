@@ -323,3 +323,8 @@
         (caller  tx-sender)
         (reward  (pending-yield caller))
        )
+    (try! (assert-live))
+    (try! (assert-ready))
+    (asserts! (> (default-to u0 (map-get? stake-balances caller)) u0) ERR-INSUFFICIENT-BALANCE)
+    (asserts! (> reward u0) ERR-NOTHING-TO-CLAIM)
+    (asserts! (<= (+ (var-get total-minted) reward) (var-get token-cap)) ERR-CAP-EXCEEDED)
