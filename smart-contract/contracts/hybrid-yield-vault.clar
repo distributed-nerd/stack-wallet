@@ -451,3 +451,4 @@
 (define-read-only (get-yield-rate)
   (ok (var-get yield-rate-bps)))
 
+(define-read-only (get-counter-cost)
