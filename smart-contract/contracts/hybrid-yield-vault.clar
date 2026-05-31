@@ -160,3 +160,4 @@
 
 (define-public (transfer-admin (new-admin principal))
   (begin
+    (asserts! (is-admin) ERR-NOT-ADMIN)
