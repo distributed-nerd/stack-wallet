@@ -389,3 +389,5 @@
     (try! (assert-initialized))
     (asserts! (> weight u0) ERR-NO-STAKE)
     (asserts! (< burn-block-height (get end-block proposal)) ERR-VOTING-ENDED)
+    (asserts! (is-none (map-get? proposal-votes { proposal-id: proposal-id, voter: caller }))
+              ERR-ALREADY-VOTED)
