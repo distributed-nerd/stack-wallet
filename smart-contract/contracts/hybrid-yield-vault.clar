@@ -462,3 +462,4 @@
 
 ;; ===== read-only : staking =====
 
+(define-read-only (get-stake (who principal))
