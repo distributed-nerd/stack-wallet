@@ -428,3 +428,4 @@
            (var-set yield-rate-bps value) (ok true))
     (if (is-eq param PARAM-COUNTER-COST)
       (begin (asserts! (<= value MAX-COUNTER-COST) ERR-COST-TOO-HIGH)
+             (var-set counter-action-cost value) (ok true))
