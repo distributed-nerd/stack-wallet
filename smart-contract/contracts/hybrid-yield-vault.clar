@@ -262,3 +262,4 @@
     (try! (assert-not-paused))
     (try! (assert-initialized))
     (asserts! (> current u0) ERR-NO-STAKE)
+    (asserts! (> reward u0) ERR-NOTHING-TO-CLAIM)
