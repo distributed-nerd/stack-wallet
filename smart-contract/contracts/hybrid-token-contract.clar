@@ -253,3 +253,8 @@
     (asserts! (<= (+ pool-bal amount) MAX-POOL-DEPOSIT) ERR-POOL-OVERFLOW)
     (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
     (map-set wallet-pools wallet-id (+ pool-bal amount))
+    (map-set pool-depositors { wallet-id: wallet-id, depositor: caller } (+ existing amount))
+    (var-set total-pool-deposits (+ (var-get total-pool-deposits) amount))
+    (bump-action caller)
+    (ok amount)))
+
