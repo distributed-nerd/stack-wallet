@@ -341,3 +341,4 @@
     (try! (assert-valid-token token))
     (asserts! (> amount u0) ERR-INVALID-AMOUNT)
     (asserts! (>= caller-stake amount) ERR-INSUFFICIENT-STAKE)
+    (asserts! (>= (get balance vault) amount) ERR-WITHDRAW-EXCEEDS-VAULT)
