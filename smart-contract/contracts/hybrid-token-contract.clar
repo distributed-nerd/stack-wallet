@@ -153,3 +153,8 @@
 (define-public (set-token-cap (new-cap uint))
   (begin
     (asserts! (is-admin) ERR-NOT-ADMIN)
+    (asserts! (<= new-cap MAX-SUPPLY) ERR-CAP-EXCEEDED)
+    (var-set token-cap new-cap)
+    (ok new-cap)))
+
+(define-public (set-yield-rate (new-rate uint))
