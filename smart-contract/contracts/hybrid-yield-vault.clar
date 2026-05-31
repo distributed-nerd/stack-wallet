@@ -407,3 +407,4 @@
         (value (get new-value proposal))
        )
     (try! (assert-not-paused))
+    (try! (assert-initialized))
