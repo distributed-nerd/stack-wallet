@@ -337,3 +337,4 @@
         (caller-stake (default-to u0 (map-get? vault-depositors { vault-id: vault-id, depositor: caller })))
        )
     (try! (assert-not-paused))
+    (try! (assert-initialized))
