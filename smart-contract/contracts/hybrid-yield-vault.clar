@@ -25,3 +25,4 @@
 (define-constant ERR-NOT-INITIALIZED        (err u302))
 (define-constant ERR-ALREADY-INITIALIZED    (err u303))
 (define-constant ERR-INVALID-TOKEN          (err u304))
+(define-constant ERR-INVALID-AMOUNT         (err u305))
