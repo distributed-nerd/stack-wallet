@@ -357,3 +357,4 @@
         (proposal-id (+ (var-get proposal-nonce) u1))
         (window (var-get voting-window-blocks))
        )
+    (try! (assert-not-paused))
