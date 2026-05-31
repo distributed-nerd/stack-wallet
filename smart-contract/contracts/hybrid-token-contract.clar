@@ -173,3 +173,8 @@
 
 ;; ===== mint and burn =====
 
+(define-public (mint-to (amount uint) (recipient principal))
+  (begin
+    (try! (assert-live))
+    (try! (assert-ready))
+    (asserts! (is-admin) ERR-NOT-ADMIN)
