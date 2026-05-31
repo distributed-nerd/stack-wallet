@@ -268,3 +268,8 @@
     (try! (assert-ready))
     (try! (assert-valid-token token))
     (asserts! (> amount u0) ERR-INVALID-AMOUNT)
+    (asserts! (>= deposited amount) ERR-INSUFFICIENT-BALANCE)
+    (asserts! (>= pool-bal amount) ERR-WITHDRAW-EXCEEDS-POOL)
+    (try! (as-contract (contract-call? token transfer amount tx-sender caller none)))
+    (map-set wallet-pools wallet-id (- pool-bal amount))
+    (map-set pool-depositors { wallet-id: wallet-id, depositor: caller } (- deposited amount))
