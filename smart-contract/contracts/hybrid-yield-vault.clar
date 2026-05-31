@@ -227,3 +227,4 @@
     (asserts! (> amount u0) ERR-INVALID-AMOUNT)
     (asserts! (>= current amount) ERR-INSUFFICIENT-STAKE)
     (asserts! (>= burn-block-height lock-until) ERR-STILL-LOCKED)
+    (try! (as-contract (contract-call? token transfer amount tx-sender caller none)))
