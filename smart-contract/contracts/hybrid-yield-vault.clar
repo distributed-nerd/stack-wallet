@@ -468,3 +468,5 @@
 (define-read-only (get-stake-lock-until (who principal))
   (ok (default-to u0 (map-get? stake-lock-until who))))
 
+(define-read-only (get-pending-yield (who principal))
+  (ok (pending-yield who)))
