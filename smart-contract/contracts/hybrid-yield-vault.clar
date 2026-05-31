@@ -236,3 +236,4 @@
     (ok (- current amount))))
 
 (define-public (claim-yield)
+  (let (
