@@ -518,3 +518,4 @@
 
 (define-read-only (get-action-count-global)
   (ok (var-get action-count-global)))
+
