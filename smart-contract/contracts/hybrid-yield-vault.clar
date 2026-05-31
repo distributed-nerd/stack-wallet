@@ -89,3 +89,4 @@
 (define-map stake-lock-until principal uint)
 (define-map accrued-yield-debt principal uint)
 (define-map member-action-tally principal uint)
+
