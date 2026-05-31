@@ -48,3 +48,4 @@
 (define-constant ERR-STILL-LOCKED           (err u325))
 (define-constant ERR-ZERO-ADDRESS           (err u326))
 (define-constant ERR-COST-TOO-HIGH          (err u327))
+(define-constant ERR-UNKNOWN-PARAM          (err u328))
