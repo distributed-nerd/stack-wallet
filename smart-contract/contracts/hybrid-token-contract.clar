@@ -353,3 +353,8 @@
     (map-set stake-start-block caller burn-block-height)
     (var-set total-minted    (+ (var-get total-minted) reward))
     (var-set total-yield-paid (+ (var-get total-yield-paid) reward))
+    (bump-action caller)
+    (ok (+ current reward))))
+
+;; ===== counter bridge =====
+
