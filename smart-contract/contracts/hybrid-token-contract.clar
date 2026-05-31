@@ -58,3 +58,8 @@
 ;; ===== data vars =====
 (define-data-var contract-admin      principal CONTRACT-DEPLOYER)
 (define-data-var is-paused           bool      false)
+(define-data-var initialized         bool      false)
+(define-data-var token-cap           uint      MAX-SUPPLY)
+(define-data-var yield-rate-bps      uint      u100)
+(define-data-var counter-action-cost uint      u1000)
+(define-data-var total-minted        uint      u0)
