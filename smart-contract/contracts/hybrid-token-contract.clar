@@ -358,3 +358,8 @@
 
 ;; ===== counter bridge =====
 
+(define-public (counter-increment-burn (token <sip010-trait>))
+  (let (
+        (caller tx-sender)
+        (cost   (var-get counter-action-cost))
+       )
