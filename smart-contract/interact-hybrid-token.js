@@ -126,3 +126,11 @@ async function main() {
 
   const senderKey = await loadPrivateKey();
 
+  switch (cmd) {
+    case 'initialize':
+      return callContract(senderKey, 'initialize', []);
+    case 'set-paused':
+      return callContract(senderKey, 'set-paused', [boolCV(args[0] === 'true')]);
+    case 'mint-to':
+      return callContract(senderKey, 'mint-to', [uintCV(BigInt(args[0])), principalCV(args[1])]);
+    case 'burn-from':
