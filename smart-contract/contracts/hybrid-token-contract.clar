@@ -438,3 +438,8 @@
 
 (define-read-only (get-action-nonce)
   (ok (var-get action-nonce)))
+
+(define-read-only (get-allowance (owner principal) (spender principal))
+  (ok (default-to u0 (map-get? allowances { owner: owner, spender: spender }))))
+
+(define-read-only (get-wallet-pool (wallet-id uint))
