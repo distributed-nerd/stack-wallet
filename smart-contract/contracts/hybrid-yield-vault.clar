@@ -115,3 +115,4 @@
   (is-eq tx-sender (var-get contract-admin)))
 
 (define-private (assert-not-paused)
+  (if (var-get is-paused) ERR-PAUSED (ok true)))
