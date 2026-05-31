@@ -100,3 +100,4 @@
     param: uint,
     new-value: uint,
     start-block: uint,
+    end-block: uint,
