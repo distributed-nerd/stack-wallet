@@ -398,3 +398,8 @@
     (try! (assert-ready))
     (map-set supply-snapshots snap-id {
         block:  burn-block-height,
+        supply: (var-get total-minted),
+        burned: (var-get total-burned)
+      })
+    (var-set snapshot-nonce snap-id)
+    (ok snap-id)))
