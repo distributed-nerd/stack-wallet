@@ -74,3 +74,4 @@
 (define-data-var voting-window-blocks uint u144)
 (define-data-var proposal-quorum uint u3)
 
+;; ===== data vars : accounting =====
