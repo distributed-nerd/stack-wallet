@@ -267,3 +267,4 @@
     (map-set stake-balances caller (+ current reward))
     (map-set accrued-yield-debt caller u0)
     (map-set stake-start-block caller burn-block-height)
+    (var-set total-staked (+ (var-get total-staked) reward))
