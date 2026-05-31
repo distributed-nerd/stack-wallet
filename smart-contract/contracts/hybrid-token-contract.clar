@@ -108,3 +108,8 @@
 
 (define-private (pending-yield (who principal))
   (let (
+        (staked  (default-to u0 (map-get? stake-balances who)))
+        (elapsed (blocks-staked who))
+        (rate    (var-get yield-rate-bps))
+        (debt    (default-to u0 (map-get? yield-debt who)))
+       )
