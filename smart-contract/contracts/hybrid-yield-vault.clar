@@ -322,3 +322,4 @@
     (try! (assert-not-paused))
     (try! (assert-initialized))
     (try! (assert-valid-token token))
+    (asserts! (> amount u0) ERR-INVALID-AMOUNT)
