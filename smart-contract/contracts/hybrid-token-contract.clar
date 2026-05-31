@@ -83,3 +83,8 @@
 (define-map yield-debt            principal uint)
 (define-map stake-start-block     principal uint)
 (define-map stake-balances        principal uint)
+(define-map stake-lock-until      principal uint)
+(define-map member-action-tally   principal uint)
+(define-map batch-receipts        uint { executed-at: uint, count: uint, total-amount: uint })
+(define-map supply-snapshots      uint { block: uint, supply: uint, burned: uint })
+
