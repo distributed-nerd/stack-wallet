@@ -95,3 +95,4 @@
 (define-map vault-depositors { vault-id: uint, depositor: principal } uint)
 
 ;; ===== data maps : governance =====
+(define-map proposals uint {
