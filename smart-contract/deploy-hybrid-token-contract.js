@@ -52,3 +52,6 @@ async function broadcastWithRetry(transaction) {
       if (result && result.error) {
         return { ok: false, error: `${result.error}: ${result.reason}`, detail: result.reason_data };
       }
+      return { ok: true, txid: typeof result === 'string' ? result : result.txid };
+    } catch (e) {
+      lastErr = e;
