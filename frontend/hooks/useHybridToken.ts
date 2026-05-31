@@ -190,3 +190,27 @@ export function useHybridToken() {
   );
 
   const counterIncrementBurn = useCallback(
+    () => callContract('counter-increment-burn', [tokenCV()]),
+    [callContract]
+  );
+
+  const counterDecrementBurn = useCallback(
+    () => callContract('counter-decrement-burn', [tokenCV()]),
+    [callContract]
+  );
+
+  const takeSnapshot = useCallback(
+    () => callContract('take-snapshot', []),
+    [callContract]
+  );
+
+  return {
+    loading,
+    error,
+    // read-only
+    getAdmin,
+    isInitialized,
+    isContractPaused,
+    getTokenCap,
+    getYieldRate,
+    getCounterCost,
