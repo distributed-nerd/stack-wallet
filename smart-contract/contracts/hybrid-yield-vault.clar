@@ -446,3 +446,4 @@
   (ok (var-get is-paused)))
 
 (define-read-only (is-initialized-check)
+  (ok (var-get initialized)))
