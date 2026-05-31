@@ -102,3 +102,16 @@ async function main() {
   });
 
   await test('get-action-nonce returns uint', async () => {
+    const r = await read('get-action-nonce');
+    assert(r.success, 'not ok');
+  });
+
+  await test('get-snapshot-nonce returns uint', async () => {
+    const r = await read('get-snapshot-nonce');
+    assert(r.success, 'not ok');
+  });
+
+  await test('get-max-supply returns uint', async () => {
+    const r = await read('get-max-supply');
+    assert(r.success, 'not ok');
+    assert(r.value.value === '21000000000000', `unexpected cap: ${r.value.value}`);
