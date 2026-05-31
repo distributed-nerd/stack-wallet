@@ -439,3 +439,4 @@
 
 ;; ===== read-only : config =====
 
+(define-read-only (get-admin)
