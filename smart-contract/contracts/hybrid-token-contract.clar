@@ -203,3 +203,8 @@
 (define-public (approve (spender principal) (amount uint))
   (begin
     (try! (assert-live))
+    (try! (assert-ready))
+    (asserts! (not (is-eq spender tx-sender)) ERR-SELF-TRANSFER)
+    (map-set allowances { owner: tx-sender, spender: spender } amount)
+    (ok amount)))
+
