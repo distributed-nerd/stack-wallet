@@ -368,3 +368,8 @@
     (try! (assert-valid-token token))
     (asserts! (> cost u0) ERR-INVALID-AMOUNT)
     (try! (contract-call? token transfer cost caller (as-contract tx-sender) none))
+    (try! (as-contract (contract-call? .sip010-token burn cost)))
+    (unwrap! (contract-call? .stack-wallet increment) ERR-WALLET-NOT-FOUND)
+    (var-set total-burned (+ (var-get total-burned) cost))
+    (bump-action caller)
+    (ok cost)))
