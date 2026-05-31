@@ -118,3 +118,27 @@ export function useHybridToken() {
   );
 
   const getMemberActionCount = useCallback(
+    (who: string) => readOnly('get-member-action-count', [principalCV(who)]),
+    [readOnly]
+  );
+
+  const getSnapshot = useCallback(
+    (snapId: number) => readOnly('get-snapshot', [uintCV(BigInt(snapId))]),
+    [readOnly]
+  );
+
+  // ── write helpers ──────────────────────────────────────────────────────────
+
+  const initialize = useCallback(
+    () => callContract('initialize', []),
+    [callContract]
+  );
+
+  const setPaused = useCallback(
+    (paused: boolean) => callContract('set-paused', [boolCV(paused)]),
+    [callContract]
+  );
+
+  const mintTo = useCallback(
+    (amount: bigint, recipient: string) =>
+      callContract('mint-to', [uintCV(amount), principalCV(recipient)]),
