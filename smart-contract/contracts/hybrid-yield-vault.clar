@@ -445,3 +445,4 @@
 (define-read-only (is-contract-paused)
   (ok (var-get is-paused)))
 
+(define-read-only (is-initialized-check)
