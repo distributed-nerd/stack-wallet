@@ -382,3 +382,4 @@
 (define-public (vote (proposal-id uint) (support bool))
   (let (
         (caller tx-sender)
+        (proposal (unwrap! (map-get? proposals proposal-id) ERR-PROPOSAL-NOT-FOUND))
