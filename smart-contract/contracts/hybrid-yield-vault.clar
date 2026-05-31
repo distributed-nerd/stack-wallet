@@ -110,3 +110,4 @@
 (define-map member-reward-claims principal uint)
 
 ;; ===== private helpers =====
+
