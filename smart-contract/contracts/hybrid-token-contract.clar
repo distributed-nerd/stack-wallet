@@ -8,3 +8,8 @@
 ;;   - Wallet-pool escrow with per-depositor accounting
 ;;   - Staking + block-based yield accrual
 ;;   - Counter bridge (burn tokens to advance stack-wallet counter)
+;;   - Supply snapshots for off-chain analytics
+;;
+;; Depends on: .sip010-trait  .sip010-token  .stack-wallet
+
+;; ===== traits =====
