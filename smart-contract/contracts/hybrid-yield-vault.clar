@@ -96,3 +96,4 @@
 
 ;; ===== data maps : governance =====
 (define-map proposals uint {
+    proposer: principal,
