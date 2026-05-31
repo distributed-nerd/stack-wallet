@@ -388,3 +388,8 @@
     (unwrap! (contract-call? .stack-wallet decrement) ERR-WALLET-NOT-FOUND)
     (var-set total-burned (+ (var-get total-burned) cost))
     (bump-action caller)
+    (ok cost)))
+
+;; ===== supply snapshot =====
+
+(define-public (take-snapshot)
