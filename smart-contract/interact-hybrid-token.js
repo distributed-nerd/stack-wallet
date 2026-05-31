@@ -86,3 +86,11 @@ async function callContract(senderKey, functionName, functionArgs) {
     console.error(`Error: ${result.error} - ${result.reason}`);
     process.exit(1);
   }
+  const txid = typeof result === 'string' ? result : result.txid;
+  console.log(`Broadcast OK  txid: ${txid}`);
+  console.log(`Explorer: https://explorer.hiro.so/txid/${txid}?chain=mainnet`);
+  return txid;
+}
+
+async function readContract(functionName, functionArgs = []) {
+  const result = await callReadOnlyFunction({
