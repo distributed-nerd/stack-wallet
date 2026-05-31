@@ -166,3 +166,27 @@ export function useHybridToken() {
     (walletId: number, amount: bigint) =>
       callContract('withdraw-from-pool', [tokenCV(), uintCV(BigInt(walletId)), uintCV(amount)]),
     [callContract]
+  );
+
+  const stakeTokens = useCallback(
+    (amount: bigint, lockBlocks: number) =>
+      callContract('stake-tokens', [tokenCV(), uintCV(amount), uintCV(BigInt(lockBlocks))]),
+    [callContract]
+  );
+
+  const unstakeTokens = useCallback(
+    (amount: bigint) => callContract('unstake-tokens', [tokenCV(), uintCV(amount)]),
+    [callContract]
+  );
+
+  const claimYield = useCallback(
+    () => callContract('claim-yield', []),
+    [callContract]
+  );
+
+  const compoundYield = useCallback(
+    () => callContract('compound-yield', []),
+    [callContract]
+  );
+
+  const counterIncrementBurn = useCallback(
