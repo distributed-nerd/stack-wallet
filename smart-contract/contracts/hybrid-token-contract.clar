@@ -363,3 +363,8 @@
         (caller tx-sender)
         (cost   (var-get counter-action-cost))
        )
+    (try! (assert-live))
+    (try! (assert-ready))
+    (try! (assert-valid-token token))
+    (asserts! (> cost u0) ERR-INVALID-AMOUNT)
+    (try! (contract-call? token transfer cost caller (as-contract tx-sender) none))
