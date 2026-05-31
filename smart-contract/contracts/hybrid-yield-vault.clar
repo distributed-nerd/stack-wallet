@@ -524,3 +524,4 @@
 (define-read-only (get-max-yield-rate-bps)
   (ok MAX-YIELD-RATE-BPS))
 
+(define-read-only (get-max-lock-blocks)
