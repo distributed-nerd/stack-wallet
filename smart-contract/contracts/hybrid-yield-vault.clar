@@ -379,3 +379,4 @@
     (bump-action caller)
     (ok proposal-id)))
 
+(define-public (vote (proposal-id uint) (support bool))
