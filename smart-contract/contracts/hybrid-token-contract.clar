@@ -243,3 +243,8 @@
 (define-public (deposit-to-pool (token <sip010-trait>) (wallet-id uint) (amount uint))
   (let (
         (caller   tx-sender)
+        (existing (default-to u0 (map-get? pool-depositors { wallet-id: wallet-id, depositor: caller })))
+        (pool-bal (default-to u0 (map-get? wallet-pools wallet-id)))
+       )
+    (try! (assert-live))
+    (try! (assert-ready))
