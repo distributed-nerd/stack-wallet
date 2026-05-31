@@ -377,3 +377,4 @@
       })
     (var-set proposal-nonce proposal-id)
     (bump-action caller)
+    (ok proposal-id)))
