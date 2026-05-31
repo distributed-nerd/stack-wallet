@@ -482,3 +482,4 @@
 
 ;; ===== read-only : vaults =====
 
+(define-read-only (get-vault (vault-id uint))
