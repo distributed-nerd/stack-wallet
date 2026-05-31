@@ -221,3 +221,4 @@
         (carried (pending-yield tx-sender))
         (lock-until (default-to u0 (map-get? stake-lock-until tx-sender)))
        )
+    (try! (assert-not-paused))
