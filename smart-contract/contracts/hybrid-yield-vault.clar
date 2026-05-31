@@ -192,3 +192,4 @@
     (var-set proposal-quorum new-quorum)
     (ok new-quorum)))
 
+;; ===== staking functions =====
