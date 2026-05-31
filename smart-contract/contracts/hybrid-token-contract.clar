@@ -418,3 +418,8 @@
 (define-read-only (get-token-cap)
   (ok (var-get token-cap)))
 
+(define-read-only (get-yield-rate)
+  (ok (var-get yield-rate-bps)))
+
+(define-read-only (get-counter-cost)
+  (ok (var-get counter-action-cost)))
