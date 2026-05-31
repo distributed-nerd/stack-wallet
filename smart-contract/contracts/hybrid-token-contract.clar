@@ -78,3 +78,8 @@
 
 (define-map pool-depositors
   { wallet-id: uint, depositor: principal }
+  uint)
+
+(define-map yield-debt            principal uint)
+(define-map stake-start-block     principal uint)
+(define-map stake-balances        principal uint)
