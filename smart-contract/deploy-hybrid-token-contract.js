@@ -22,3 +22,6 @@ async function loadPrivateKey() {
   if (!fs.existsSync(tomlPath)) {
     console.error('ERROR: no STACKS_PRIVATE_KEY env var and settings/Mainnet.toml not found.');
     process.exit(1);
+  }
+  const tomlText = fs.readFileSync(tomlPath, 'utf8');
+  const match = tomlText.match(/^\s*mnemonic\s*=\s*"([^"]+)"/m);
