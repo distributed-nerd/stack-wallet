@@ -67,3 +67,6 @@ async function broadcastWithRetry(transaction) {
 async function main() {
   const senderKey = await loadPrivateKey();
   const address = getAddressFromPrivateKey(senderKey, 'mainnet');
+  console.log(`Deployer: ${address}`);
+
+  if (EXPECTED_ADDRESS && EXPECTED_ADDRESS !== address) {
