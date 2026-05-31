@@ -301,3 +301,4 @@
         (vault-id (+ (var-get vault-nonce) u1))
        )
     (try! (assert-not-paused))
+    (try! (assert-initialized))
