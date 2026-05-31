@@ -188,3 +188,4 @@
 (define-public (set-quorum (new-quorum uint))
   (begin
     (asserts! (is-admin) ERR-NOT-ADMIN)
+    (asserts! (> new-quorum u0) ERR-INVALID-AMOUNT)
