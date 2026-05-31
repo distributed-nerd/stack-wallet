@@ -54,3 +54,11 @@ async function loadPrivateKey() {
   const tomlText = fs.readFileSync(tomlPath, 'utf8');
   const match = tomlText.match(/^\s*mnemonic\s*=\s*"([^"]+)"/m);
   if (!match) { console.error('No mnemonic in Mainnet.toml'); process.exit(1); }
+  const wallet = await generateWallet({ secretKey: match[1].trim(), password: '' });
+  return wallet.accounts[0].stxPrivateKey;
+}
+
+async function getNonce(address) {
+  const res = await fetch(`${API}/extended/v1/address/${address}/nonces`);
+  const data = await res.json();
+  return data.possible_next_nonce;
