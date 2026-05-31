@@ -483,3 +483,5 @@
 ;; ===== read-only : vaults =====
 
 (define-read-only (get-vault (vault-id uint))
+  (ok (map-get? vaults vault-id)))
+
