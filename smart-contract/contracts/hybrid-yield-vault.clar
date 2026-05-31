@@ -151,3 +151,4 @@
     (asserts! (is-admin) ERR-NOT-ADMIN)
     (var-set initialized true)
     (ok true)))
+
