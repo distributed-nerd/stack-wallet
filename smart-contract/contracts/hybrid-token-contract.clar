@@ -163,3 +163,8 @@
     (asserts! (<= new-rate MAX-YIELD-RATE-BPS) ERR-RATE-TOO-HIGH)
     (var-set yield-rate-bps new-rate)
     (ok new-rate)))
+
+(define-public (set-counter-cost (new-cost uint))
+  (begin
+    (asserts! (is-admin) ERR-NOT-ADMIN)
+    (asserts! (<= new-cost MAX-COUNTER-COST) ERR-COST-TOO-HIGH)
