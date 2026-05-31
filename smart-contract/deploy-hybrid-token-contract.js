@@ -70,3 +70,6 @@ async function main() {
   console.log(`Deployer: ${address}`);
 
   if (EXPECTED_ADDRESS && EXPECTED_ADDRESS !== address) {
+    console.error(`ERROR: address mismatch. Got ${address}, expected ${EXPECTED_ADDRESS}`);
+    process.exit(1);
+  }
