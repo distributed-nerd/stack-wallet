@@ -111,3 +111,4 @@
 
 ;; ===== private helpers =====
 
+(define-private (is-admin)
