@@ -205,3 +205,4 @@
     (try! (assert-valid-token token))
     (asserts! (> amount u0) ERR-INVALID-AMOUNT)
     (asserts! (<= lock-blocks MAX-LOCK-BLOCKS) ERR-LOCK-TOO-LONG)
+    (try! (contract-call? token transfer amount caller (as-contract tx-sender) none))
