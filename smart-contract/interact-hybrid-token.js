@@ -22,3 +22,11 @@
  *   take-snapshot
  *   read <function-name> [args...]
  */
+
+const {
+  makeContractCall,
+  broadcastTransaction,
+  getAddressFromPrivateKey,
+  AnchorMode,
+  PostConditionMode,
+  uintCV,
