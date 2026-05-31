@@ -14,3 +14,4 @@
 ;; tokens as-contract and mints yield against accrued reward debt.
 
 ;; ===== traits =====
+(use-trait sip010-trait .sip010-trait.sip-010-trait)
