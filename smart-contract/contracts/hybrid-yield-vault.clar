@@ -365,3 +365,4 @@
                       (or (is-eq param PARAM-VOTING-WINDOW)
                           (is-eq param PARAM-QUORUM)))) ERR-UNKNOWN-PARAM)
     (map-set proposals proposal-id {
+        proposer: caller,
