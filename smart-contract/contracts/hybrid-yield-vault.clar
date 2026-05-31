@@ -154,3 +154,5 @@
 
 (define-public (set-paused (paused bool))
   (begin
+    (asserts! (is-admin) ERR-NOT-ADMIN)
+    (var-set is-paused paused)
