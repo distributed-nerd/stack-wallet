@@ -440,3 +440,4 @@
 ;; ===== read-only : config =====
 
 (define-read-only (get-admin)
+  (ok (var-get contract-admin)))
