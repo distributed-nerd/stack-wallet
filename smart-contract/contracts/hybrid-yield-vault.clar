@@ -138,3 +138,5 @@
 
 (define-private (bump-action (who principal))
   (begin
+    (map-set member-action-tally who
+      (+ (default-to u0 (map-get? member-action-tally who)) u1))
