@@ -263,3 +263,8 @@
         (caller     tx-sender)
         (pool-bal   (default-to u0 (map-get? wallet-pools wallet-id)))
         (deposited  (default-to u0 (map-get? pool-depositors { wallet-id: wallet-id, depositor: caller })))
+       )
+    (try! (assert-live))
+    (try! (assert-ready))
+    (try! (assert-valid-token token))
+    (asserts! (> amount u0) ERR-INVALID-AMOUNT)
