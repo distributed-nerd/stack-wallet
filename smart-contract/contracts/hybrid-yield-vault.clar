@@ -495,3 +495,4 @@
 
 (define-read-only (get-proposal (proposal-id uint))
   (ok (map-get? proposals proposal-id)))
+
