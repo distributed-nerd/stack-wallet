@@ -10,3 +10,4 @@
 ;;   - counter bridge     : advance stack-wallet counter by burning stake
 ;;   - member accounting  : per-member tallies for reward attribution
 ;;
+;; All token movements flow through the sip010-token contract; the vault holds
