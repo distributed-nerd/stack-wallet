@@ -200,3 +200,4 @@
         (current (default-to u0 (map-get? stake-balances tx-sender)))
         (carried (pending-yield tx-sender))
        )
+    (try! (assert-not-paused))
