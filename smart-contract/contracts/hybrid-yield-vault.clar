@@ -493,3 +493,4 @@
 
 ;; ===== read-only : governance =====
 
+(define-read-only (get-proposal (proposal-id uint))
