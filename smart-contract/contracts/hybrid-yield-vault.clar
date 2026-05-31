@@ -52,3 +52,4 @@
 (define-constant ERR-QUORUM-NOT-MET         (err u329))
 
 ;; ===== safety bounds =====
+(define-constant MAX-YIELD-RATE-BPS     u2000)
