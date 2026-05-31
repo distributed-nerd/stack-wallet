@@ -37,3 +37,16 @@ async function test(label, fn) {
     passed++;
   } catch (e) {
     console.error(`  FAIL  ${label}: ${e.message}`);
+    failed++;
+  }
+}
+
+function assert(condition, msg) {
+  if (!condition) throw new Error(msg || 'assertion failed');
+}
+
+async function main() {
+  console.log(`\nSmoke-testing ${DEPLOYER}.${CONTRACT}\n`);
+
+  await test('get-admin returns a principal', async () => {
+    const r = await read('get-admin');
