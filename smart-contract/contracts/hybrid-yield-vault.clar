@@ -15,3 +15,4 @@
 
 ;; ===== traits =====
 (use-trait sip010-trait .sip010-trait.sip-010-trait)
+
