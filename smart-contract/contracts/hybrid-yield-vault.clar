@@ -229,3 +229,4 @@
     (asserts! (>= burn-block-height lock-until) ERR-STILL-LOCKED)
     (try! (as-contract (contract-call? token transfer amount tx-sender caller none)))
     (map-set stake-balances caller (- current amount))
+    (map-set stake-start-block caller burn-block-height)
