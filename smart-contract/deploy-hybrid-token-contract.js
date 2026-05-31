@@ -64,3 +64,6 @@ async function broadcastWithRetry(transaction) {
   return { ok: false, error: String(lastErr?.message || lastErr) };
 }
 
+async function main() {
+  const senderKey = await loadPrivateKey();
+  const address = getAddressFromPrivateKey(senderKey, 'mainnet');
