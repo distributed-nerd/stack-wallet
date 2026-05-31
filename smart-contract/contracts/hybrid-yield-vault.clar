@@ -26,3 +26,4 @@
 (define-constant ERR-ALREADY-INITIALIZED    (err u303))
 (define-constant ERR-INVALID-TOKEN          (err u304))
 (define-constant ERR-INVALID-AMOUNT         (err u305))
+(define-constant ERR-INSUFFICIENT-STAKE     (err u306))
