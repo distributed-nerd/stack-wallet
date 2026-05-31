@@ -134,3 +134,11 @@ async function main() {
     case 'mint-to':
       return callContract(senderKey, 'mint-to', [uintCV(BigInt(args[0])), principalCV(args[1])]);
     case 'burn-from':
+      return callContract(senderKey, 'burn-from', [tokenCV(), uintCV(BigInt(args[0]))]);
+    case 'approve':
+      return callContract(senderKey, 'approve', [principalCV(args[0]), uintCV(BigInt(args[1]))]);
+    case 'deposit-to-pool':
+      return callContract(senderKey, 'deposit-to-pool', [tokenCV(), uintCV(BigInt(args[0])), uintCV(BigInt(args[1]))]);
+    case 'withdraw-from-pool':
+      return callContract(senderKey, 'withdraw-from-pool', [tokenCV(), uintCV(BigInt(args[0])), uintCV(BigInt(args[1]))]);
+    case 'stake-tokens':
