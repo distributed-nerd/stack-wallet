@@ -403,3 +403,4 @@
 (define-public (execute-proposal (proposal-id uint))
   (let (
         (proposal (unwrap! (map-get? proposals proposal-id) ERR-PROPOSAL-NOT-FOUND))
+        (param (get param proposal))
