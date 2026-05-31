@@ -361,3 +361,4 @@
     (try! (assert-initialized))
     (asserts! (> (default-to u0 (map-get? stake-balances caller)) u0) ERR-NO-STAKE)
     (asserts! (or (is-eq param PARAM-YIELD-RATE)
+                  (or (is-eq param PARAM-COUNTER-COST)
