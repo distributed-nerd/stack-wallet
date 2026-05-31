@@ -527,3 +527,4 @@
 (define-read-only (get-max-lock-blocks)
   (ok MAX-LOCK-BLOCKS))
 
+(define-read-only (get-max-counter-cost)
