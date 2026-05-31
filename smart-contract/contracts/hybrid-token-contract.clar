@@ -143,3 +143,8 @@
     (var-set is-paused paused)
     (ok paused)))
 
+(define-public (transfer-admin (new-admin principal))
+  (begin
+    (asserts! (is-admin) ERR-NOT-ADMIN)
+    (asserts! (not (is-eq new-admin (as-contract tx-sender))) ERR-ZERO-ADDRESS)
+    (var-set contract-admin new-admin)
