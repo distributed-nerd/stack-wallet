@@ -254,3 +254,4 @@
     (ok reward)))
 
 (define-public (compound-yield)
+  (let (
