@@ -98,3 +98,4 @@
 (define-map proposals uint {
     proposer: principal,
     param: uint,
+    new-value: uint,
