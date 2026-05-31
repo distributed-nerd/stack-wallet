@@ -185,3 +185,5 @@
     (var-set voting-window-blocks new-window)
     (ok new-window)))
 
+(define-public (set-quorum (new-quorum uint))
+  (begin
