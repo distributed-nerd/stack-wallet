@@ -309,3 +309,4 @@
     (map-set vaults vault-id { owner: caller, balance: amount, created-at: burn-block-height })
     (map-set vault-depositors { vault-id: vault-id, depositor: caller } amount)
     (var-set vault-nonce vault-id)
+    (var-set total-vault-deposits (+ (var-get total-vault-deposits) amount))
