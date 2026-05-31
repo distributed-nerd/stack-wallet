@@ -149,3 +149,4 @@
   (begin
     (asserts! (not (var-get initialized)) ERR-ALREADY-INITIALIZED)
     (asserts! (is-admin) ERR-NOT-ADMIN)
+    (var-set initialized true)
