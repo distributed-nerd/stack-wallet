@@ -3,3 +3,8 @@
 ;;
 ;; Subsystems:
 ;;   - Admin controls (pause, cap, yield-rate, counter-cost)
+;;   - Mint / burn with supply cap enforcement
+;;   - ERC-20-style allowance model on top of SIP-010
+;;   - Wallet-pool escrow with per-depositor accounting
+;;   - Staking + block-based yield accrual
+;;   - Counter bridge (burn tokens to advance stack-wallet counter)
