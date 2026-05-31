@@ -13,3 +13,6 @@ const fs = require('fs');
 const CONTRACT_NAME = 'hybrid-token-contract';
 const CONTRACT_FILE = './contracts/hybrid-token-contract.clar';
 const DEPLOY_FEE = 250000n;
+const API = 'https://api.hiro.so';
+const EXPECTED_ADDRESS = process.env.STACKS_EXPECTED_ADDRESS;
+
