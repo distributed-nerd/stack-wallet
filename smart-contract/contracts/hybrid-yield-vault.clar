@@ -260,3 +260,4 @@
         (current (default-to u0 (map-get? stake-balances tx-sender)))
        )
     (try! (assert-not-paused))
+    (try! (assert-initialized))
