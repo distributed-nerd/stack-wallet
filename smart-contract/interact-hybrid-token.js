@@ -142,3 +142,11 @@ async function main() {
     case 'withdraw-from-pool':
       return callContract(senderKey, 'withdraw-from-pool', [tokenCV(), uintCV(BigInt(args[0])), uintCV(BigInt(args[1]))]);
     case 'stake-tokens':
+      return callContract(senderKey, 'stake-tokens', [tokenCV(), uintCV(BigInt(args[0])), uintCV(BigInt(args[1]))]);
+    case 'unstake-tokens':
+      return callContract(senderKey, 'unstake-tokens', [tokenCV(), uintCV(BigInt(args[0]))]);
+    case 'claim-yield':
+      return callContract(senderKey, 'claim-yield', []);
+    case 'compound-yield':
+      return callContract(senderKey, 'compound-yield', []);
+    case 'counter-increment-burn':
