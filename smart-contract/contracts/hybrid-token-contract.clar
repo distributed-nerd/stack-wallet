@@ -258,3 +258,8 @@
     (bump-action caller)
     (ok amount)))
 
+(define-public (withdraw-from-pool (token <sip010-trait>) (wallet-id uint) (amount uint))
+  (let (
+        (caller     tx-sender)
+        (pool-bal   (default-to u0 (map-get? wallet-pools wallet-id)))
+        (deposited  (default-to u0 (map-get? pool-depositors { wallet-id: wallet-id, depositor: caller })))
