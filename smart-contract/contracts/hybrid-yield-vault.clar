@@ -477,3 +477,4 @@
 (define-read-only (get-member-action-count (who principal))
   (ok (default-to u0 (map-get? member-action-tally who))))
 
+(define-read-only (get-member-reward-claims (who principal))
