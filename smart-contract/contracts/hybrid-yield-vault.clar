@@ -314,3 +314,4 @@
     (ok vault-id)))
 
 (define-public (deposit-to-vault (token <sip010-trait>) (vault-id uint) (amount uint))
+  (let (
