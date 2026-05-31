@@ -51,3 +51,4 @@
 (define-constant ERR-UNKNOWN-PARAM          (err u328))
 (define-constant ERR-QUORUM-NOT-MET         (err u329))
 
+;; ===== safety bounds =====
