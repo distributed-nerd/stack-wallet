@@ -256,3 +256,4 @@
 (define-public (compound-yield)
   (let (
         (caller tx-sender)
+        (reward (pending-yield tx-sender))
