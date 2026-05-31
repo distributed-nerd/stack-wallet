@@ -523,3 +523,4 @@
 
 (define-read-only (get-max-yield-rate-bps)
   (ok MAX-YIELD-RATE-BPS))
+
