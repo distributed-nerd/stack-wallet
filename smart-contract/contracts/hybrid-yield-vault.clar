@@ -435,3 +435,4 @@
         (if (is-eq param PARAM-QUORUM)
           (begin (asserts! (> value u0) ERR-INVALID-AMOUNT)
                  (var-set proposal-quorum value) (ok true))
+          ERR-UNKNOWN-PARAM)))))
