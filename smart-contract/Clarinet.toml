@@ -28,3 +28,6 @@ path = "contracts/hybrid-yield-vault.clar"
 [repl]
 costs_version = 3
 parser_version = 2
+
+[contracts.hybrid-token-contract]
+path = "contracts/hybrid-token-contract.clar"
