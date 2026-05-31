@@ -358,3 +358,5 @@
         (window (var-get voting-window-blocks))
        )
     (try! (assert-not-paused))
+    (try! (assert-initialized))
+    (asserts! (> (default-to u0 (map-get? stake-balances caller)) u0) ERR-NO-STAKE)
